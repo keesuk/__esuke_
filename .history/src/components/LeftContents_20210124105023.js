@@ -7,7 +7,6 @@ const LeftContentsBox = styled.div`
     width: 30vw;
     height: 100vh;
     border-right: ${solid};
-    box-sizing: content-box;
     display: flex;
     background-color: #EEE; 
 `;
