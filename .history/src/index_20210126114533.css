@@ -22,12 +22,11 @@ button {
     all: unset;
     cursor: url(img/_click.svg), pointer;
 }
+button:visited{
+    color: black;
+}
 
 a {
     all: unset;
     cursor: url(img/_click.svg), pointer;
-}
-
-a:visited {
-    color: inherit;
 }

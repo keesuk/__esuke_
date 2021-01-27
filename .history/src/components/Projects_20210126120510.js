@@ -2,9 +2,9 @@ import styled from "styled-components";
 import { line_2, instaLink, instaColor, facebookLink, facebookColor } from "./_Functions.jsx";
 import Pigeon from "../img/Pigeon.png"
 import Ruler from "../img/Ruler.png"
-import Onvoyage from "../img/Onvoyage.png"
 // import Wedel from "../img/Wedel.png"
 // import Weeat from "../img/Weeat.png"
+import Onvoyage from "../img/Onvoyage.png"
 
 const IntroDiv = styled.div`
     margin-top: 5vh;

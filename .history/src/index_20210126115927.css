@@ -29,5 +29,5 @@ a {
 }
 
 a:visited {
-    color: inherit;
+    all: unset;
 }
