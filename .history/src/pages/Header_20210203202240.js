@@ -1,0 +1,19 @@
+import React from 'react';
+import styled from 'styled-components';
+import Left from './Left'
+import Index from '../components/Index'
+import Home from '../components/Home'
+import { line_1, line_3, rainbow, app_menu, app_aboutMe, all_portFolio, findObject } from '../_data/_Functions.jsx';
+
+
+
+const Header = () => {
+    return (
+        <header>
+            <Index/>
+            <Home/>
+        </header>
+    )
+}
+
+export default Header;
