@@ -1,9 +1,10 @@
 import { Component } from "react";
-import { Route } from 'react-router-dom';
+import { Route } from "react-router-dom";
 
-import styled from 'styled-components';
+import styled from "styled-components";
+import Projects from "./_Projects.jsx";
 
-import { line_1, line_3, rainbow, app_menu, app_aboutMe, all_portFolio, findObject } from '../_data/_Functions.jsx';
+import { line_1 } from "../_data/_Functions.jsx";
 
 
 const RightDiv = styled.div`
@@ -26,6 +27,7 @@ class Right extends Component {
         return(
             <RightDiv>
                 <div className="rightRight">
+                    <Projects/>
                 </div>
             </RightDiv>
         )

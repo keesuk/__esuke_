@@ -14,7 +14,9 @@ const LeftDiv = styled.div`
 `;
 
 class Left extends Component {
+    
     render(){
+        console.log(this.porps.match)
         return(
             <LeftDiv/>
         )
