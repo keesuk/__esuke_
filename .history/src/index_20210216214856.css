@@ -1,0 +1,45 @@
+@import url(https://fonts.googleapis.com/earlyaccess/notosanskr.css);
+@import url(https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;1,100;1,200;1,300;1,400;1,500;1,600;1,700&display=swap);
+@import url(https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400;1,500;1,600;1,700&display=swap);
+@import url(https://fonts.googleapis.com/css2?family=Gothic+A1:wght@100;200;300;400;500;600;700;800;900&display=swap);
+@font-face { font-family: 'MaruBuri-Regular'; src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_20-10-21@1.0/MaruBuri-Regular.woff') format('woff'); font-weight: normal; font-style: normal;}
+
+@media (max-width: 3400px) { html { font-size: 31px; }}
+@media (max-width: 2900px) { html { font-size: 29px; }}
+@media (max-width: 2400px) { html { font-size: 24px; }}
+@media (max-width: 1900px) { html { font-size: 19px; }}
+@media (max-width: 1400px) { html { font-size: 14px; }}
+@media (max-width: 900px) { html { font-size: 9px; }}
+@media (max-width: 400px) { html { font-size: 1px; }}
+
+body {
+    font-size: 1.4rem;
+    line-height: 1.6rem;
+    margin: 0;
+    user-select: none;
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen','Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',sans-serif;
+    font-family: 'Cormorant Garamond', serif;
+    font-family: 'IBM Plex Mono', monospace !important;
+    font-family: 'Noto Sans KR', sans-serif;
+    font-family: 'MaruBuri-Regular', serif;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
+
+code { font-family: 'source-code-pro', 'Menlo', 'Monaco', 'Consolas', 'Courier New',monospace; }
+
+a { all: unset; }
+a:visited { color: inherit; }
+button { all: unset; cursor: pointer; }
+header { all: unset; }
+
+@keyframes effect {
+    0%   { opacity: 0; }
+    95%  { opacity: 0; }
+    100% { opacity: 1; }
+};
+@keyframes blink {
+    0%   { opacity: 0; }
+    0.01%  { opacity: 1; }
+    100% { opacity: 1; }
+};
