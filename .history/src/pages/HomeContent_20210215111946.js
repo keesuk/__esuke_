@@ -1,6 +1,10 @@
 import styled from "styled-components";
 
-import { projects_link, introDiv_introduce } from "../_data/_Functions.jsx";
+import FolioList from "../components/FolioList.js";
+import { RightDiv } from "../css/SMainLayout.js";
+import { colors } from "../css/_Color.jsx";
+import { projects_link, introDiv_introduce } from "../_data/_Data.jsx";
+
 
 const IntroduceDiv = styled.div`
     margin-top: 5%;
@@ -17,7 +21,7 @@ const IntroduceDiv = styled.div`
             height: 1.4rem;
             line-height: 1.6rem;
             padding-top: -1rem;
-            background-color: #ffff11;
+            background-color: ${colors["yellow"]};
     }}
     .link { margin-top: 2rem; }
 `;
@@ -40,25 +44,28 @@ const ALink = styled.a`
     }
 `;
 
-const Introduce = () => {
+const HomeContent = () => {
     return(
-        <IntroduceDiv>
-            <div className="text">
-                {introDiv_introduce}
-            </div>
-            <div className="link">
-                {projects_link.map(v =>
-                    <ALink 
-                        color={v["color"]} 
-                        href={v["link"]} 
-                        key={v["title"]}
-                    >
-                        {v["title"]}
-                    </ALink>
-                )}
-            </div>  
-        </IntroduceDiv>
+        <RightDiv>
+            <IntroduceDiv>
+                <div className="text">
+                    {introDiv_introduce}
+                </div>
+                <div className="link">
+                    {projects_link.map(v =>
+                        <ALink 
+                            color={v["color"]} 
+                            href={v["link"]} 
+                            key={v["title"]}
+                        >
+                            {v["title"]}
+                        </ALink>
+                    )}
+                </div>  
+            </IntroduceDiv>
+            <FolioList/>
+        </RightDiv>
     )
 }
 
-export default Introduce;
+export default HomeContent;
