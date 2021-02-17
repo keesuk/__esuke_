@@ -80,29 +80,18 @@ export function shuffle(array) {
     return array
 }
 
-export function removeSame(arr) {
-    var s = new Set(arr)
-    var it = s.values()
-    return Array.from(it)
-}
-
 export function numbering(text, tagF, tagB) {
     var regNum = /\d+/g
     var num
     var numArr = []
+    console.log(text)
+    while ((num = regNum.exec(text)) !== null) {
+        numArr.push(num[0]);
+    }
 
-    while ((num = regNum.exec(text)) !== null) numArr.push(num[0])
-    var checkArr = removeSame(numArr)
-
-    function replaceAll(txt, arr){
-        var txt
-    
-        for(var i of arr){
-            var regNum = new RegExp(i, "g")
-            txt = txt.replace(regNum, tagF + i + tagB)
-        }
-        return txt
+    for(var i in numArr){
+        text.replace(i, tagF + i + tagB)
     }
     
-    return replaceAll(text, checkArr)
+    return text
 }

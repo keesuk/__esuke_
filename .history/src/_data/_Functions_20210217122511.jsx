@@ -86,23 +86,23 @@ export function removeSame(arr) {
     return Array.from(it)
 }
 
-export function numbering(text, tagF, tagB) {
+export function replaceAll(txt, arr, target){
+    var txt
+    for(var i of arr) txt = txt.replace(new RegExp(i, "g"), target)
+    return txt
+}
+
+export function findNumToArr(txt){
     var regNum = /\d+/g
     var num
     var numArr = []
 
-    while ((num = regNum.exec(text)) !== null) numArr.push(num[0])
-    var checkArr = removeSame(numArr)
+    while ((num = regNum.exec(txt)) !== null) numArr.push(num[0])
+    return removeSame(numArr)
+}
 
-    function replaceAll(txt, arr){
-        var txt
-    
-        for(var i of arr){
-            var regNum = new RegExp(i, "g")
-            txt = txt.replace(regNum, tagF + i + tagB)
-        }
-        return txt
-    }
-    
-    return replaceAll(text, checkArr)
+export function numbering(text, tagF, tagB) {
+
+    console.log(replaceAll(text, findNumToArr(text), "dsadas"))
+    return text
 }

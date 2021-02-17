@@ -90,19 +90,22 @@ export function numbering(text, tagF, tagB) {
     var regNum = /\d+/g
     var num
     var numArr = []
+    console.log(text)
 
     while ((num = regNum.exec(text)) !== null) numArr.push(num[0])
     var checkArr = removeSame(numArr)
 
+    console.log(checkArr)
     function replaceAll(txt, arr){
         var txt
     
         for(var i of arr){
             var regNum = new RegExp(i, "g")
-            txt = txt.replace(regNum, tagF + i + tagB)
+            txt = txt.replace(regNum, `${tagF}${regNum}${tagB}`)
         }
         return txt
     }
     
+    console.log(replaceAll(text, checkArr))
     return replaceAll(text, checkArr)
 }

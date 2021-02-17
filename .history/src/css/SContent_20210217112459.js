@@ -212,12 +212,8 @@ export const MainText = styled.div`
 
         .korNum {
             font-family: 'Cormorant Garamond', serif;
-            font-weight: 300;
-            font-size: 1.2rem;
-
-            &::selection{
-                background-color: ${colors["yellowGreen"]};
-            }
+            font-weight: 400;
+            font-size: 1.4rem;
         }
     }
 `;

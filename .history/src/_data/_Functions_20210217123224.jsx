@@ -99,10 +99,11 @@ export function numbering(text, tagF, tagB) {
     
         for(var i of arr){
             var regNum = new RegExp(i, "g")
-            txt = txt.replace(regNum, tagF + i + tagB)
+            txt = txt.replace(regNum, "dd")
         }
         return txt
     }
     
+    console.log(replaceAll(text, checkArr))
     return replaceAll(text, checkArr)
 }

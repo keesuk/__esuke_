@@ -54,13 +54,8 @@ const _Pigeon = () => {
             <MainText ref={styRefs.current[0]}>
                 <div className="engContents" >
                     <Marks>
-                        <span className="text">
-                            {marks["0"]["title"]}
-                            <span className="num">
-                                {marks["0"]["num"]}
-                            </span>
-                        </span>
-                        <div className="marksIn">
+                        <span className="text">{marks["0"]["title"]}<span className="num">{marks["0"]["num"]}</span></span>
+                        <span className="marksIn">
                             <span className="marksInTitle">
                                 {marks["0"]["title"]}/
                             </span>
@@ -70,19 +65,16 @@ const _Pigeon = () => {
                             <span className="marksInKor">
                                 {marks["0"]["textKor"]}
                             </span>
-                        </div>
+                        </span>
                     </Marks> 
                     {text["0"]["eng"]}
                 </div>
-                <div 
-                    className="korContents"
-                    dangerouslySetInnerHTML={{
-                        __html : 
-                            numbering(text["0"]["kor"],
-                            `<span class="korNum">`,
-                            `</span>`
-                    )}}
-                />
+                <div className="korContents">
+                    {numbering(
+                        text["0"]["kor"], 
+                        <span className="korNum">,</span>
+                    )}
+                </div>
             </MainText>
             <ImgBox 
                 marginTop={"10"} 

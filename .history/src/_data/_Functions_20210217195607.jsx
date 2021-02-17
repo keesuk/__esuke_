@@ -104,5 +104,6 @@ export function numbering(text, tagF, tagB) {
         return txt
     }
     
+    console.log(replaceAll(text, checkArr))
     return replaceAll(text, checkArr)
 }

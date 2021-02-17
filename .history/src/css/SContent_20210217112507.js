@@ -214,10 +214,6 @@ export const MainText = styled.div`
             font-family: 'Cormorant Garamond', serif;
             font-weight: 300;
             font-size: 1.2rem;
-
-            &::selection{
-                background-color: ${colors["yellowGreen"]};
-            }
         }
     }
 `;

@@ -92,17 +92,13 @@ export function numbering(text, tagF, tagB) {
     var numArr = []
 
     while ((num = regNum.exec(text)) !== null) numArr.push(num[0])
-    var checkArr = removeSame(numArr)
+    var check = removeSame(numArr)
 
-    function replaceAll(txt, arr){
-        var txt
-    
-        for(var i of arr){
-            var regNum = new RegExp(i, "g")
-            txt = txt.replace(regNum, tagF + i + tagB)
-        }
-        return txt
+    for(var i of check){
+        console.log(i)
+        text.replace(`${i}`, `${tagF}${i}${tagB}`)
+        console.log(text)
     }
-    
-    return replaceAll(text, checkArr)
+
+    return text
 }

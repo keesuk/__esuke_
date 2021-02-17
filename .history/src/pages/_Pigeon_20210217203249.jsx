@@ -56,9 +56,7 @@ const _Pigeon = () => {
                     <Marks>
                         <span className="text">
                             {marks["0"]["title"]}
-                            <span className="num">
-                                {marks["0"]["num"]}
-                            </span>
+                            <span className="num">{marks["0"]["num"]}</span>
                         </span>
                         <div className="marksIn">
                             <span className="marksInTitle">

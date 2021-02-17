@@ -96,13 +96,10 @@ export function numbering(text, tagF, tagB) {
 
     function replaceAll(txt, arr){
         var txt
-    
-        for(var i of arr){
-            var regNum = new RegExp(i, "g")
-            txt = txt.replace(regNum, tagF + i + tagB)
-        }
+        for(var i of arr) txt = txt.replace(new RegExp(i, "g"), "gsds")
         return txt
     }
     
-    return replaceAll(text, checkArr)
+    console.log(replaceAll(text, checkArr))
+    return text
 }
