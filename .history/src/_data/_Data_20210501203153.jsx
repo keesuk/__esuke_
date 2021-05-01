@@ -170,8 +170,8 @@ export const PigeonContents = {
     category : "Editorial",
     logo: <PigeonLogo/>,
     color : {
-        "main" : colorObj["pigeonColor"],
-        "subColor" : colorObj["pigeonSubColor"],
+        "main" : colors["pigeonColor"],
+        "subColor" : colors["hotPink"],
     },
     pageStyle : [
         "· intro", 

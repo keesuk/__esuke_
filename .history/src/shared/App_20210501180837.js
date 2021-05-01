@@ -13,7 +13,6 @@ import { Component } from "react";
 class App extends Component {
     render() {
         return (<>
-            <div>텍스트</div>
             {/* <header>
                 <Route path="/">
                     <Home/>

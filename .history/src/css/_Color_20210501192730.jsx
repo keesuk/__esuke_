@@ -1,0 +1,62 @@
+export const colors = {
+    "white": 
+        "#FFFFFF",
+    "lightGrey": 
+        "#FAFAFA",
+    "middleGrey": 
+        "#E3E7E3",
+    "lightVanila": 
+        "#EAE7E0",
+    "yellow": 
+        "#FFFF2F",
+    "deepYellow": 
+        "#CCAA66",
+    "orangeRed": 
+        "#F72D0D",
+    "pink": 
+        "#FE70B3",
+    "hotPink": 
+        "#E44E99",
+    "deepPink": 
+        "#ee2267",
+    "purplePinkg": 
+        "#D60F85",
+    "purple": 
+        "#D11CD1",
+    "deepPurple": 
+        "#560D56",
+    "deepDarkPurple": 
+        "#482552",
+    "lightBlue": 
+        "#006CCA",
+    "blue": 
+        "#0000FF",
+    "deepBlue": 
+        "#0303B7",
+    "lightSkyblue": 
+        "#A7EFFF",
+    "deepSkyBlue":
+        "#4DC2DC",
+    "cyan":
+        "#21F9F9",
+    "mint": 
+        "#3EB489",
+    "deepMint":
+        "#37BFBF",
+    "lightGreen":
+        "#5DD368",
+    "green":
+        "#029511",
+    "middleGreen":
+        "#007D00",
+    "darkGreen":
+        "#0E572B",
+    "yellowGreen": 
+        "#C9FF2F",
+    "black":
+        "#000000",
+}
+
+export const colorsObj = {
+
+}
