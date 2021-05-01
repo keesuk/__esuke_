@@ -1,6 +1,5 @@
 import { Component } from "react";
 import styled from "styled-components";
-import { textSizes  } from "../css/_Theme.jsx";
 // import { Route } from "react-router-dom";
 
 // import Index from "../components/Index"
@@ -11,14 +10,14 @@ import { textSizes  } from "../css/_Theme.jsx";
 // import HomeContent from "../pages/HomeContent.js";
 // import { all_portFolio  } from "../_data/_Data.jsx";
 
-const A1 = styled.div`
-    font-size: ${textSizes["A1"]}
+const a1 = styled.div`
+    
 `;
 
 class App extends Component {
     render() {
         return (<>
-            <A1>A1 TextA1 TextA1 TextA1 TextA1 TextA1 TextA1 TextA1 TextA1 TextA1 TextA1 TextA1 Text</A1>
+            <div>텍스트</div>
             {/* <header>
                 <Route path="/">
                     <Home/>

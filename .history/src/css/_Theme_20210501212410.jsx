@@ -5,11 +5,11 @@ export const textSizes = {
     "A4" : "1.2rem",
     "A5" : "1.1rem",
     "A6" : "1rem",
-    "A7" : "0.6rem",
-    "A8" : "0.5rem",
-    "A9" : "0.4rem",
-    "A10" : "0.3rem",
-    "A11" : "0.1rem",
+    "A7" : ".6rem",
+    "A8" : ".5rem",
+    "A9" : ".4rem",
+    "A10" : ".3rem",
+    "A11" : ".1rem",
 }
 
 export const lines = {

@@ -1,15 +1,14 @@
 export const textSizes = {
     "A1" : "2.6rem",
-    "A2" : "1.5rem",
-    "A3" : "1.4rem",
-    "A4" : "1.2rem",
-    "A5" : "1.1rem",
-    "A6" : "1rem",
-    "A7" : "0.6rem",
-    "A8" : "0.5rem",
-    "A9" : "0.4rem",
-    "A10" : "0.3rem",
-    "A11" : "0.1rem",
+    "A1" : "2.6rem",
+    "A1" : "2.6rem",
+    "A1" : "2.6rem",
+    "A1" : "2.6rem",
+    "A1" : "2.6rem",
+    "A1" : "2.6rem",
+    "A1" : "2.6rem",
+    "A1" : "2.6rem",
+    "A1" : "2.6rem",
 }
 
 export const lines = {

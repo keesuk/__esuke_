@@ -18,7 +18,7 @@ const A1 = styled.div`
 class App extends Component {
     render() {
         return (<>
-            <A1>A1 TextA1 TextA1 TextA1 TextA1 TextA1 TextA1 TextA1 TextA1 TextA1 TextA1 TextA1 Text</A1>
+            <A1>텍스트</A1>
             {/* <header>
                 <Route path="/">
                     <Home/>
