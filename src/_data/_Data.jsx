@@ -23,7 +23,7 @@ import Samsara from "../pages/_Samsara.jsx"
 import SamsaraImg from "./img/Samsara.png"
 
 import { randomize } from "./_Functions.jsx";
-import { colorObj, colors } from "../css/_Theme.jsx";
+import { colors } from "../css/_Color.jsx";
 
 
 export const introDiv_introduce = <>
@@ -37,46 +37,46 @@ export const projects_link = [
     {
         "title" : "Instagram", 
         "link" : "https://www.instagram.com/keesukeeeeee/", 
-        "color": colorObj["instagramColor"]
+        "color": colors["instagramColor"]
     },{
         "title" : "Github", 
         "link" : "https://github.com/keesuk", 
-        "color": colorObj["githubColor"],
+        "color": colors["githubColor"],
     }
 ]
 export const all_portFolio = [
     {
         "title": "Pigeon",
         "category": "Editorial",
-        "color" : colorObj["pigeonSubColor"],
+        "color" : colors["hotPink"],
         "img" : PigeonImg,
         "componentR" : Pigeon,
         "componentL" : null,
     },{
         "title": "Samsara",
         "category": "Poster",
-        "color" : colorObj["samsaraSubColor"],
+        "color" : colors["purpleDeep"],
         "img" : SamsaraImg,
         "componentR" : Samsara,
         "componentL" : null,
     },{
         "title": "Ruler",
         "category": "Editorial",
-        "color" : colorObj["rulerSubColor"],
+        "color" : colors["blue"],
         "img" : RulerImg,
         "componentR" : Ruler,
         "componentL" : null,
     },{
         "title": "on Voyage",
         "category": "VR UI/UX",
-        "color" : colorObj["onvoyageSubColor"],
+        "color" : "#ffffff",
         "img" : OnvoyageImg,
         "componentR" : Onvoyage,
         "componentL" : null,
     },{
         "title": "GMF Festival",
         "category": "Branding",
-        "color" : colorObj["gmfSubColor"],
+        "color" : colors["mint"],
         "img" : GmfImg,
         "componentR" : Gmf,
         "componentL" : null,
@@ -170,8 +170,8 @@ export const PigeonContents = {
     category : "Editorial",
     logo: <PigeonLogo/>,
     color : {
-        "main" : colorObj["pigeonColor"],
-        "subColor" : colorObj["pigeonSubColor"],
+        "main" : colors["pigeonColor"],
+        "subColor" : colors["hotPink"],
     },
     pageStyle : [
         "· intro", 

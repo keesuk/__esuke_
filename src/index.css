@@ -12,8 +12,6 @@
 @media (max-width: 900px) { html { font-size: 9px; }}
 @media (max-width: 400px) { html { font-size: 1px; }}
 
-code { font-family: 'source-code-pro', 'Menlo', 'Monaco', 'Consolas', 'Courier New',monospace; }
-
 html {
     overflow: hidden;
     height: 100%;
@@ -30,6 +28,9 @@ body {
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
 }
+
+code { font-family: 'source-code-pro', 'Menlo', 'Monaco', 'Consolas', 'Courier New',monospace; }
+
 a { all: unset; }
 a:visited { color: inherit; }
 button { all: unset; cursor: pointer; }
