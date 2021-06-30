@@ -1,12 +1,12 @@
 import { Component } from "react";
 import { Route } from "react-router-dom";
 
-// import Index from "../components/Index"
-// import Home from "../components/Home.js"
-// import Menu from "../components/Menu"
-// import Left from "../components/Left"
+import Index from "../components/Index"
+import Home from "../components/Home.js"
+import Menu from "../components/Menu"
+import Left from "../components/Left"
 
-import HomePage from "../pages/HomePage";
+import HomeContent from "../pages/HomeContent.js";
 import { portFolioContents  } from "../_data/_Data.jsx";
 
 
@@ -18,7 +18,7 @@ class App extends Component {
                 <Menu/>
                 <Index/> */}
             </Route>
-            <Route exact path="/" component={HomePage}/>
+            <Route exact path="/" component={HomeContent}/>
             {portFolioContents.map(v => 
                 <Route 
                     path={"/" + v["title"]} 
@@ -26,7 +26,7 @@ class App extends Component {
                     component={v["componentR"]}
                 />
             )}
-            {/* <Route path="/" component={Left}/> */}
+            <Route path="/" component={Left}/>
         </>)
     }
 }

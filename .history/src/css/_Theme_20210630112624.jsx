@@ -77,7 +77,7 @@ const colors = {
         "#662583",
 }
 
-const colorObjs = {
+const colorObj = {
     "mark": colors["yellowGreen"],
     "rainbow": "linear-gradient(to right, red, orange, yellow, green, cyan, blue, violet)",
 
@@ -111,7 +111,7 @@ const lines = {
     "subTitleLine": `.025rem dashed ${colors["black"]}`,
     "subTagLine": `.02rem solid ${colors["orangeRed"]}`,
     "subStickerLine": `.01rem solid ${colors["deepGrey"]}`,
-    "cellLine": `.1rem solid ${colors["lightSkyblue"]}`,
+    "cellLine": `.02rem solid ${colors["lightSkyblue"]}`,
     "postItContentLine" : ".13rem solid",
     "postItMenuLine" : "2px solid #000000",
 }
@@ -130,14 +130,14 @@ const fontSizes = {
     "A11" : "0.5rem",
 }
 
-const fontFamilys = {
+const fontFamileys = {
     "engMono" : "'IBM Plex Mono', monospace",
     "engSerif" : "'Cormorant Garamond', serif",
     "korSans" : "'Gothic A1', sans-serif ",
     "korSerif" : "'MaruBuri-Regular', serif",
 }
 
-const fontWeights = {
+const fontWeight = {
     "extraLight" : "200",
     "light" : "300",
     "regular" : "400",
@@ -155,8 +155,8 @@ const theme = {
     colorObjs,
     lines,
     fontSizes, 
-    fontFamilys, 
-    fontWeights,
+    fontFamileys, 
+    fontWeight,
     layoutRatio,
 }
 

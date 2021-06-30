@@ -1,4 +1,4 @@
-import Pigeon from "../pages/Pigeon.js"
+import Pigeon from "../pages/_Pigeon.jsx"
 import PigeonImg from "./img/Pigeon.png"
 import PigeonLogo from "./img/_PigeonLogo.jsx";
 import Pigeon_Content1 from "./img/Pigeon_Content/Pigeon-12.png"
@@ -10,16 +10,16 @@ import Pigeon_Content6 from "./img/Pigeon_Content/Pigeon-17.png"
 import Pigeon_Content7 from "./img/Pigeon_Content/Pigeon-18.png"
 
 
-import Ruler from "../pages/Ruler.js"
+import Ruler from "../pages/_Ruler.jsx"
 import RulerImg from "./img/Ruler.png"
 
-import Onvoyage from "../pages/Onvoyage.js"
+import Onvoyage from "../pages/_Onvoyage.jsx"
 import OnvoyageImg from "./img/Onvoyage.png"
 
-import Gmf from "../pages/Gmf.js"
+import Gmf from "../pages/_Gmf.jsx"
 import GmfImg from "./img/Gmf.png"
 
-import Samsara from "../pages/Samsara.js"
+import Samsara from "../pages/_Samsara.jsx"
 import SamsaraImg from "./img/Samsara.png"
 
 import { randomize } from "./_Functions.jsx";
@@ -31,7 +31,7 @@ import theme from "../css/_Theme.jsx";
 export const welcomeMention = <>
     <mark>Keesuk Lee</mark> is a <mark>graphic Designer</mark> and <mark>Developer</mark> living in Seoul, S.Korea.
 </>
-export const otherSiteLink = [
+export const otherLink = [
     {
         "title" : "Instagram", 
         "link" : "https://www.instagram.com/keesukeeeeee/", 
@@ -131,7 +131,7 @@ export const menuAboutMe = [
 ]
 
 //-------------포폴관련--------------
-export const portFolioContents = [
+export const allPortFolio = [
     {
         "title": "Pigeon",
         "category": "Editorial",

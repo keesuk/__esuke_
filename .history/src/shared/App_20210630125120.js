@@ -6,7 +6,7 @@ import { Route } from "react-router-dom";
 // import Menu from "../components/Menu"
 // import Left from "../components/Left"
 
-import HomePage from "../pages/HomePage";
+import HomeContent from "../pages/HomeContent.js";
 import { portFolioContents  } from "../_data/_Data.jsx";
 
 
@@ -18,7 +18,7 @@ class App extends Component {
                 <Menu/>
                 <Index/> */}
             </Route>
-            <Route exact path="/" component={HomePage}/>
+            <Route exact path="/" component={HomeContent}/>
             {portFolioContents.map(v => 
                 <Route 
                     path={"/" + v["title"]} 

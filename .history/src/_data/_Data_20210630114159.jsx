@@ -31,7 +31,7 @@ import theme from "../css/_Theme.jsx";
 export const welcomeMention = <>
     <mark>Keesuk Lee</mark> is a <mark>graphic Designer</mark> and <mark>Developer</mark> living in Seoul, S.Korea.
 </>
-export const otherSiteLink = [
+export const otherLink = [
     {
         "title" : "Instagram", 
         "link" : "https://www.instagram.com/keesukeeeeee/", 

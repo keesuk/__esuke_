@@ -3,8 +3,6 @@ const colors = {
         "#FFFFFF",
     "lightGrey": 
         "#FAFAFA",
-    "middleLightGrey":
-        "#EEEEEE",
     "middleGrey": 
         "#E3E7E3",
     "middleDeepGrey":
@@ -77,17 +75,9 @@ const colors = {
         "#662583",
 }
 
-const colorObjs = {
+const colorObj = {
     "mark": colors["yellowGreen"],
     "rainbow": "linear-gradient(to right, red, orange, yellow, green, cyan, blue, violet)",
-
-    "subLayoutBackColor" : colors["middleLightGrey"],
-    "mainLayoutBackColor" : colors["white"],
-
-    "homeButtonColor" : colors["black"],
-    "subTagBackColor" : colors["lightGrey"],
-    "subStickerBackColor" : "rgba(250, 250, 250, .55)",
-    "cellEmptyBackColor": colors["middleDeepGrey"],
 
     "instagramColor": colors["instagram"],
     "githubColor": colors["github"],
@@ -104,14 +94,19 @@ const colorObjs = {
     "onvoyageSubColor": colors["white"],
     "seoulColor": colors["middleDeepGrey"],
     "seoulSubColor": colors["black"],
+
+    "homeButtonColor" : colors["black"],
+    "leftTagBackColor" : colors["lightGrey"],
+    "leftStickerBackColor" : "rgba(250, 250, 250, .55)",
+    "cellEmptyBackground": colors["middleDeepGrey"],
 }
 
 const lines = {
     "mainLayoutLine": `.2rem solid ${colors["black"]}`,
-    "subTitleLine": `.025rem dashed ${colors["black"]}`,
-    "subTagLine": `.02rem solid ${colors["orangeRed"]}`,
-    "subStickerLine": `.01rem solid ${colors["deepGrey"]}`,
-    "cellLine": `.1rem solid ${colors["lightSkyblue"]}`,
+    "leftTitleLine": `.025rem dashed ${colors["black"]}`,
+    "leftTagLine": `.02rem solid ${colors["orangeRed"]}`,
+    "leftStickerLine": `.01rem solid ${colors["deepGrey"]}`,
+    "cellLine": `.02rem solid ${colors["lightSkyblue"]}`,
     "postItContentLine" : ".13rem solid",
     "postItMenuLine" : "2px solid #000000",
 }
@@ -130,14 +125,14 @@ const fontSizes = {
     "A11" : "0.5rem",
 }
 
-const fontFamilys = {
+const fontFamileys = {
     "engMono" : "'IBM Plex Mono', monospace",
     "engSerif" : "'Cormorant Garamond', serif",
     "korSans" : "'Gothic A1', sans-serif ",
     "korSerif" : "'MaruBuri-Regular', serif",
 }
 
-const fontWeights = {
+const fontWeight = {
     "extraLight" : "200",
     "light" : "300",
     "regular" : "400",
@@ -146,17 +141,17 @@ const fontWeights = {
 }
 
 const layoutRatio = {
-    "sub" : "29",
-    "main" : "71"
+    "L" : "29",
+    "R" : "71"
 }
 
 const theme = {
     colors,
-    colorObjs,
+    colorObj,
     lines,
     fontSizes, 
-    fontFamilys, 
-    fontWeights,
+    fontFamileys, 
+    fontWeight,
     layoutRatio,
 }
 

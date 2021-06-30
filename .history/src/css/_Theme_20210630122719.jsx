@@ -111,7 +111,7 @@ const lines = {
     "subTitleLine": `.025rem dashed ${colors["black"]}`,
     "subTagLine": `.02rem solid ${colors["orangeRed"]}`,
     "subStickerLine": `.01rem solid ${colors["deepGrey"]}`,
-    "cellLine": `.1rem solid ${colors["lightSkyblue"]}`,
+    "cellLine": `.02rem solid ${colors["lightSkyblue"]}`,
     "postItContentLine" : ".13rem solid",
     "postItMenuLine" : "2px solid #000000",
 }
@@ -155,7 +155,7 @@ const theme = {
     colorObjs,
     lines,
     fontSizes, 
-    fontFamilys, 
+    fontFamileys, 
     fontWeights,
     layoutRatio,
 }
