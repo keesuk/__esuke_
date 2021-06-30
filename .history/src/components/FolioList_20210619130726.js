@@ -20,7 +20,7 @@ const FolioList = ({folioArr, category, divMargin, name}) => {
     
     let num
 
-    if(grid >= length)num = grid-length
+    if(grid >= length)num =  grid-length
     else num = grid-(length%grid)
 
     const emArr = mentArr.slice(0, num)

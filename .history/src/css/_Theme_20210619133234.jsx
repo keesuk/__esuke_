@@ -61,44 +61,31 @@ const colors = {
         "#C9FF2F",
     "black":
         "#000000",
-    "instagram": 
-        "#F58529, #DD2A7B, #8134AF, #515BD4",
-    "github": 
-        "#216e39, #30a14e, #40c463",
-    "pigeon": 
-        "#ff677f",
-    "gmf": 
-        "#219D87",
-    "ruler": 
-        "#3B44AC",
-    "samsara": 
-        "#662583",
 }
 
 const colorObj = {
     "mark": colors["yellowGreen"],
     "rainbow": "linear-gradient(to right, red, orange, yellow, green, cyan, blue, violet)",
 
-    "instagramColor": colors["instagram"],
-    "githubColor": colors["github"],
+    "leftTagBackColor" : colors["lightGrey"],
+    "leftStickerBackColor" : "rgba(250, 250, 250, .55)",
+    "cellEmptyBackground": colors["middleDeepGrey"],
 
-    "pigeonColor": colors["pigeon"],
+    "instagramColor": "#F58529, #DD2A7B, #8134AF, #515BD4",
+    "githubColor": "#216e39, #30a14e, #40c463",
+
+    "pigeonColor": "#ff677f",
     "pigeonSubColor": colors["pink"],
-    "gmfColor": colors["gmf"],
+    "gmfColor": "#219D87",
     "gmfSubColor": colors["deepMint"],
-    "rulerColor": colors["ruler"],
+    "rulerColor": "#3B44AC",
     "rulerSubColor": colors["blue"],
-    "samsaraColor": colors["samsara"],
+    "samsaraColor": "#662583",
     "samsaraSubColor": colors["deepPurple"],
     "onvoyageColor": colors["black"],
     "onvoyageSubColor": colors["white"],
     "seoulColor": colors["middleDeepGrey"],
     "seoulSubColor": colors["black"],
-
-    "homeButtonColor" : colors["black"],
-    "leftTagBackColor" : colors["lightGrey"],
-    "leftStickerBackColor" : "rgba(250, 250, 250, .55)",
-    "cellEmptyBackground": colors["middleDeepGrey"],
 }
 
 const lines = {
