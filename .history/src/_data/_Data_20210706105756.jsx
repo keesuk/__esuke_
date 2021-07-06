@@ -135,7 +135,7 @@ export const portFolioContents = [
     {
         "title": "Pigeon",
         "category": "Editorial",
-        "mainColor" : theme.colorObjs["pigeonSubColor"],
+        "color" : theme.colorObjs["pigeonSubColor"],
         "backColor" : "white",
         "img" : PigeonImg,
         "componentR" : Pigeon,
@@ -143,7 +143,7 @@ export const portFolioContents = [
     },{
         "title": "Samsara",
         "category": "Poster",
-        "mainColor" : theme.colorObjs["samsaraSubColor"],
+        "color" : theme.colorObjs["samsaraSubColor"],
         "backColor" : null,
         "img" : SamsaraImg,
         "componentR" : Samsara,
@@ -151,7 +151,7 @@ export const portFolioContents = [
     },{
         "title": "Ruler",
         "category": "Editorial",
-        "mainColor" : theme.colorObjs["rulerSubColor"],
+        "color" : theme.colorObjs["rulerSubColor"],
         "backColor" : "#F2F2F2",
         "img" : RulerImg,
         "componentR" : Ruler,
@@ -159,7 +159,7 @@ export const portFolioContents = [
     },{
         "title": "on Voyage",
         "category": "UI/UX",
-        "mainColor" : theme.colorObjs["onvoyageSubColor"],
+        "color" : theme.colorObjs["onvoyageSubColor"],
         "backColor" : "black",
         "img" : OnvoyageImg,
         "componentR" : Onvoyage,
@@ -167,7 +167,7 @@ export const portFolioContents = [
     },{
         "title": "GMF Festival",
         "category": "Branding",
-        "mainColor" : theme.colorObjs["gmfSubColor"],
+        "color" : theme.colorObjs["gmfSubColor"],
         "backColor" : null,
         "img" : GmfImg,
         "componentR" : Gmf,

@@ -7,7 +7,6 @@ import { mentInEmptyCell } from "../../_data/_Data.jsx";
 
 const FolioListDiv = styled.div`
     margin-top: ${({divMargin}) => divMargin.marginTop}%;
-    margin-bottom: ${({divMargin}) => divMargin.marginBottom}%;
     margin-left: ${({divMargin}) => divMargin.marginLeft}%;
     margin-right: ${({divMargin}) => divMargin.marginRight}%;
     display: grid;
@@ -18,7 +17,6 @@ const FolioListDiv = styled.div`
 FolioListDiv.defaultProps = {
     divMargin: {
         marginTop: "10",
-        marginBottom: "10",
         marginLeft: "3.5",
         marginRight: "5",
 }}
@@ -47,16 +45,14 @@ const FolioCell = styled.div`
         left: .2rem;
         right: .08rem;
     }
-
     .cellWrap {
         position: relative;
         width: 88%;
-        margin-left: 6%;
-        margin-right: 6%;
+        padding-left: 6%;
+        padding-right: 6%;
+        padding-top: 6%;
+        padding-bottom: 6%;
         height: 88%;
-        margin-top: 6%;
-        margin-bottom: 6%;
-        background-color: ${({backColor}) => backColor};
 
         &:after { 
             content: "";
@@ -72,42 +68,46 @@ const FolioCell = styled.div`
             visibility: visible;
         }
 
-        .cellWrapInside {
-
-            .img {
-                ${({category}) => category == "Branding" 
-                    ? `display: block;
-                    margin: auto;
-                    width: 100%;`
-                    : (category == "Editorial" 
-                    ? `display: block;
-                    margin: auto;
-                    width: 100%;`
-                    : (category == "Poster"
-                    ? `display: block;
-                    margin: auto;
-                    width: 100%;
-                    object-fit: cover;`
-                    : (category == "UI/UX"
-                    ? `display: block;
-                    margin: auto;
-                    width: 100%;`
-                    : null)))
-                }}
-            .content_text {
-                position: absolute;
-                top: 0;
-                font-size: ${theme.fontObjs["cell"]["fontSize"]};
-                font-weight: ${theme.fontObjs["cell"]["fontWeight"]};
-                font-family: ${theme.fontObjs["cell"]["fontFamily"]};
-                letter-spacing: -.05rem;
-
-                strong {
-                    font-weight: ${theme.fontObjs["cell"]["strong"]["fontWeight"]};
-                    letter-spacing: -.03rem;
+        .img {
+            ${({category}) => category == "Branding" 
+                ? `display: block;
+                margin-left: auto;
+                margin-right: auto;
+                width: 100%;`
+                : (category == "Editorial" 
+                ? `display: block;
+                margin-left: auto;
+                margin-right: auto;
+                width: 100%;`
+                : (category == "Poster"
+                ? `display: block;
+                margin-left: auto;
+                margin-right: auto;
+                width: 100%;`
+                : (category == "UI/UX"
+                ? `display: block;
+                margin-left: auto;
+                margin-right: auto;
+                width: 100%;`
+                : null)))
             }}
-        }
+        .content_text {
+            font-size: ${theme.fontObjs["cell"]["fontSize"]};
+            font-weight: ${theme.fontObjs["cell"]["fontWeight"]};
+            font-family: ${theme.fontObjs["cell"]["fontFamily"]};
+            padding-top: .2rem;
+            letter-spacing: -.05rem;
+
+            strong {
+                font-weight: ${theme.fontObjs["cell"]["strong"]["fontWeight"]};
+                letter-spacing: -.03rem;
+        }}
     }
+`;
+const ImgButtonDiv = styled.div`
+    position: absolute;
+    width: 100%;
+    height: 100%;
 `;
 const FolioCellEmpty = styled.div`
     background-color: ${theme.colorObjs["cellEmptyBackColor"]};
@@ -116,7 +116,7 @@ const FolioCellEmpty = styled.div`
     left: 2%;
     top: 2%;
     width: 96%;
-    height: 95%;
+    height: 96%;
     &:before {
         color: ${theme.colorObjs["cellEmptyTextColor"]};
         content: "✂";
@@ -165,14 +165,12 @@ const FolioList = ({folioArr, category, divMargin, name}) => {
                 >
                     <NavLink to={v["title"]}>
                         <div className="cellWrap">
-                            <div className="cellWrapInside">
-                                <img 
-                                    className="img" 
-                                    src={v["img"]} 
-                                    alt={""}/>
-                                <div className="content_text">
-                                    <strong>{v["title"]}</strong> {v["category"]}
-                                </div>
+                            <img 
+                                className="img" 
+                                src={v["img"]} 
+                                alt={""}/>
+                            <div className="content_text">
+                                <strong>{v["title"]}</strong> {v["category"]}
                             </div>
                         </div>
                     </NavLink>

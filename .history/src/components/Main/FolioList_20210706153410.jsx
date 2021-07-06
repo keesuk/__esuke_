@@ -53,9 +53,9 @@ const FolioCell = styled.div`
         width: 88%;
         margin-left: 6%;
         margin-right: 6%;
-        height: 88%;
+        height: 90%;
         margin-top: 6%;
-        margin-bottom: 6%;
+        margin-bottom: 4%;
         background-color: ${({backColor}) => backColor};
 
         &:after { 
@@ -87,25 +87,27 @@ const FolioCell = styled.div`
                     ? `display: block;
                     margin: auto;
                     width: 100%;
+                    height: 20rem;
                     object-fit: cover;`
                     : (category == "UI/UX"
                     ? `display: block;
                     margin: auto;
                     width: 100%;`
                     : null)))
-                }}
-            .content_text {
-                position: absolute;
-                top: 0;
-                font-size: ${theme.fontObjs["cell"]["fontSize"]};
-                font-weight: ${theme.fontObjs["cell"]["fontWeight"]};
-                font-family: ${theme.fontObjs["cell"]["fontFamily"]};
-                letter-spacing: -.05rem;
+                }
 
-                strong {
-                    font-weight: ${theme.fontObjs["cell"]["strong"]["fontWeight"]};
-                    letter-spacing: -.03rem;
-            }}
+                .content_text {
+                    font-size: ${theme.fontObjs["cell"]["fontSize"]};
+                    font-weight: ${theme.fontObjs["cell"]["fontWeight"]};
+                    font-family: ${theme.fontObjs["cell"]["fontFamily"]};
+                    padding-top: .2rem;
+                    letter-spacing: -.05rem;
+
+                    strong {
+                        font-weight: ${theme.fontObjs["cell"]["strong"]["fontWeight"]};
+                        letter-spacing: -.03rem;
+                }}
+            }
         }
     }
 `;
@@ -169,10 +171,12 @@ const FolioList = ({folioArr, category, divMargin, name}) => {
                                 <img 
                                     className="img" 
                                     src={v["img"]} 
-                                    alt={""}/>
+                                    alt={""}>
                                 <div className="content_text">
-                                    <strong>{v["title"]}</strong> {v["category"]}
+                                    <strong>{v["title"]}</strong> 
+                                    {v["category"]}
                                 </div>
+                                </img>
                             </div>
                         </div>
                     </NavLink>

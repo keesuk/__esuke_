@@ -86,7 +86,8 @@ const FolioCell = styled.div`
                     : (category == "Poster"
                     ? `display: block;
                     margin: auto;
-                    width: 100%;
+                    width: 10rem;
+                    height: calc(10rem * 1.72);
                     object-fit: cover;`
                     : (category == "UI/UX"
                     ? `display: block;
@@ -171,7 +172,8 @@ const FolioList = ({folioArr, category, divMargin, name}) => {
                                     src={v["img"]} 
                                     alt={""}/>
                                 <div className="content_text">
-                                    <strong>{v["title"]}</strong> {v["category"]}
+                                    <strong>{v["title"]}</strong> 
+                                    {v["category"]}
                                 </div>
                             </div>
                         </div>

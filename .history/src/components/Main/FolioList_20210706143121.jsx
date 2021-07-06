@@ -56,7 +56,6 @@ const FolioCell = styled.div`
         height: 88%;
         margin-top: 6%;
         margin-bottom: 6%;
-        background-color: ${({backColor}) => backColor};
 
         &:after { 
             content: "";
@@ -73,6 +72,8 @@ const FolioCell = styled.div`
         }
 
         .cellWrapInside {
+            
+            background-color: ${({backColor}) => backColor ? backColor : "white"};
 
             .img {
                 ${({category}) => category == "Branding" 
@@ -86,8 +87,7 @@ const FolioCell = styled.div`
                     : (category == "Poster"
                     ? `display: block;
                     margin: auto;
-                    width: 100%;
-                    object-fit: cover;`
+                    width: 100%;`
                     : (category == "UI/UX"
                     ? `display: block;
                     margin: auto;
@@ -95,11 +95,10 @@ const FolioCell = styled.div`
                     : null)))
                 }}
             .content_text {
-                position: absolute;
-                top: 0;
                 font-size: ${theme.fontObjs["cell"]["fontSize"]};
                 font-weight: ${theme.fontObjs["cell"]["fontWeight"]};
                 font-family: ${theme.fontObjs["cell"]["fontFamily"]};
+                padding-top: .2rem;
                 letter-spacing: -.05rem;
 
                 strong {
@@ -165,14 +164,13 @@ const FolioList = ({folioArr, category, divMargin, name}) => {
                 >
                     <NavLink to={v["title"]}>
                         <div className="cellWrap">
-                            <div className="cellWrapInside">
-                                <img 
-                                    className="img" 
-                                    src={v["img"]} 
-                                    alt={""}/>
-                                <div className="content_text">
-                                    <strong>{v["title"]}</strong> {v["category"]}
-                                </div>
+                            <img 
+                                className="img" 
+                                src={v["img"]} 
+                                alt={""}/>
+                            <div className="content_text">
+                                <strong>{v["title"]}</strong> 
+                                {v["category"]}
                             </div>
                         </div>
                     </NavLink>

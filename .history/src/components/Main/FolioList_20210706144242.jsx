@@ -53,9 +53,9 @@ const FolioCell = styled.div`
         width: 88%;
         margin-left: 6%;
         margin-right: 6%;
-        height: 88%;
+        height: 90%;
         margin-top: 6%;
-        margin-bottom: 6%;
+        margin-bottom: 4%;
         background-color: ${({backColor}) => backColor};
 
         &:after { 
@@ -73,6 +73,8 @@ const FolioCell = styled.div`
         }
 
         .cellWrapInside {
+            padding-top: 10%;
+            padding-bottom: 10%;
 
             .img {
                 ${({category}) => category == "Branding" 
@@ -86,8 +88,7 @@ const FolioCell = styled.div`
                     : (category == "Poster"
                     ? `display: block;
                     margin: auto;
-                    width: 100%;
-                    object-fit: cover;`
+                    width: 100%;`
                     : (category == "UI/UX"
                     ? `display: block;
                     margin: auto;
@@ -95,11 +96,10 @@ const FolioCell = styled.div`
                     : null)))
                 }}
             .content_text {
-                position: absolute;
-                top: 0;
                 font-size: ${theme.fontObjs["cell"]["fontSize"]};
                 font-weight: ${theme.fontObjs["cell"]["fontWeight"]};
                 font-family: ${theme.fontObjs["cell"]["fontFamily"]};
+                padding-top: .2rem;
                 letter-spacing: -.05rem;
 
                 strong {
@@ -171,7 +171,8 @@ const FolioList = ({folioArr, category, divMargin, name}) => {
                                     src={v["img"]} 
                                     alt={""}/>
                                 <div className="content_text">
-                                    <strong>{v["title"]}</strong> {v["category"]}
+                                    <strong>{v["title"]}</strong> 
+                                    {v["category"]}
                                 </div>
                             </div>
                         </div>

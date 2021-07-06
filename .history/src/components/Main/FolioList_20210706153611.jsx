@@ -87,6 +87,7 @@ const FolioCell = styled.div`
                     ? `display: block;
                     margin: auto;
                     width: 100%;
+                    height: 16rem;
                     object-fit: cover;`
                     : (category == "UI/UX"
                     ? `display: block;
@@ -96,7 +97,6 @@ const FolioCell = styled.div`
                 }}
             .content_text {
                 position: absolute;
-                top: 0;
                 font-size: ${theme.fontObjs["cell"]["fontSize"]};
                 font-weight: ${theme.fontObjs["cell"]["fontWeight"]};
                 font-family: ${theme.fontObjs["cell"]["fontFamily"]};
@@ -171,7 +171,8 @@ const FolioList = ({folioArr, category, divMargin, name}) => {
                                     src={v["img"]} 
                                     alt={""}/>
                                 <div className="content_text">
-                                    <strong>{v["title"]}</strong> {v["category"]}
+                                    <strong>{v["title"]}</strong> 
+                                    {v["category"]}
                                 </div>
                             </div>
                         </div>

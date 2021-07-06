@@ -26,6 +26,8 @@ FolioListDiv.defaultProps = {
 const FolioCell = styled.div`
     position: relative;
     width: 100%;
+    padding-top: 10%;
+    padding-bottom: 10%;
     -webkit-filter: drop-shadow(.12rem .1rem .12rem rgba(0,0,0,0.6));
     background-color: white;
     background: radial-gradient(
@@ -56,7 +58,7 @@ const FolioCell = styled.div`
         height: 88%;
         margin-top: 6%;
         margin-bottom: 6%;
-        background-color: ${({backColor}) => backColor};
+        background-color: ${({backColor}) => backColor ? backColor : "white"};
 
         &:after { 
             content: "";
@@ -72,41 +74,36 @@ const FolioCell = styled.div`
             visibility: visible;
         }
 
-        .cellWrapInside {
-
-            .img {
-                ${({category}) => category == "Branding" 
-                    ? `display: block;
-                    margin: auto;
-                    width: 100%;`
-                    : (category == "Editorial" 
-                    ? `display: block;
-                    margin: auto;
-                    width: 100%;`
-                    : (category == "Poster"
-                    ? `display: block;
-                    margin: auto;
-                    width: 100%;
-                    object-fit: cover;`
-                    : (category == "UI/UX"
-                    ? `display: block;
-                    margin: auto;
-                    width: 100%;`
-                    : null)))
-                }}
-            .content_text {
-                position: absolute;
-                top: 0;
-                font-size: ${theme.fontObjs["cell"]["fontSize"]};
-                font-weight: ${theme.fontObjs["cell"]["fontWeight"]};
-                font-family: ${theme.fontObjs["cell"]["fontFamily"]};
-                letter-spacing: -.05rem;
-
-                strong {
-                    font-weight: ${theme.fontObjs["cell"]["strong"]["fontWeight"]};
-                    letter-spacing: -.03rem;
+        .img {
+            ${({category}) => category == "Branding" 
+                ? `display: block;
+                margin: auto;
+                width: 100%;`
+                : (category == "Editorial" 
+                ? `display: block;
+                margin: auto;
+                width: 100%;`
+                : (category == "Poster"
+                ? `display: block;
+                margin: auto;
+                width: 100%;`
+                : (category == "UI/UX"
+                ? `display: block;
+                margin: auto;
+                width: 100%;`
+                : null)))
             }}
-        }
+        .content_text {
+            font-size: ${theme.fontObjs["cell"]["fontSize"]};
+            font-weight: ${theme.fontObjs["cell"]["fontWeight"]};
+            font-family: ${theme.fontObjs["cell"]["fontFamily"]};
+            padding-top: .2rem;
+            letter-spacing: -.05rem;
+
+            strong {
+                font-weight: ${theme.fontObjs["cell"]["strong"]["fontWeight"]};
+                letter-spacing: -.03rem;
+        }}
     }
 `;
 const FolioCellEmpty = styled.div`
@@ -165,14 +162,13 @@ const FolioList = ({folioArr, category, divMargin, name}) => {
                 >
                     <NavLink to={v["title"]}>
                         <div className="cellWrap">
-                            <div className="cellWrapInside">
-                                <img 
-                                    className="img" 
-                                    src={v["img"]} 
-                                    alt={""}/>
-                                <div className="content_text">
-                                    <strong>{v["title"]}</strong> {v["category"]}
-                                </div>
+                            <img 
+                                className="img" 
+                                src={v["img"]} 
+                                alt={""}/>
+                            <div className="content_text">
+                                <strong>{v["title"]}</strong> 
+                                {v["category"]}
                             </div>
                         </div>
                     </NavLink>
