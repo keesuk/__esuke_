@@ -5,7 +5,7 @@ import styled from "styled-components";
 import { findCategory, useWindowSize, shuffle, getGrid } from "../../_data/_Functions.jsx";
 import { mentInEmptyCell } from "../../_data/_Data.jsx";
 
-const FolioCellsDiv = styled.div`
+const FolioListDiv = styled.div`
     margin-top: ${({divMargin}) => divMargin.marginTop}%;
     margin-bottom: ${({divMargin}) => divMargin.marginBottom}%;
     margin-left: ${({divMargin}) => divMargin.marginLeft}%;
@@ -15,9 +15,9 @@ const FolioCellsDiv = styled.div`
     grid-gap: .7rem;
     grid-auto-rows: minmax(5rem, auto);
 `;
-FolioCellsDiv.defaultProps = {
+FolioListDiv.defaultProps = {
     divMargin: {
-        marginTop: "8",
+        marginTop: "10",
         marginBottom: "10",
         marginLeft: "3.5",
         marginRight: "5",
@@ -25,8 +25,8 @@ FolioCellsDiv.defaultProps = {
 
 const FolioCell = styled.div`
     position: relative;
-    width: 100%;
-    padding-bottom: 25%;
+    width: 90%;
+    height: 10%;
     -webkit-filter: drop-shadow(.12rem .1rem .12rem rgba(0,0,0,0.6));
     background-color: white;
     background: radial-gradient(
@@ -51,67 +51,72 @@ const FolioCell = styled.div`
 
     .cellWrap {
         position: relative;
-        display: flex;
         width: 88%;
         margin-left: 6%;
         margin-right: 6%;
         margin-top: 6%;
         margin-bottom: 6%;
-        height: 113%;
         background-color: ${({backColor}) => backColor};
 
         &:after { 
             content: "";
             position: absolute;
             border-top: 0.25rem solid ${({mainColor}) => mainColor};
-            width: 112%;
+            width: 100%;
             margin-left: -6%;
             height: 50%;
-            transform: translateY(100%);
+            transform: translateY(-100%);
             visibility: hidden;
         }
         &:hover:after { 
             visibility: visible;
         }
-    }
-`;
 
-const FolioCellImg = styled.img`
-    width: 100%;
-    display: block;
+        .cellWrapInside {
 
-    ${({category}) => category === "Branding" 
-        ? "margin-top: 0; margin-bottom: auto;"
-        : (category === "Editorial" 
-        ? "margin: auto;"
-        : (category === "Poster"
-        ? "object-fit: cover;"
-        : (category === "UI/UX"
-        ? "margin: auto;"
-        : null)))
-    }
-`;
-const FolioCellText = styled.div`
-    position: absolute;
-    top: 0;
-    font-size: ${theme.fontObjs["cell"]["fontSize"]};
-    font-weight: ${theme.fontObjs["cell"]["fontWeight"]};
-    font-family: ${theme.fontObjs["cell"]["fontFamily"]};
-    letter-spacing: -.05rem;
+            .img {
+                ${({category}) => category == "Branding" 
+                    ? `display: block;
+                    margin: auto;
+                    width: 100%;`
+                    : (category == "Editorial" 
+                    ? `display: block;
+                    margin: auto;
+                    width: 100%;`
+                    : (category == "Poster"
+                    ? `display: block;
+                    margin: auto;
+                    width: 100%;
+                    object-fit: cover;`
+                    : (category == "UI/UX"
+                    ? `display: block;
+                    margin: auto;
+                    width: 100%;`
+                    : null)))
+                }}
+            .content_text {
+                position: absolute;
+                top: 0;
+                font-size: ${theme.fontObjs["cell"]["fontSize"]};
+                font-weight: ${theme.fontObjs["cell"]["fontWeight"]};
+                font-family: ${theme.fontObjs["cell"]["fontFamily"]};
+                letter-spacing: -.05rem;
 
-    strong {
-        font-weight: ${theme.fontObjs["cell"]["strong"]["fontWeight"]};
-        letter-spacing: -.03rem;
+                strong {
+                    font-weight: ${theme.fontObjs["cell"]["strong"]["fontWeight"]};
+                    letter-spacing: -.03rem;
+            }}
+        }
     }
 `;
 const FolioCellEmpty = styled.div`
     background-color: ${theme.colorObjs["cellEmptyBackColor"]};
     border: ${theme.lines["cellEmptyLine"]};
     position: relative;
-    left: 2.5%;
-    top: 2.5%;
-    width: 95.5%;
-    height: 95.5%;
+    left: 2%;
+    top: 2%;
+    width: 96%;
+    height: 95%;
     &:before {
         color: ${theme.colorObjs["cellEmptyTextColor"]};
         content: "✂";
@@ -147,28 +152,28 @@ const FolioList = ({folioArr, category, divMargin, name}) => {
     const emArr = mentArr.slice(0, num)
     
     return(
-        <FolioCellsDiv 
+        <FolioListDiv 
             divMargin={divMargin}
             grid={grid}
         >
             {folioList.map(v => 
                 <FolioCell
                     key={v["title"]}
+                    category={v["category"]}
                     mainColor={v["mainColor"]}
                     backColor={v["backColor"]}
                 >
                     <NavLink to={v["title"]}>
                         <div className="cellWrap">
-                            <FolioCellImg
-                                category={v["category"]}
-                                src={v["img"]} 
-                                alt={""}
-                            />
-                            <FolioCellText
-                                category={v["category"]}
-                            >
-                                <strong>{v["title"]}</strong> {v["category"]}
-                            </FolioCellText>
+                            <div className="cellWrapInside">
+                                <img 
+                                    className="img" 
+                                    src={v["img"]} 
+                                    alt={""}/>
+                                <div className="content_text">
+                                    <strong>{v["title"]}</strong> {v["category"]}
+                                </div>
+                            </div>
                         </div>
                     </NavLink>
                 </FolioCell>)}
@@ -180,7 +185,7 @@ const FolioList = ({folioArr, category, divMargin, name}) => {
                         <div className="ment">{v}</div>
                     </FolioCellEmpty>)
                 : null}
-        </FolioCellsDiv>
+        </FolioListDiv>
     )
 }
 export default FolioList;

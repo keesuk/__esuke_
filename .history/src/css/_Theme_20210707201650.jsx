@@ -79,7 +79,7 @@ const lines = {
     "subTitleLine": `.025rem dashed ${colors["black"]}`,
     "subTagLine": `.02rem solid ${colors["orangeRed"]}`,
     "subStickerLine": `.01rem solid ${colors["deepGrey"]}`,
-    "cellEmptyLine": `.11rem solid ${colors["lightSkyblue"]}`,
+    "cellEmptyLine": `.1rem solid ${colors["lightSkyblue"]}`,
     "postItContentLine" : ".13rem solid",
     "postItMenuLine" : "2px solid #000000",
 }

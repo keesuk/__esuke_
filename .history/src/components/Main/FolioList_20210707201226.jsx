@@ -5,7 +5,7 @@ import styled from "styled-components";
 import { findCategory, useWindowSize, shuffle, getGrid } from "../../_data/_Functions.jsx";
 import { mentInEmptyCell } from "../../_data/_Data.jsx";
 
-const FolioCellsDiv = styled.div`
+const FolioListDiv = styled.div`
     margin-top: ${({divMargin}) => divMargin.marginTop}%;
     margin-bottom: ${({divMargin}) => divMargin.marginBottom}%;
     margin-left: ${({divMargin}) => divMargin.marginLeft}%;
@@ -15,7 +15,7 @@ const FolioCellsDiv = styled.div`
     grid-gap: .7rem;
     grid-auto-rows: minmax(5rem, auto);
 `;
-FolioCellsDiv.defaultProps = {
+FolioListDiv.defaultProps = {
     divMargin: {
         marginTop: "8",
         marginBottom: "10",
@@ -76,7 +76,7 @@ const FolioCell = styled.div`
     }
 `;
 
-const FolioCellImg = styled.img`
+const FolioCellImg = stlyed.img`
     width: 100%;
     display: block;
 
@@ -89,9 +89,9 @@ const FolioCellImg = styled.img`
         : (category === "UI/UX"
         ? "margin: auto;"
         : null)))
-    }
+    }}
 `;
-const FolioCellText = styled.div`
+const FolioCellText = stlyed.div`
     position: absolute;
     top: 0;
     font-size: ${theme.fontObjs["cell"]["fontSize"]};
@@ -147,7 +147,7 @@ const FolioList = ({folioArr, category, divMargin, name}) => {
     const emArr = mentArr.slice(0, num)
     
     return(
-        <FolioCellsDiv 
+        <FolioListDiv 
             divMargin={divMargin}
             grid={grid}
         >
@@ -180,7 +180,7 @@ const FolioList = ({folioArr, category, divMargin, name}) => {
                         <div className="ment">{v}</div>
                     </FolioCellEmpty>)
                 : null}
-        </FolioCellsDiv>
+        </FolioListDiv>
     )
 }
 export default FolioList;

@@ -89,7 +89,7 @@ const FolioCellImg = styled.img`
         : (category === "UI/UX"
         ? "margin: auto;"
         : null)))
-    }
+    }}
 `;
 const FolioCellText = styled.div`
     position: absolute;
