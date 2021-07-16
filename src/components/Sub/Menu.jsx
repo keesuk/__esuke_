@@ -8,6 +8,14 @@ import { menuMenu, menuAboutMe } from '../../_data/_Data.jsx';
 import theme from "../../css/_Theme.jsx";
 
 const MenuDiv = styled.div`
+    @media (max-width: 1900px){transform: scale(0.95, 0.95)};
+    @media (max-width: 1750px){transform: scale(0.9, 0.9)};
+    @media (max-width: 1400px){transform: scale(0.85, 0.85)};
+    @media (max-width: 1150px){transform:scale(0.8, 0.8)}; 
+    @media (max-width: 900px){transform: scale(0.75, 0.75)};
+    @media (max-width: 750px){transform: scale(0.7, 0.7)};
+    @media (max-width: 400px){transform: scale(0.65, 0.65)};
+    
     transform-origin: bottom left;
     position: fixed;
     z-index: 1000;

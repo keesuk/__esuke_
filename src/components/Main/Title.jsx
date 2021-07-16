@@ -7,17 +7,24 @@ export const MainTitleDiv = styled.div`
 
     .text {
         font-size: ${theme.fontObjs["mainTitle"]["fontSize"]};
-        font-weight: ${theme.fontObjs["mainTitle"]["fontWeight"]};
+        font-weight: ${props => props.default
+            ? theme.fontObjs["mainTitle"]["fontWeight"]["home"]
+            : theme.fontObjs["mainTitle"]["fontWeight"]["page"]
+        };
         font-family: ${theme.fontObjs["mainTitle"]["fontFamily"]};
         line-height: 4.4rem;
         letter-spacing: -.06rem;
         
         mark {
-            font-weight: ${theme.fontObjs["mainTitle"]["mark"]["fontWeight"]};
+            font-weight: ${props => props.default
+                ? theme.fontObjs["mainTitle"]["mark"]["fontWeight"]["home"]
+                : theme.fontObjs["mainTitle"]["mark"]["fontWeight"]["page"]
+            };
             font-style: ${theme.fontObjs["mainTitle"]["mark"]["fontStyle"]};
             background-color: ${props => props.default 
                 ? theme.colorObjs["mark"] 
-                : props.color};
+                : props.color
+            };
             display: inline-block; 
             height: 1.4rem;
             line-height: 1.6rem;

@@ -75,34 +75,51 @@ const colorObjs = {
     "seoulSubColor": colors["black"],
     "seoulBackColor": colors["white"],
     "seoulTextColor": colors["black"],
+
+//----------------페이지------------------
+    "pageModulesOuterImgBoxLineColor" : colors["middleLightDeepGrey"],
+
+    "remarkTextColor" : colors["lightBlack"],
+    "InnerBackgroundColor" : colors["black"],
 }
 
 const lines = {
-    "mainLayoutLine": `.2rem solid ${colorObjs["mainLayoutLineColor"]}`,
+    "mainLayoutLine": `0.2rem solid ${colorObjs["mainLayoutLineColor"]}`,
 
-    "subPageLine" : `.12rem dashed ${colorObjs["subPageLineColor"]}`,
-    "subTagLineBold": `.22rem solid ${colorObjs["subTagLineColor"]}`,
-    "subTagLineLight": `.1rem solid ${colorObjs["subTagLineColor"]}`,
-    "subTagInLineBold": `.13rem solid ${colorObjs["subTagLineColor"]}`,
-    "subTagInLineLight": `.1rem solid ${colorObjs["subTagLineLightColor"]}`,
-    "subTagStkBackLineDark": `.1rem solid ${colorObjs["subTagStkBackLineDarkColor"]}`,
-    "subTagStkBackLineLight": `.1rem solid ${colorObjs["subTagStkBackLineLightColor"]}`,
+    "subPageLine" : `0.12rem dashed ${colorObjs["subPageLineColor"]}`,
+    "subTagLineBold": `0.22rem solid ${colorObjs["subTagLineColor"]}`,
+    "subTagLineLight": `0.1rem solid ${colorObjs["subTagLineColor"]}`,
+    "subTagInLineBold": `0.13rem solid ${colorObjs["subTagLineColor"]}`,
+    "subTagInLineLight": `0.05rem solid ${colorObjs["subTagLineLightColor"]}`,
+    "subTagStkBackLineDark": `0.02rem solid ${colorObjs["subTagStkBackLineDarkColor"]}`,
+    "subTagStkBackLineLight": `0.02rem solid ${colorObjs["subTagStkBackLineLightColor"]}`,
 
-    "subMenuAboutMeLine": `.12rem solid ${colorObjs["subMenuAboutMeDeepColor"]}`,
-    "subMenuContactLine": `.12rem solid ${colorObjs["subMenuContactDeepColor"]}`,
+    "subMenuAboutMeLine": `0.13rem solid ${colorObjs["subMenuAboutMeDeepColor"]}`,
+    "subMenuContactLine": `0.13rem solid ${colorObjs["subMenuContactDeepColor"]}`,
+    "postItContentLine" : `0.13rem solid`,
 
-    "cellEmptyLine": `.11rem solid ${colorObjs["cellEmptyLineColor"]}`,
-    "postItContentLine" : ".13rem solid",
+    "cellEmptyLine": `0.11rem solid ${colorObjs["cellEmptyLineColor"]}`,
+
+    "pageModulesOuterImgBoxLine" : `.05rem solid ${colorObjs["pageModulesOuterImgBoxLineColor"]}`,
 }
 
 const fontObjs = {
     "mainTitle" : {
-        "fontWeight" : fontWeights["medium"],
+        "fontWeight" : {
+            "home" : fontWeights["medium"],
+            "page" : fontWeights["regular"],
+        },
         "fontFamily" : fontFamilys["engMono"],
         "fontSize" : fontSizes["A1"],
         "mark" : {
-            "fontStyle" : "italic",
-            "fontWeight" : fontWeights["semiBold"],
+            "fontStyle" : {
+                "home" : "italic",
+                "page" : "",
+            },
+            "fontWeight" : {
+                "home" : fontWeights["semiBold"],
+                "page" : fontWeights["regular"],
+            }
         }
     },
     "linkA" : {
@@ -133,7 +150,8 @@ const fontObjs = {
 
 const layoutRatio = {
     "sub" : 29,
-    "main" : 71
+    "main" : 71,
+    "topMargin" : 3,
 }
 
 const theme = {

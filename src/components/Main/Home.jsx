@@ -9,7 +9,7 @@ const HomeButton = styled.button`
     border-bottom: ${theme.lines["mainLayoutLine"]};
     border-left: ${theme.lines["mainLayoutLine"]};
     background-color: white;
-    height: 3rem;
+    height: ${theme.layoutRatio["topMargin"]}rem;
     position: fixed;
     box-sizing: border-box;
     z-index: 3;

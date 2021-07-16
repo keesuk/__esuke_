@@ -71,6 +71,10 @@ const colors = {
         "#C9FF2F",
     "black":
         "#000000",
+    "lightBlack":
+        "#222222",
+    "middleBlack":
+        "#111111",
     "instagram": 
         "#F58529, #DD2A7B, #8134AF, #515BD4",
     "github": 
@@ -87,17 +91,17 @@ const colors = {
 
 
 const fontSizes = {
-    "A1" : "2.6rem",
-    "A2" : "1.5rem",
-    "A3" : "1.4rem",
-    "A4" : "1.2rem",
-    "A5" : "1.1rem",
-    "A6" : "1rem",
-    "A7" : "0.9rem",
-    "A8" : "0.8rem",
-    "A9" : "0.7rem",
-    "A10" : "0.6rem",
-    "A11" : "0.5rem",
+    "A1" : "2.8rem",
+    "A2" : "1.7rem",
+    "A3" : "1.6rem",
+    "A4" : "1.4rem",
+    "A5" : "1.3rem",
+    "A6" : "1.2rem",
+    "A7" : "1.1rem",
+    "A8" : "0.9rem",
+    "A9" : "0.8rem",
+    "A10" : "0.7rem",
+    "A11" : "0.6rem",
 }
 const fontFamilys = {
     "engMono" : "'IBM Plex Mono', monospace",
