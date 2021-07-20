@@ -1,7 +1,7 @@
 import { useRef, createRef } from "react";
 
 import { numbering } from "../_data/_Functions.jsx";
-import { portFolioContents, RulerContents } from "../_data/_Data.jsx";
+import { portFolioContents, PigeonContents } from "../_data/_Data.jsx";
 
 import pageModules from "../components/Main/PageModules.jsx";
 import { MainLayout } from "../components/_Layout.jsx";
@@ -12,7 +12,7 @@ import FolioList from "../components/Main/FolioList.jsx";
 
 
 const _Ruler = () => {
-    const { name, pageStyle, marks, title, category, color, logo, mainText, subText, image } = RulerContents
+    const { name, pageStyle, marks, title, category, color, logo, mainText, subText, image } = PigeonContents
     const { SubTitle, TitleBoxLogo, Remark, MainText, SubText, OuterImgBox, InnerImgBoxBackground, InnerImgBox, Marks, } = pageModules
 
     const styRefs = useRef([])    

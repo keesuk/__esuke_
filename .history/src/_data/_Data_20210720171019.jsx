@@ -15,7 +15,6 @@ import Pigeon_Content7 from "./img/Pigeon_Content/Pigeon-18.png"
 
 import Ruler from "../pages/Ruler.js"
 import RulerImg from "./img/Ruler.png"
-import RulerLogo from "./img/_RulerLogo.jsx"
 
 import Onvoyage from "../pages/Onvoyage.js"
 import OnvoyageImg from "./img/Onvoyage.png"

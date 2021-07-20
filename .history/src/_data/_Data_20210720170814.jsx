@@ -15,7 +15,6 @@ import Pigeon_Content7 from "./img/Pigeon_Content/Pigeon-18.png"
 
 import Ruler from "../pages/Ruler.js"
 import RulerImg from "./img/Ruler.png"
-import RulerLogo from "./img/_RulerLogo.jsx"
 
 import Onvoyage from "../pages/Onvoyage.js"
 import OnvoyageImg from "./img/Onvoyage.png"
@@ -171,14 +170,15 @@ export const portFolioContents = {
         "backColor" : theme.colorObjs["rulerBackColor"],
         "textColor" : theme.colorObjs["rulerTextColor"],
         "year" : "2017",
-        "img" : RulerImg,
-        "componentR" : Ruler,
+        "img" : PigeonImg,
+        "componentR" : Pigeon,
         "componentL" : null,
         "tag" : {
             "Assignment" : "This is a project that visualizes sentiment data for a region by utilizing the website UI.",
             "Solution" : "This is a project that visualizes sentiment data for a region by utilizing the website UI.",
             "Project Includes" : "Logo / Editorial / Infographic"
         }
+    },
     },
     "on Voyage": {
         "title": "on Voyage",
@@ -211,85 +211,6 @@ export const PigeonContents = {
     color : {
         "main" : theme.colorObjs["pigeonColor"],
         "sub" : theme.colorObjs["pigeonSubColor"],
-    },
-    pageStyle : [
-        "· intro", 
-        "· output"
-    ],
-    marks : {
-        "0" : {
-            "title" : "festival",
-            "num" : "1",
-            "textEng" : "festival is that they are temporary and provide a similar experience to consumers",
-            "textKor" : "페스티벌들의 한계는 한시적이고, 매년 비슷한 방식, 비슷한 게스트 등 소비자에게 유사할 수 밖에 없는 경험을 제공한다는 것",
-        }
-    },
-    mainText : {
-        "0" : {
-            "eng" : "is that they are temporary and provide a similar experience to consumers, such as similar guests, every year. This happens because you cannot help but consider realistic aspects such as ticket power and customer base. Branded in 2017, the Grand Mint Festival not only had such chronic problems, but also had a clear lack of identity and expansion. In addition, the concept of the 2017 Grand Mint Festival was considered to be insufficient branding to convey the originally intended",
-            "kor" : "페스티벌들의 한계는 한시적이고, 매년 비슷한 방식, 비슷한 게스트 등 소비자에게 유사할 수 밖에 없는 경험을 제공한다는 것입니다. 이는 티켓파워, 고객층 유지 등 현실적인 부분을 고려하지 않을 수 없기 때문에 발생합니다. 2017년 브랜딩된 ‘그랜드 민트 페스티벌’은 그러한 고질적인 문제를 담고 있었습니다. 인디밴드 플랫폼 민트페이퍼 산하의 페스티벌이고, 2007년 인디밴드 라인업으로 진행했던 체제와 다르게 2017년이 된 지금에서는 장르 분문 다양한 아티스트들이 출현 하고 있습니다."
-        },
-    },
-    subText : {
-        "0" : {
-            "color" : "white",
-            "eng" : "is that they are temporary and provide a similar experience to consumers, such as similar guests, every year. This happens because you cannot help but consider realistic aspects such as ticket power and customer base. Branded in 2017, the Grand Mint Festival not only had such chronic problems, but also had a clear lack of identity and expansion. In addition, the concept of the 2017 Grand Mint Festival was considered to be insufficient branding to convey the originally intended",
-            "kor" : "페스티벌들의 한계는 한시적이고, 매년 비슷한 방식, 비슷한 게스트 등 소비자에게 유사할 수 밖에 없는 경험을 제공한다는 것입니다. 이는 티켓파워, 고객층 유지 등 현실적인 부분을 고려하지 않을 수 없기 때문에 발생합니다. 2017년 브랜딩된 ‘그랜드 민트 페스티벌’은 그러한 고질적인 문제를 담고 있었습니다. 인디밴드 플랫폼 민트페이퍼 산하의 페스티벌이고, 2007년 인디밴드 라인업으로 진행했던 체제와 다르게 2017년이 된 지금에서는 장르 분문 다양한 아티스트들이 출현 하고 있습니다."
-        },
-    },
-    image : {
-        "0" : {
-            "img" : Pigeon_Content1,
-            "txtEng" : "index page",
-            "txtKor" : "목차 페이지",
-            "color" : theme.colorObjs["remarksTextColor"],
-        },
-        "1" : {
-            "img" : Pigeon_Content2,
-            "txtEng" : "about Pigeon",
-            "txtKor" : "피죤 브랜드 소개",
-            "color" : "white",
-        },
-        "2" : {
-            "img" : Pigeon_Content3,
-            "txtEng" : "Commercials",
-            "txtKor" : "피죤의 광고",
-            "color" : "white",
-        },
-        "3" : {
-            "img" : Pigeon_Content4,
-            "txtEng" : "Brand Sound",
-            "txtKor" : "브랜드 사운드",
-            "color" : "white",
-        },
-        "4" : {
-            "img" : Pigeon_Content5,
-            "txtEng" : "Packaging",
-            "txtKor" : "패키지구성",
-            "color" : "white",
-        },
-        "5" : {
-            "img" : Pigeon_Content6,
-            "txtEng" : "Logo Redesign",
-            "txtKor" : "로고 리디자인",
-            "color" : "white",
-        },
-        "6" : {
-            "img" : Pigeon_Content7,
-            "txtEng" : "Fragrance Ranking",
-            "txtKor" : "향기랭킹",
-            "color" : "white",
-        },
-    }
-}
-export const RulerContents = {
-    name : "Ruler",
-    title : "Ruler Brand Book:",
-    category : "Editorial",
-    logo: <RulerLogo/>,
-    color : {
-        "main" : theme.colorObjs["rulerColor"],
-        "sub" : theme.colorObjs["rulerSubColor"],
     },
     pageStyle : [
         "· intro", 
