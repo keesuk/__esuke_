@@ -13,21 +13,27 @@ export const MainTitleDiv = styled.div`
         };
         font-family: ${theme.fontObjs["mainTitle"]["fontFamily"]};
         line-height: 4.4rem;
-        letter-spacing: -.06rem;
+        letter-spacing: ${props => props.default
+                ? "-0.06rem"
+                : "-0.07rem"
+            };
         
         mark {
             font-weight: ${props => props.default
                 ? theme.fontObjs["mainTitle"]["mark"]["fontWeight"]["home"]
                 : theme.fontObjs["mainTitle"]["mark"]["fontWeight"]["page"]
             };
-            font-style: ${theme.fontObjs["mainTitle"]["mark"]["fontStyle"]};
+            font-style: ${props => props.default
+                ? theme.fontObjs["mainTitle"]["mark"]["fontStyle"]["home"]
+                : theme.fontObjs["mainTitle"]["mark"]["fontStyle"]["page"]
+            };
             background-color: ${props => props.default 
                 ? theme.colorObjs["mark"] 
                 : props.color
             };
             display: inline-block; 
-            height: 1.4rem;
-            line-height: 1.6rem;
+            height: ${({TorB}) => TorB === "T" ? "0.25rem" : "1.4rem"};
+            line-height: ${({TorB}) => TorB === "T" ? "0.1rem" : "1.6rem"};
             padding-top: -1rem;
         }
         .link {

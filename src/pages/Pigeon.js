@@ -12,8 +12,8 @@ import FolioList from "../components/Main/FolioList.jsx";
 
 
 const _Pigeon = () => {
-    const { name, pageStyle, marks, title, category, color, logo, mainText, subText, image } = PigeonContents
-    const { SubTitle, TitleBoxLogo, Remark, MainText, SubText, OuterImgBox, InnerImgBoxBackground, InnerImgBox, Marks, } = pageModules
+    const { name, pageStyle, mark, title, category, color, logo, mainText, subText, image } = PigeonContents
+    const { SubTitle, TitleBoxLogo, Remark, MainText, SubText, OuterImgBox, InnerImgBoxBackground, InnerImgBox, MarkBox, } = pageModules
 
     const styRefs = useRef([])    
     styRefs.current = pageStyle.map(i => styRefs.current[i] = createRef())
@@ -22,6 +22,7 @@ const _Pigeon = () => {
         <MainLayout>
             <MainTitleDiv
                 color={color["sub"]}
+                TorB={color["TorB"]}
             >
                 <div className="text">
                     <mark>{title}</mark><br/>
@@ -32,6 +33,8 @@ const _Pigeon = () => {
                 backGroundColor={color["main"]}
                 logoTypeColor={"white"}
                 logoBackColor={"black"}
+                paddingTopBottom={"16"}
+                logoWidth={"50"}
             >
                 <div className="logoBox">
                     <div className="logo">
@@ -44,26 +47,28 @@ const _Pigeon = () => {
                 marginTop={"8"}
                 marginBottom={"0"}
             >
-                <div className="engContents" >
-                    <Marks>
+                <div className="engContents">
+                    <MarkBox
+                        color={color["sub"]}
+                    >
                         <span className="text">
-                            {marks["0"]["title"]}
+                            {mark["0"]["title"]}
                             <span className="num">
-                                {marks["0"]["num"]}
+                                {mark["0"]["num"]}
                             </span>
                         </span>
-                        <div className="marksIn">
-                            <span className="marksInTitle">
-                                {marks["0"]["title"]}/
+                        <div className="markBoxInner">
+                            <span className="titleText">
+                                {mark["0"]["title"]}/
                             </span>
-                            <span className="marksInEng">
-                                {marks["0"]["textEng"]}
+                            <span className="engText">
+                                {mark["0"]["textEng"]}
                             </span>
-                            <span className="marksInKor">
-                                {marks["0"]["textKor"]}
+                            <span className="korText">
+                                {mark["0"]["textKor"]}
                             </span>
                         </div>
-                    </Marks> 
+                    </MarkBox> 
                     {mainText["0"]["eng"]}
                 </div>
                 <div 
@@ -81,7 +86,8 @@ const _Pigeon = () => {
                 width={"60"}
                 height={"32"}
                 LorR={"L"}
-                brightnessFilter={true}
+                outlineYorN={"Y"}
+                filterYorN={"Y"}
             >
                 <div className="box">
                     <img className="img" alt="" src={image["0"]["img"]}/>
@@ -106,6 +112,7 @@ const _Pigeon = () => {
                 paddingRight={"5"}
                 marginTop={"0"}
                 marginBottom={"0"}
+                color={image["imgBoxBack"]}
                 ref={styRefs.current[1]}
             >
                 <InnerImgBox 

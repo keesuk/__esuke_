@@ -12,8 +12,8 @@ import FolioList from "../components/Main/FolioList.jsx";
 
 
 const _Ruler = () => {
-    const { name, pageStyle, marks, title, category, color, logo, mainText, subText, image } = RulerContents
-    const { SubTitle, TitleBoxLogo, Remark, MainText, SubText, OuterImgBox, InnerImgBoxBackground, InnerImgBox, Marks, } = pageModules
+    const { name, pageStyle, mark, title, category, color, logo, mainText, subText, image } = RulerContents
+    const { SubTitle, TitleBoxLogo, Remark, MainText, SubText, OuterImgBox, InnerImgBoxBackground, InnerImgBox, MarkBox, } = pageModules
 
     const styRefs = useRef([])    
     styRefs.current = pageStyle.map(i => styRefs.current[i] = createRef())
@@ -22,6 +22,7 @@ const _Ruler = () => {
         <MainLayout>
             <MainTitleDiv
                 color={color["sub"]}
+                TorB={color["TorB"]}
             >
                 <div className="text">
                     <mark>{title}</mark><br/>
@@ -32,6 +33,8 @@ const _Ruler = () => {
                 backGroundColor={color["main"]}
                 logoTypeColor={"white"}
                 logoBackColor={"black"}
+                paddingTopBottom={"16"}
+                logoWidth={"50"}
             >
                 <div className="logoBox">
                     <div className="logo">
@@ -45,25 +48,27 @@ const _Ruler = () => {
                 marginBottom={"0"}
             >
                 <div className="engContents" >
-                    <Marks>
+                    <MarkBox
+                        color={color["sub"]}
+                    >
                         <span className="text">
-                            {marks["0"]["title"]}
+                            {mark["0"]["title"]}
                             <span className="num">
-                                {marks["0"]["num"]}
+                                {mark["0"]["num"]}
                             </span>
                         </span>
-                        <div className="marksIn">
-                            <span className="marksInTitle">
-                                {marks["0"]["title"]}/
+                        <div className="markBoxInner">
+                            <span className="titleText">
+                                {mark["0"]["title"]}/
                             </span>
-                            <span className="marksInEng">
-                                {marks["0"]["textEng"]}
+                            <span className="engText">
+                                {mark["0"]["textEng"]}
                             </span>
-                            <span className="marksInKor">
-                                {marks["0"]["textKor"]}
+                            <span className="korText">
+                                {mark["0"]["textKor"]}
                             </span>
                         </div>
-                    </Marks> 
+                    </MarkBox> 
                     {mainText["0"]["eng"]}
                 </div>
                 <div 
@@ -78,10 +83,11 @@ const _Ruler = () => {
             </MainText>
             <OuterImgBox 
                 marginTop={"10"}
-                width={"60"}
-                height={"32"}
+                width={"70"}
+                height={"30"}
                 LorR={"L"}
-                brightnessFilter={true}
+                outlineYorN={"Y"}
+                filterYorN={"N"}
             >
                 <div className="box">
                     <img className="img" alt="" src={image["0"]["img"]}/>
@@ -99,6 +105,30 @@ const _Ruler = () => {
                     </Remark>
                 </div>
             </OuterImgBox>
+            <OuterImgBox 
+                marginTop={"8"}
+                width={"75"}
+                height={"80"}
+                LorR={"R"}
+                outlineYorN={"N"}
+                filterYorN={"N"}
+            >
+                <div className="box">
+                    <img className="img" alt="" src={image["1"]["img"]}/>
+                    <Remark
+                        marginTop={"-5"}
+                        marginBottom={"0"}
+                        marginLeft={"0"}
+                        marginRight={"3"}
+                        LorR={"R"}
+                        lineHeight={"1.4"}
+                        color={""}
+                    >
+                        <span className="remarkEng">{image["1"]["txtEng"]}</span>
+                        <span className="remarkKor">{image["1"]["txtKor"]}</span>
+                    </Remark>
+                </div>
+            </OuterImgBox>
             <InnerImgBoxBackground 
                 paddingTop={"13"}
                 paddingBottom={"13"}
@@ -106,36 +136,55 @@ const _Ruler = () => {
                 paddingRight={"5"}
                 marginTop={"0"}
                 marginBottom={"0"}
+                color={image["imgBoxBack"]}
                 ref={styRefs.current[1]}
             >
                 <InnerImgBox 
                     width={"80"}
-                    height={"40"}
+                    height={"34"}
                     LorR={"L"}
                     marginTop={"0"}
                 >
                     <div className="box">
-                        <img className="img" alt="" src={image["1"]["img"]}/>
-                        <Remark
-                            marginTop={".5"}
-                            marginBottom={"0"}
-                            marginLeft={"0"}
-                            marginRight={"0"}
-                            LorR={"R"}
-                            lineHeight={"1.4"}
-                            color={image["1"]["color"]}
-                        >
-                            <span className="remarkEng">{image["1"]["txtEng"]}</span>
-                            <span className="remarkKor">{image["1"]["txtKor"]}</span>
-                        </Remark> 
+                        <img className="img" alt="" src={image["2"]["img"]}/>
+                    </div>
+                </InnerImgBox>
+                <InnerImgBox 
+                    width={"80"}
+                    height={"34"}
+                    LorR={"L"}
+                    marginTop={"0"}
+                >
+                    <div className="box">
+                        <img className="img" alt="" src={image["3"]["img"]}/>
+                    </div>
+                </InnerImgBox>
+                <InnerImgBox 
+                    width={"80"}
+                    height={"34"}
+                    LorR={"L"}
+                    marginTop={"0"}
+                >
+                    <div className="box">
+                        <img className="img" alt="" src={image["4"]["img"]}/>
+                    </div>
+                </InnerImgBox>
+                <InnerImgBox 
+                    width={"80"}
+                    height={"34"}
+                    LorR={"L"}
+                    marginTop={"0"}
+                >
+                    <div className="box">
+                        <img className="img" alt="" src={image["5"]["img"]}/>
                     </div>
                 </InnerImgBox>
                 <SubText
-                        marginTop={"0"}  
-                        marginBottom={"5"}  
+                        marginTop={"5"}  
+                        marginBottom={"3"}  
                         marginLeft={"0"}  
                         marginRight={"0"}
-                        textWidth={"40"}
+                        textWidth={"35"}
                         LorR={"R"}
                         HorV={"H"}
                         textColor={subText["0"]["color"]}

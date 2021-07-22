@@ -47,6 +47,8 @@ const colors = {
         "#0000FF",
     "deepBlue": 
         "#0303B7",
+    "deepDeepBlue": 
+        "#1C2156",
     "lightSkyblue": 
         "#A7EFFF",
     "deepSkyblue":
@@ -87,6 +89,10 @@ const colors = {
         "#3B44AC",
     "samsara": 
         "#662583",
+    "wedel":
+        "#3aaa35",
+    "weEat":
+        "#f75821",
 }
 
 

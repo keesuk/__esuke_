@@ -51,6 +51,7 @@ const colorObjs = {
     "pigeonSubColor": colors["pink"],
     "pigeonBackColor": colors["white"],
     "pigeonTextColor": colors["black"],
+    "pigeonImgBoxBackColor": colors["black"],
 
     "gmfColor": colors["gmf"],
     "gmfSubColor": colors["deepMint"],
@@ -61,6 +62,7 @@ const colorObjs = {
     "rulerSubColor": colors["blue"],
     "rulerBackColor": colors["middleLightMiddleGrey"],
     "rulerTextColor": colors["black"],
+    "rulerImgBoxBackColor": colors["black"],
 
     "samsaraColor": colors["samsara"],
     "samsaraSubColor": colors["deepPurple"],
@@ -76,6 +78,16 @@ const colorObjs = {
     "seoulSubColor": colors["black"],
     "seoulBackColor": colors["white"],
     "seoulTextColor": colors["black"],
+    
+    "weDelColor": colors["weDel"],
+    "weDelSubColor": colors["darkGreen"],
+    "weDelBackColor": colors["white"],
+    "weDelTextColor": colors["black"],
+
+    "weEatColor": colors["weEat"],
+    "weEatSubColor": colors["orangeRed"],
+    "weEatBackColor": colors["white"],
+    "weEatTextColor": colors["black"],
 
 //----------------페이지------------------
     "pageModulesOuterImgBoxLineColor" : colors["middleLightDeepGrey"],
@@ -99,7 +111,7 @@ const lines = {
     "subMenuContactLine": `0.13rem solid ${colorObjs["subMenuContactDeepColor"]}`,
     "postItContentLine" : `0.13rem solid`,
 
-    "cellEmptyLine": `0.11rem solid ${colorObjs["cellEmptyLineColor"]}`,
+    "cellEmptyLine": `0.13rem dashed ${colorObjs["cellEmptyLineColor"]}`,
 
     "pageModulesOuterImgBoxLine" : `.05rem solid ${colorObjs["pageModulesOuterImgBoxLineColor"]}`,
 }

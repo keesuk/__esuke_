@@ -12,8 +12,8 @@ const FolioCellsDiv = styled.div`
     padding-right: ${({divMargin}) => divMargin.marginRight}%;
     display: grid;
     grid-template-columns: repeat(${({grid}) => grid}, 1fr);
-    grid-gap: .7rem;
-    grid-auto-rows: minmax(5rem, auto);
+    grid-gap: 1rem 1.2rem;
+    grid-auto-rows: auto;
 `;
 FolioCellsDiv.defaultProps = {
     divMargin: {
@@ -26,49 +26,23 @@ FolioCellsDiv.defaultProps = {
 const FolioCell = styled.div`
     position: relative;
     width: 100%;
-    padding-bottom: 25%;
-    -webkit-filter: drop-shadow(.12rem .1rem .12rem rgba(0,0,0,0.6));
-    background-color: white;
-    background: radial-gradient(
-        transparent 0rem, 
-        transparent .15rem, 
-        white .15rem,
-        white
-    );
-    background-size: .4rem .4rem;
-    background-position: -4.2rem -4.2rem;
-
-    &:before {
-        content: "";
-        position: absolute;
-        background-color: white;
-        z-index: -1;
-        top: .1rem;
-        bottom: .1rem;
-        left: .2rem;
-        right: .08rem;
-    }
+    padding-bottom: 30%;
+    border: .15rem solid #ddd;
+    box-shadow: .1rem .1rem .1rem #777777;
 `;
 const FolioCellWrap = styled.div`
     position: relative;
     display: flex;
-    width: 88%;
-    margin-left: 6%;
-    margin-right: 6%;
-    margin-top: 6%;
-    margin-bottom: 6%;
-    height: 113%;
-    background-color: ${({category}) => category === "Branding" 
-        ? "white" : ({backColor}) => backColor};
+    width: 100%;
+    height: 130%;
 
     &:after { 
         content: "";
         position: absolute;
         border-top: 0.25rem solid ${({mainColor}) => mainColor};
-        width: 112%;
-        margin-left: -6%;
-        height: 50%;
-        transform: translateY(100%);
+        width: 100%;
+        height: 100%;
+        transform: translateY(40%);
         visibility: hidden;
     }
     &:hover:after { 
@@ -78,120 +52,50 @@ const FolioCellWrap = styled.div`
 const FolioCellImg = styled.img`
     width: 100%;
     display: block;
-
-    ${({category}) => category === "Branding" 
-        ? "margin-top: 0; margin-bottom: auto;"
-        : (category === "Editorial" 
-        ? "margin: auto;"
-        : (category === "Poster"
-        ? "object-fit: cover;"
-        : (category === "UI/UX"
-        ? "margin: auto;"
-        : null)))
-    }
+    
+    margin-top: 0; 
+    margin-left: 0;
+    margin-right: 0;
+    margin-bottom: auto;
 `;
 const FolioCellText = styled.div`
     position: absolute;
-    color: ${({textColor}) => textColor};
+    color: black;
+    
+    width: 100%;
+    height: 100%;
 
-    ${({category}) => category === "Branding" 
-        ? `
-        bottom: 4%;
-        height: 1rem; 
-        display: flex;
-        justify-content: space-between;      
-
-        .title {
-            letter-spacing: -.055rem; 
-            font-size: 1.1rem; //a6
-            font-weight: 500; //500 
-        }
-        .category {
-            margin-left: .45rem;
-            letter-spacing: -.04rem; 
-            font-size: 0.7rem; //a9
-            font-weight: 400; //r
-        }
-        .year {
-            display: none;
-        }`
-        : (category === "Editorial" 
-        ? `
-        bottom: 0;
-        font-size: 0.7rem; 
-        font-weight: 500; //500 
-        font-style: italic;  
-        letter-spacing: -.02rem; 
-        width: 100%;
-        margin: 0 auto;
-        display: flex;
-        justify-content: center;
-
-        .category {
-            margin-left: .4rem;
-        }
-        .year {
-            margin-left: .4rem;
-            font-size: 0.7rem; 
-            font-weight: 300; //
-        }`
-        : (category === "Poster"
-        ? `
-        top: 2%;
-        font-size: .9rem; 
-        font-weight: 600; //500 
-        letter-spacing: -.01rem; 
-        width: 100%;
-        margin: 0 auto;
-        display: flex;
-        justify-content: center;
-        font-family: 'Cormorant Garamond', serif;
-
-        .category {
-            margin-left: .3rem;
-        }
-        .year {
-            margin-left: .3rem;
-            font-weight: 300; //
-            font-style: italic;  
-        }`
-        : (category === "UI/UX"
-        ? `
-        width: 100%;
-        height: 100%;
-
-        .title {
-            font-size: 1rem; 
-            font-weight: 500;
-            position: absolute;
-            bottom: .4rem;
-            left: .5rem;
-        }
-        .category {
-            font-size: .7rem; 
-            position: absolute;
-            bottom: 1.3rem;
-            left: .5rem;
-        }
-        .year {
-            font-size: .7rem; 
-            position: absolute;
-            top: .2rem;
-            right: .5rem;
-            font-weight: 300; 
-            font-style: italic;  
-        }`
-        : null)))
+    .category {
+        font-size: .6rem; 
+        font-weight: 400;
+        font-style: italic;
+        letter-spacing: -.02rem;
+        position: absolute;
+        bottom: 1.5rem;
+        left: .95rem;
+    }
+    .title {
+        font-size: 1rem; 
+        font-weight: 600;
+        font-style: italic;
+        word-spacing: -.18rem;
+        letter-spacing: -.03rem;
+        position: absolute;
+        bottom: 0.5rem;
+        left: 1rem;
+    }
+    .year {
+        display: none;
     }
 `;
 const FolioCellEmpty = styled.div`
     background-color: ${theme.colorObjs["cellEmptyBackColor"]};
     border: ${theme.lines["cellEmptyLine"]};
     position: relative;
-    left: 2.5%;
-    top: 2.5%;
-    width: 95.5%;
-    height: 95.5%;
+    margin-left: 2%;
+    margin-top: 2%;
+    width: 97%;
+    height: 96%;
     &:before {
         color: ${theme.colorObjs["cellEmptyTextColor"]};
         content: "✂";

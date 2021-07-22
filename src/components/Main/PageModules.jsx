@@ -45,11 +45,12 @@ const TitleBoxLogo = styled.div`
     background-color: ${({backGroundColor}) => backGroundColor};
     margin-left: 2.5vw;
     margin-top: 2.5vw;
-    padding: 16% 13%;
+    padding: ${({paddingTopBottom}) => paddingTopBottom}% 13%;
     transition: all .2s;
     .logo {
         pointer-events: auto;
-        width: 50vw;
+        width: ${({logoWidth}) => logoWidth}vw;
+        margin: auto;
         .logoType {
             fill: ${({logoTypeColor}) => logoTypeColor};
     }}
@@ -199,16 +200,16 @@ const OuterImgBox = styled.div`
             display: block;
             height: auto;
             width: 100%;
-            border: ${lines["pageModulesOuterImgBoxLine"]};
-            filter: ${({brightnessFilter}) => brightnessFilter ? "brightness(97%)": null};
+            border: ${({outlineYorN}) => outlineYorN === "Y" ? lines["pageModulesOuterImgBoxLine"]: null};
+            filter: ${({filterYorN}) => filterYorN === "Y" ? "brightness(97%)": null};
         }
     }
 `;
 const InnerImgBoxBackground = styled.div`
     margin-left: 2.5vw;
     background-color: ${props => props.default
-        ? props.color
-        : colorObjs["InnerBackgroundColor"]
+        ? colorObjs["InnerBackgroundColor"]
+        : props.color
     };
     width: calc(100%-2.5vw);
     margin-top: ${({marginTop}) => marginTop}vw;
@@ -233,7 +234,7 @@ const InnerImgBox = styled.div`
         }
     }
 `;
-const Marks = styled.mark`
+const MarkBox = styled.mark`
     user-select: none;
     display: inline-block;
     position: relative;
@@ -252,7 +253,7 @@ const Marks = styled.mark`
             font-style: normal;
         }
     }
-    .marksIn {
+    .markBoxInner {
         @supports (backdrop-filter: none) {
             backdrop-filter: blur(.4rem);
             background-color: rgba(250, 250, 250, .3);  
@@ -274,7 +275,7 @@ const Marks = styled.mark`
         pointer-events: none;
         opacity: 0;
         grid-gap: .6rem;
-        .marksInTitle {
+        .titleText {
             font-size: 1.3rem;
             margin-left: 1.2rem;
             margin-bottom: .2rem;
@@ -284,7 +285,7 @@ const Marks = styled.mark`
                 content: "*";
             }
         }
-        .marksInEng {
+        .engText {
             font-size: .85rem;
             line-height: 1.2rem;
             font-weight: 400;
@@ -292,7 +293,7 @@ const Marks = styled.mark`
             word-spacing: .1rem;
             color: #454545;
         }
-        .marksInKor {
+        .korText {
             font-family: 'MaruBuri-Regular', serif;
             font-size: .6rem;
             font-weight: 400;
@@ -308,7 +309,7 @@ const Marks = styled.mark`
         margin-top: .57rem;
         left: 50%;
         transform: translate(-50%, 0);
-        background: linear-gradient(#ffffff, ${colorObjs["pigeonColor"]});
+        background: linear-gradient(#ffffff, ${({color}) => color});
         border-radius: 0 0 3rem 3rem;
         width: 3rem;
         height: 3rem;
@@ -316,18 +317,18 @@ const Marks = styled.mark`
         transition: all .1s;
     }
     &:hover {
-        background-color: ${colorObjs["pigeonColor"]};
+        background-color: ${({color}) => color};
         transition: background-color .8s;
-        .marksIn { 
+        .markBoxInner { 
             opacity: 1; 
-            border-top-color: ${colorObjs["pigeonColor"]};
+            border-top-color: ${({color}) => color};
             transition: border-top 1s 0s, box-shadow .5s 0s;
             box-shadow: .15rem .15rem .15rem rgba(0, 0, 0, .4);
         }
         :before {
             opacity: .6;
             border-radius: 0 0 5rem 5rem;
-            background: linear-gradient(#ffffff, ${colorObjs["pigeonColor"]}, ${theme.colorObjs["pigeonColor"]});
+            background: linear-gradient(#ffffff, ${({color}) => color}, ${({color}) => color});
             width: 8.5rem;
             height: 4rem;
             transition: all ease-out 1.2s;
@@ -345,7 +346,7 @@ const pageModules = {
     OuterImgBox,
     InnerImgBoxBackground,
     InnerImgBox,
-    Marks,
+    MarkBox,
 }
 
 export default pageModules;
