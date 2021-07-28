@@ -1,0 +1,42 @@
+@import url(https://fonts.googleapis.com/earlyaccess/notosanskr.css);
+@import url(https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;1,100;1,200;1,300;1,400;1,500;1,600;1,700&display=swap);
+@import url(https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400;1,500;1,600;1,700&display=swap);
+@import url(https://fonts.googleapis.com/css2?family=Gothic+A1:wght@100;200;300;400;500;600;700;800;900&display=swap);
+@font-face { font-family: 'MaruBuri-Regular'; src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_20-10-21@1.0/MaruBuri-Regular.woff') format('woff'); font-weight: normal; font-style: normal;}
+
+html {
+    overflow: hidden;
+    height: 100%;
+    scroll-behavior: smooth;
+    font-size: 1.1vw;
+    -webkit-text-size-adjust: 100%;
+}
+body {
+    overflow: auto;
+    height: 100%;
+    font-size: 1.4rem;
+    line-height: 1.6rem;
+    margin: 0;
+    user-select: none;
+    font-family: 'IBM Plex Mono', monospace !important;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
+
+code { font-family: 'source-code-pro', 'Menlo', 'Monaco', 'Consolas', 'Courier New',monospace; }
+
+a { all: unset; }
+a:visited { color: inherit; }
+button { all: unset; cursor: pointer; }
+header { all: unset; }
+
+@keyframes effect {
+    0%   { opacity: 0; }
+    95%  { opacity: 0; }
+    100% { opacity: 1; }
+};
+@keyframes blink {
+    0%   { opacity: 0; }
+    0.01%  { opacity: 1; }
+    100% { opacity: 1; }
+};
