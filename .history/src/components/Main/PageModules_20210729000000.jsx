@@ -44,10 +44,10 @@ const TitleBoxLogo = styled.div`
     background-color: ${({backGroundColor}) => backGroundColor};
     margin-left: 2.5vw;
     margin-top: 2.5vw;
-    padding: ${({paddingTopBottom}) => paddingTopBottom}% 8%;
+    padding: ${({paddingTopBottom}) => paddingTopBottom}% 13%;
     transition: all .2s;
     .logo {
-        padding: 5%;
+        padding: 2rem;
         pointer-events: auto;
         width: ${({logoWidth}) => logoWidth}vw;
         margin: auto;

@@ -53,7 +53,7 @@ const _Pigeon = () => {
                     backGroundColor={color["main"]}
                     logoTypeColor={"white"}
                     logoBackColor={"black"}
-                    paddingTopBottom={"13"}
+                    paddingTopBottom={"14"}
                     logoWidth={"50"}
                 >
                     <div className="logoBox">
