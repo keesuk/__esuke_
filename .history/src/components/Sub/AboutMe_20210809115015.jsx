@@ -35,6 +35,7 @@ const AboutMe = ({ num, zValue, order, img, width, close, borColor, color, conte
     const allStyle = {
         position: "absolute",
         opacity: opa === true ? "0.8" : "",
+        width: opa === true ? width/2 : "",
         animationName: "effect",
         animationIterationCount: 1,
         animationDuration: `.${num}s`,

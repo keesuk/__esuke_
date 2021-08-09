@@ -35,6 +35,7 @@ const AboutMe = ({ num, zValue, order, img, width, close, borColor, color, conte
     const allStyle = {
         position: "absolute",
         opacity: opa === true ? "0.8" : "",
+        transform: `scale(${opa === true ? "0.8, 0.8" : "1, 1"})`,
         animationName: "effect",
         animationIterationCount: 1,
         animationDuration: `.${num}s`,

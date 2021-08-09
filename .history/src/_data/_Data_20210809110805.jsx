@@ -1,8 +1,6 @@
 import { getDate,randomize  } from "./_Functions.jsx"
 import theme from "../css/_Theme.jsx"
 
-import {Front, Back} from "./img/_ContactProfile.jsx"
-
 import Pigeon from "../pages/Pigeon.js"
 import PigeonImg from "./img/Pigeon.png"
 import PigeonLogo from "./img/_PigeonLogo.jsx"
@@ -124,10 +122,15 @@ export const menuAboutMe = [
         "img" : null,
     }
 ]
-export const menuContact = {
-    front : <Front/>, 
-    back : <Back/>
-}
+export const menuContact = [
+    {
+        "content" : "",
+        "width" : "18rem",
+        "color" : "white",
+        "borColor" : "#aaaaaa",
+        "img" : "",
+    }
+]
 export const subPageIntroTag = {
     "text" : {
         "eng" : <>

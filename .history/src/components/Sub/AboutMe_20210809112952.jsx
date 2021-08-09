@@ -34,7 +34,6 @@ const AboutMe = ({ num, zValue, order, img, width, close, borColor, color, conte
 
     const allStyle = {
         position: "absolute",
-        opacity: opa === true ? "0.8" : "",
         animationName: "effect",
         animationIterationCount: 1,
         animationDuration: `.${num}s`,
@@ -47,14 +46,15 @@ const AboutMe = ({ num, zValue, order, img, width, close, borColor, color, conte
         order(num)
         setDrag(true)
     }
-
     const handleDrag = (e, ui) => {
         if(e.clientX > X && e.clientY < Y) setOpa(true)
-        else setOpa(false)
     }
-
     const stopDrag = () => {
         setDrag(false)
+    }
+
+    const closeDrag = () => {
+        setHover(false)
         if (opa === true) close(num)
     }
 
@@ -68,7 +68,7 @@ const AboutMe = ({ num, zValue, order, img, width, close, borColor, color, conte
             <div 
                 style={allStyle}
                 onMouseEnter={() => setHover(true)}
-                onMouseLeave={() => setHover(false)}
+                onMouseLeave={() => closeDrag()}
             > 
                 <div style={divStyle}>
                     {content}

@@ -243,10 +243,8 @@ class Menu extends Component {
         this.state = {
             menu: {}, 
             aboutMe: {},
-            cor: {
-                X: document.body.clientWidth-200,
-                Y: 200
-            }
+            X: document.body.clientWidth-200,
+            Y: 200
         }
         this.postItHandler = this.postItHandler.bind(this)
         this.postItClose = this.postItClose.bind(this)
@@ -314,9 +312,7 @@ class Menu extends Component {
 
 
     render(){
-        const { menu, aboutMe, cor}  = this.state
-        const { X, Y } = cor
-        const { front, back } = menuContact
+        const { menu, aboutMe, X, Y }  = this.state
 
         return(<>
             {menu["AboutMe"] 
@@ -355,8 +351,8 @@ class Menu extends Component {
             }
             {menu["Contact"] 
                 ? <Contact 
-                    prfFront={front}
-                    prfBack={back}
+                    prfFront={menuContact.front}
+                    prfBack={menuContact.back}
                     /> 
                 : null
             }

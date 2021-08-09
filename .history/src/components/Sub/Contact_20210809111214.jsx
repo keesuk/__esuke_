@@ -3,26 +3,26 @@ import Draggable from "react-draggable"
 
 import theme from "../../css/_Theme.jsx";
 
-const Contact = ({prfFront, prfBack}) => {
+const Contact = () => {
 
     const allStytle = {
+
         backgroundPosition: "center",
         backgroundRepeat: "no-repeat",
         backgroundSize: "cover",
         backgroundColor: "white",
-        boxShadow: `.5rem .5rem 1rem rgba(0, 0, 0, .5)`,
-        width: "calc(325px *1.5)",
-        height: "calc(200px *1.5)",
-        left: "16vw",
-        bottom: "0vw",
+        boxShadow: ``,
+        border: "1px solid black",
+        width: "500px",
+        height: "700px",
+        padding: "10px",
+        float: "left",
         position: "absolute",
         zIndex: 100000,
     }
-
+        
     return (
-        <div style={allStytle}>
-            {prfFront}
-        </div>
+        <div style={allStytle}></div>
     );
 }
 

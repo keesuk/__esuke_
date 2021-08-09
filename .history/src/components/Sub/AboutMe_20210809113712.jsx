@@ -34,7 +34,6 @@ const AboutMe = ({ num, zValue, order, img, width, close, borColor, color, conte
 
     const allStyle = {
         position: "absolute",
-        opacity: opa === true ? "0.8" : "",
         animationName: "effect",
         animationIterationCount: 1,
         animationDuration: `.${num}s`,
@@ -50,9 +49,8 @@ const AboutMe = ({ num, zValue, order, img, width, close, borColor, color, conte
 
     const handleDrag = (e, ui) => {
         if(e.clientX > X && e.clientY < Y) setOpa(true)
-        else setOpa(false)
     }
-
+    
     const stopDrag = () => {
         setDrag(false)
         if (opa === true) close(num)

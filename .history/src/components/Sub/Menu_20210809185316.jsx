@@ -355,8 +355,8 @@ class Menu extends Component {
             }
             {menu["Contact"] 
                 ? <Contact 
-                    prfFront={front}
-                    prfBack={back}
+                    PrfFront={front}
+                    PrfBack={back}
                     /> 
                 : null
             }

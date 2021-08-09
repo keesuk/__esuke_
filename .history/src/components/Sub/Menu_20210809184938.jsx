@@ -316,7 +316,6 @@ class Menu extends Component {
     render(){
         const { menu, aboutMe, cor}  = this.state
         const { X, Y } = cor
-        const { front, back } = menuContact
 
         return(<>
             {menu["AboutMe"] 
@@ -355,8 +354,8 @@ class Menu extends Component {
             }
             {menu["Contact"] 
                 ? <Contact 
-                    prfFront={front}
-                    prfBack={back}
+                    prfFront={menuContact["front"]}
+                    prfBack={menuContact["back"]}
                     /> 
                 : null
             }

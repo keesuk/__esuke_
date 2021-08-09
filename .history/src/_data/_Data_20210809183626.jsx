@@ -125,8 +125,8 @@ export const menuAboutMe = [
     }
 ]
 export const menuContact = {
-    front : <Front/>, 
-    back : <Back/>
+    "front" : Front, 
+    "back" : Back
 }
 export const subPageIntroTag = {
     "text" : {

@@ -8,8 +8,6 @@ const AboutMe = ({ num, zValue, order, img, width, close, borColor, color, conte
     
     const [hover, setHover] = useState(false)
     const [drag, setDrag] = useState(false)
-    const [opa, setOpa] = useState(false)
-
     const zIndexing = 1000 + zValue
     const xy = num * 45 + 50
     const x = img !== null ? xy : xy + 80
@@ -34,7 +32,6 @@ const AboutMe = ({ num, zValue, order, img, width, close, borColor, color, conte
 
     const allStyle = {
         position: "absolute",
-        opacity: opa === true ? "0.8" : "",
         animationName: "effect",
         animationIterationCount: 1,
         animationDuration: `.${num}s`,
@@ -42,27 +39,19 @@ const AboutMe = ({ num, zValue, order, img, width, close, borColor, color, conte
             (!drag && zIndexing) || 
             (drag && 100000),
     }
-
     const startDrag = () => {
         order(num)
         setDrag(true)
     }
-
     const handleDrag = (e, ui) => {
-        if(e.clientX > X && e.clientY < Y) setOpa(true)
-        else setOpa(false)
-    }
-
-    const stopDrag = () => {
-        setDrag(false)
-        if (opa === true) close(num)
+        if(e.clientX > X && e.clientY < Y) close(num)
     }
 
     return (
         <Draggable 
             onStart={startDrag}
             onDrag={handleDrag}
-            onStop={stopDrag}
+            onStop={() => setDrag(false)}
             defaultPosition={{ x: x, y: y}}
         >
             <div 

@@ -4,12 +4,10 @@ import Draggable from "react-draggable"
 import theme from "../../css/_Theme.jsx";
 
 
-const AboutMe = ({ num, zValue, order, img, width, close, borColor, color, content, X, Y}) => {
+const Contact = ({ num, zValue, order, img, width, close, borColor, color, content, X, Y}) => {
     
     const [hover, setHover] = useState(false)
     const [drag, setDrag] = useState(false)
-    const [opa, setOpa] = useState(false)
-
     const zIndexing = 1000 + zValue
     const xy = num * 45 + 50
     const x = img !== null ? xy : xy + 80
@@ -34,7 +32,6 @@ const AboutMe = ({ num, zValue, order, img, width, close, borColor, color, conte
 
     const allStyle = {
         position: "absolute",
-        opacity: opa === true ? "0.8" : "",
         animationName: "effect",
         animationIterationCount: 1,
         animationDuration: `.${num}s`,
@@ -43,26 +40,18 @@ const AboutMe = ({ num, zValue, order, img, width, close, borColor, color, conte
             (drag && 100000),
     }
 
-    const startDrag = () => {
-        order(num)
-        setDrag(true)
-    }
-
     const handleDrag = (e, ui) => {
-        if(e.clientX > X && e.clientY < Y) setOpa(true)
-        else setOpa(false)
-    }
-
-    const stopDrag = () => {
-        setDrag(false)
-        if (opa === true) close(num)
+        if(e.clientX > X && e.clientY < Y) close(num)
     }
 
     return (
         <Draggable 
-            onStart={startDrag}
+            onStart={() => {
+                order(num)
+                setDrag(true)
+            }}
             onDrag={handleDrag}
-            onStop={stopDrag}
+            onStop={() => setDrag(false)}
             defaultPosition={{ x: x, y: y}}
         >
             <div 
@@ -79,4 +68,4 @@ const AboutMe = ({ num, zValue, order, img, width, close, borColor, color, conte
 }
 
 
-export default AboutMe;
+export default Contact;
