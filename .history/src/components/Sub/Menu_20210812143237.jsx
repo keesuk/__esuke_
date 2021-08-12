@@ -312,49 +312,51 @@ class Menu extends Component {
         this.setState({ aboutMe : aboutMeObj })
     }
 
+
     render(){
         const { menu, aboutMe, cor }  = this.state
         const { X, Y } = cor
 
         return(<>
             {menu["AboutMe"] 
-                ?   <> 
-                    {menuAboutMe.map((v, i) => aboutMe[i]["bool"] 
-                        ? <AboutMe 
-                            X={X}
-                            Y={Y}
-                            close={this.postItClose}
-                            order={this.postItReorder}
-                            zValue={aboutMe[i]["zValue"]} 
-                            img={v["img"]}
-                            width={v["width"]}
-                            color={v["color"]}
-                            borColor={v["borColor"]}
-                            content={v["content"]}
-                            key={i}
-                            num={i}
-                        />
-                        : null
-                    )}
-                    <Trash
-                        width={document.body.clientWidth-X}
-                        height={Y} 
-                        radius={Y}
-                    >
-                        <div className="trashInner">
-                            <div className="trashInnerInner">
-                                <div className="trashInnerInnerInner">
+                ?    <> 
+                        {menuAboutMe.map((v, i) => 
+                            aboutMe[i]["bool"] 
+                            ?   <AboutMe 
+                                    X={X}
+                                    Y={Y}
+                                    close={this.postItClose}
+                                    order={this.postItReorder}
+                                    zValue={aboutMe[i]["zValue"]} 
+                                    img={v["img"]}
+                                    width={v["width"]}
+                                    color={v["color"]}
+                                    borColor={v["borColor"]}
+                                    content={v["content"]}
+                                    key={i}
+                                    num={i}
+                                />
+                            :   null
+                        )}
+                        <Trash
+                            width={document.body.clientWidth-X}
+                            height={Y} 
+                            radius={Y}
+                        >
+                            <div className="trashInner">
+                                <div className="trashInnerInner">
+                                    <div className="trashInnerInnerInner">
+                                    </div>
                                 </div>
                             </div>
-                        </div>
-                    </Trash>
+                        </Trash>
                     </>
                 :   null}
             <Contact 
                 prfFront={menuContact["front"]}
                 prfBack={menuContact["back"]}
                 mail={menuContact["mail"]}
-                onContact={menu["Contact"] ? true : false}
+                onContact={menu["Contact"] ? true : false }
             />
             <MenuDiv>
                 {menuMenu.map(v =>

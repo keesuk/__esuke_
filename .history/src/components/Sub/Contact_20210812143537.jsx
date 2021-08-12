@@ -101,11 +101,11 @@ const Contact = ({prfFront, prfBack, mail, onContact}) => {
     
 
     useEffect(() => {
-        setCopied(false)
-        setHover(false)
-        
+        setOn(false)
         const timer = setTimeout(() => {
             setOn(!on)
+            setCopied(false)
+            setHover(false)
         }, 100)
         return () => clearTimeout(timer)
     }, [onContact])

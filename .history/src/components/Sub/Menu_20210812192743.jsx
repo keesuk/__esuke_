@@ -312,6 +312,7 @@ class Menu extends Component {
         this.setState({ aboutMe : aboutMeObj })
     }
 
+
     render(){
         const { menu, aboutMe, cor }  = this.state
         const { X, Y } = cor

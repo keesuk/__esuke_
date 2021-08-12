@@ -1,4 +1,4 @@
-import { useState, useEffect } from "react";
+import { useState } from "react";
 import styled from "styled-components";
 
 import theme from "../../css/_Theme.jsx";
@@ -11,25 +11,21 @@ const ratio = 1.5
 
 const width = `calc(${prfWidth} * ${ratio})`
 const height = `calc(${prfHeight} * ${ratio})`
-const bottom = `calc(-${prfHeight} * ${ratio+0.3})`
+const bottom = `calc(-${prfHeight} * ${ratio+0.4})`
 
 const ProfileButton = styled.button`
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
     background-color: white;
-    box-shadow: .1rem .1rem .3rem rgba(0, 0, 0, .4);
+    box-shadow: .5rem .5rem 1rem rgba(0, 0, 0, .4);
     width: ${width};
     height: ${height};
     left: 16vw;
     transition: bottom .5s ease;
     position: absolute;
-    z-index: 10;
+    z-index: 100000;
     bottom: ${({on}) => on === true ? "0vw" : bottom};
-
-    &:active > .message {
-        transform: rotate(20deg);
-    }
 
     .img {
         display: block;
@@ -41,9 +37,6 @@ const ProfileButton = styled.button`
         position: absolute;
         padding: 25px;
         right: 10px;
-        border: 1.5px solid #A7844F;
-        border-top: none;
-        border-left: none;
         top: 10px;
         background-image: url(${craft});
         background-position: center; 
@@ -51,7 +44,6 @@ const ProfileButton = styled.button`
         background-size: cover;
         color: white;
         font-size: 15px;
-        box-shadow: .1rem .1rem .2rem rgba(0, 0, 0, .4);
     }
 
     .paperclip {
@@ -67,11 +59,10 @@ const ProfileButton = styled.button`
         border-radius: 0 0 90px 90px;
         border-top: none;
         position: absolute;
-        transform: scale(0.8) rotate(20deg);
-        box-shadow: .1rem .1rem .1rem rgba(0, 0, 0, .4);
+        transform: rotate(20deg);
     }
     .paperclip::before, .paperclip::after {
-        content: "";
+        content:'';
         position: absolute;
         border: 2px groove #DDDDDD;
     }
@@ -89,26 +80,13 @@ const ProfileButton = styled.button`
         width: 26px;
         border-radius: 90px 90px 0 0;
         border-bottom: none;
-        box-shadow: inset .1rem .1rem .1rem rgba(0, 0, 0, .4);
     }
 `;
 
-const Contact = ({prfFront, prfBack, mail, onContact}) => {
+const Contact = ({prfFront, prfBack, mail, on}) => {
 
     const [hover, setHover] = useState(false)
     const [copied, setCopied] = useState(false)
-    const [on, setOn] = useState(false)
-    
-
-    useEffect(() => {
-        setCopied(false)
-        setHover(false)
-        
-        const timer = setTimeout(() => {
-            setOn(!on)
-        }, 100)
-        return () => clearTimeout(timer)
-    }, [onContact])
 
     return (
         <CopyToClipboard 
@@ -119,7 +97,7 @@ const Contact = ({prfFront, prfBack, mail, onContact}) => {
                 on={on}
                 onClick={() => setHover(!hover)}
             >
-                {copied === true
+                {copied === true 
                     ?   <div className="message">
                             <div className="paperclip"/>
                             mail copied to <br/> 
@@ -140,3 +118,24 @@ const Contact = ({prfFront, prfBack, mail, onContact}) => {
 }
 
 export default Contact;
+
+        // .clip {
+        //     position: absolute;
+        //     width: 80px;
+        //     height: 50px;
+        //     background-color: skyblue;
+        //     border-bottom: 5px solid #00aaff;
+        //     border-right: 1px solid #00aadd;
+        //     border-top: 2px solid #fff;
+        //     border-left: 1px solid #fff;
+        //     top: -30px;
+
+        //     &:before {
+        //         content: "";
+        //         display: block;
+        //         bottom: 0px;
+        //         width: 100%;
+        //         height: 30px;
+        //         background: linear-gradient(rgba(255, 255, 255, 0.8) 5%, skyblue);
+        //     }
+        // }

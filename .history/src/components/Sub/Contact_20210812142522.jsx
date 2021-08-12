@@ -93,7 +93,7 @@ const ProfileButton = styled.button`
     }
 `;
 
-const Contact = ({prfFront, prfBack, mail, onContact}) => {
+const Contact = ({prfFront, prfBack, mail}) => {
 
     const [hover, setHover] = useState(false)
     const [copied, setCopied] = useState(false)
@@ -101,14 +101,11 @@ const Contact = ({prfFront, prfBack, mail, onContact}) => {
     
 
     useEffect(() => {
-        setCopied(false)
-        setHover(false)
-        
         const timer = setTimeout(() => {
-            setOn(!on)
+            setOn(true)
         }, 100)
         return () => clearTimeout(timer)
-    }, [onContact])
+    }, [])
 
     return (
         <CopyToClipboard 

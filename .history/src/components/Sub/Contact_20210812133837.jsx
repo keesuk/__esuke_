@@ -1,4 +1,4 @@
-import { useState, useEffect } from "react";
+import { useState, useEffect(effect, deps) } from "react";
 import styled from "styled-components";
 
 import theme from "../../css/_Theme.jsx";
@@ -24,7 +24,7 @@ const ProfileButton = styled.button`
     left: 16vw;
     transition: bottom .5s ease;
     position: absolute;
-    z-index: 10;
+    z-index: 100000;
     bottom: ${({on}) => on === true ? "0vw" : bottom};
 
     &:active > .message {
@@ -51,7 +51,7 @@ const ProfileButton = styled.button`
         background-size: cover;
         color: white;
         font-size: 15px;
-        box-shadow: .1rem .1rem .2rem rgba(0, 0, 0, .4);
+        box-shadow: .1rem .1rem .2rem rgba(0, 0, 0, .6);
     }
 
     .paperclip {
@@ -93,22 +93,15 @@ const ProfileButton = styled.button`
     }
 `;
 
-const Contact = ({prfFront, prfBack, mail, onContact}) => {
+const Contact = ({prfFront, prfBack, mail, on}) => {
 
     const [hover, setHover] = useState(false)
     const [copied, setCopied] = useState(false)
-    const [on, setOn] = useState(false)
-    
 
+    
     useEffect(() => {
-        setCopied(false)
-        setHover(false)
-        
-        const timer = setTimeout(() => {
-            setOn(!on)
-        }, 100)
-        return () => clearTimeout(timer)
-    }, [onContact])
+        if(on === false) setCopied(false)
+    }, [on])
 
     return (
         <CopyToClipboard 
