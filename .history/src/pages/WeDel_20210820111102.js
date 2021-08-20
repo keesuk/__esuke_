@@ -87,10 +87,10 @@ const _WeDel = () => {
                     )}}
                 />
             </MainText>
-            <OuterImgBox 
+            {/* <OuterImgBox 
                 marginTop={"7"}
                 marginLeft={"38"}
-                width={"54"}
+                width={"52"}
                 height={"0"}
                 LorR={"L"}
                 outlineYorN={"N"}
@@ -111,9 +111,9 @@ const _WeDel = () => {
                         <span className="remarkKor">{image["0"]["txtKor"]}</span>
                     </Remark>
                 </div>
-            </OuterImgBox>
+            </OuterImgBox> */}
             <OuterImgBox 
-                marginTop={"-10"}
+                marginTop={"-20"}
                 marginLeft={"9"}
                 width={"52"}
                 height={"90"}
@@ -123,19 +123,6 @@ const _WeDel = () => {
             >
                 <div className="box">
                     <img className="img" alt="" src={image["1"]["img"]}/>
-                </div>
-            </OuterImgBox>
-            <OuterImgBox 
-                marginTop={"0"}
-                marginLeft={"0"}
-                width={"75"}
-                height={"20"}
-                LorR={"R"}
-                outlineYorN={"N"}
-                filterYorN={"N"}
-            >
-                <div className="box">
-                    <img className="img" alt="" src={image["5"]["img"]}/>
                 </div>
             </OuterImgBox>
             <InnerImgBoxBackground 

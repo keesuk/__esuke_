@@ -89,8 +89,8 @@ const _WeDel = () => {
             </MainText>
             <OuterImgBox 
                 marginTop={"7"}
-                marginLeft={"38"}
-                width={"54"}
+                marginLeft={"40"}
+                width={"52"}
                 height={"0"}
                 LorR={"L"}
                 outlineYorN={"N"}
@@ -123,19 +123,6 @@ const _WeDel = () => {
             >
                 <div className="box">
                     <img className="img" alt="" src={image["1"]["img"]}/>
-                </div>
-            </OuterImgBox>
-            <OuterImgBox 
-                marginTop={"0"}
-                marginLeft={"0"}
-                width={"75"}
-                height={"20"}
-                LorR={"R"}
-                outlineYorN={"N"}
-                filterYorN={"N"}
-            >
-                <div className="box">
-                    <img className="img" alt="" src={image["5"]["img"]}/>
                 </div>
             </OuterImgBox>
             <InnerImgBoxBackground 

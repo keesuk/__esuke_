@@ -13,22 +13,23 @@ import { portFolioContents } from "../_data/_Data.jsx";
 
 class App extends Component {
     render() {
+        const home = "/__esuke_"
 
         return (<>
-            <Route path="/">
+            <Route path={home}>
                 <Home/>
                 <Menu/>
                 <Index/>
             </Route>
-            <Route exact path="/" component={HomePage}/>
+            <Route exact path={home} component={HomePage}/>
             {Object.values(portFolioContents).map(v => 
                 <Route 
-                    path={"/"+v["title"]} 
+                    path={home+"/"+v["title"]} 
                     key={v["title"]} 
                     component={v["componentR"]}
                 />
             )}
-            <Route path="/" component={SubPage}/>
+            <Route path={home} component={SubPage}/>
         </>)
     }
 }

@@ -126,9 +126,9 @@ const _WeDel = () => {
                 </div>
             </OuterImgBox>
             <OuterImgBox 
-                marginTop={"0"}
+                marginTop={"10"}
                 marginLeft={"0"}
-                width={"75"}
+                width={"70"}
                 height={"20"}
                 LorR={"R"}
                 outlineYorN={"N"}

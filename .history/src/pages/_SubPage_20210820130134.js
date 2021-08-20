@@ -10,7 +10,7 @@ import { getKeyByValue } from '../_data/_Functions.jsx';
 
 import theme from "../css/_Theme.jsx";
 
-const home = ""
+const home = "__esuke_"
 
 const SubPageFrame = styled.div`
     padding-left: 6%;

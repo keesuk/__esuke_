@@ -13,6 +13,7 @@ import { portFolioContents } from "../_data/_Data.jsx";
 
 class App extends Component {
     render() {
+        const home = "/__esuke_"
 
         return (<>
             <Route path="/">

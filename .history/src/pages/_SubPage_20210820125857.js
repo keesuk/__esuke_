@@ -10,7 +10,6 @@ import { getKeyByValue } from '../_data/_Functions.jsx';
 
 import theme from "../css/_Theme.jsx";
 
-const home = ""
 
 const SubPageFrame = styled.div`
     padding-left: 6%;
@@ -47,9 +46,9 @@ const Sub = () => {
         <SubLayout>
             <SubPageFrame>
                 <div className="title">
-                    {location === home ? "Intro" : "About"}
+                    {location === "" ? "Intro" : "About"}
                 </div>
-                {location === home
+                {location === "" 
                     ?   <TagIntro rotate={subPageIntroTag["rotate"]}>
                             <div className="tagContentExp">
                                 <div className="eng">
@@ -88,7 +87,7 @@ const Sub = () => {
             grid={[20, 20]}
         >
             <TagSticker
-                isHome={location === home ? true : false} 
+                isHome={location === "__esuke_" ? true : false} 
             >
                 <div className="checkOutTag">
                     <div className="up">

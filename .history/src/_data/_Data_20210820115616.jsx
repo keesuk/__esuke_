@@ -971,7 +971,7 @@ export const WeDelContents = {
             "color" : "white",
         },
         "5" : {
-            "img" : WeDel_Content6,
+            "img" : Onvoyage_Content6,
             "txtEng" : "Brand Sound",
             "txtKor" : "브랜드 사운드",
             "color" : "white",

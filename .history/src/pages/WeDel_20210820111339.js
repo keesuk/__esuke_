@@ -125,19 +125,6 @@ const _WeDel = () => {
                     <img className="img" alt="" src={image["1"]["img"]}/>
                 </div>
             </OuterImgBox>
-            <OuterImgBox 
-                marginTop={"0"}
-                marginLeft={"0"}
-                width={"75"}
-                height={"20"}
-                LorR={"R"}
-                outlineYorN={"N"}
-                filterYorN={"N"}
-            >
-                <div className="box">
-                    <img className="img" alt="" src={image["5"]["img"]}/>
-                </div>
-            </OuterImgBox>
             <InnerImgBoxBackground 
                 paddingTop={"5"}
                 paddingBottom={"13"}
