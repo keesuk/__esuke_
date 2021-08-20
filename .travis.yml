@@ -1,0 +1,20 @@
+language: node_js
+
+node_js:
+  - 'stable'
+
+cache:
+  direactories:
+    - node_modules
+
+script:
+  - npm test
+  - npm run build || true
+
+deploy:
+  provider: pages
+  skip_cleanup: true
+  guthub_token: $GITHUB_TOKEN
+  local_dir: build
+  on:
+    branch: main
