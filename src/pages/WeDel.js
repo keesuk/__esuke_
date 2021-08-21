@@ -88,9 +88,9 @@ const _WeDel = () => {
                 />
             </MainText>
             <OuterImgBox 
-                marginTop={"7"}
-                marginLeft={"38"}
-                width={"54"}
+                marginTop={"5"}
+                marginLeft={"36"}
+                width={"55"}
                 height={"0"}
                 LorR={"L"}
                 outlineYorN={"N"}
@@ -114,8 +114,8 @@ const _WeDel = () => {
             </OuterImgBox>
             <OuterImgBox 
                 marginTop={"-10"}
-                marginLeft={"9"}
-                width={"52"}
+                marginLeft={"12"}
+                width={"45"}
                 height={"90"}
                 LorR={"L"}
                 outlineYorN={"N"}
@@ -125,22 +125,9 @@ const _WeDel = () => {
                     <img className="img" alt="" src={image["1"]["img"]}/>
                 </div>
             </OuterImgBox>
-            <OuterImgBox 
-                marginTop={"0"}
-                marginLeft={"0"}
-                width={"75"}
-                height={"20"}
-                LorR={"R"}
-                outlineYorN={"N"}
-                filterYorN={"N"}
-            >
-                <div className="box">
-                    <img className="img" alt="" src={image["5"]["img"]}/>
-                </div>
-            </OuterImgBox>
             <InnerImgBoxBackground 
                 paddingTop={"5"}
-                paddingBottom={"13"}
+                paddingBottom={"7"}
                 paddingLeft={"5"}
                 paddingRight={"5"}
                 marginTop={"0"}
@@ -149,45 +136,53 @@ const _WeDel = () => {
                 ref={styRefs.current[1]}
             >
                 <InnerImgBox 
-                    width={"63"}
-                    height={"26"}
+                    width={"100"}
+                    height={"40"}
+                    LorR={"L"}
+                    marginTop={"3"}
+                >
+                    <div className="box">
+                        <img className="img" alt="" src={image["6"]["img"]}/>
+                    </div>
+                </InnerImgBox>
+                <InnerImgBox 
+                    width={"40"}
+                    height={"30"}
                     LorR={"R"}
                     marginTop={"5"}
+                >
+                    <div className="box">
+                        <img className="img" alt="" src={image["7"]["img"]}/>
+                    </div>
+                </InnerImgBox>
+                <InnerImgBox 
+                    width={"55"}
+                    height={"24"}
+                    LorR={"L"}
+                    marginTop={"0"}
+                >
+                    <div className="box">
+                        <img className="img" alt="" src={image["8"]["img"]}/>
+                    </div>
+                </InnerImgBox>
+                <InnerImgBox 
+                    width={"75"}
+                    height={"35"}
+                    LorR={"L"}
+                    marginTop={"0"}
                 >
                     <div className="box">
                         <img className="img" alt="" src={image["3"]["img"]}/>
                     </div>
                 </InnerImgBox>
-                <InnerImgBox 
-                    width={"63"}
-                    height={"26"}
-                    LorR={"R"}
-                    marginTop={"0"}
-                >
-                    <div className="box">
-                        <img className="img" alt="" src={image["4"]["img"]}/>
-                        <Remark
-                            marginTop={"0"}
-                            marginBottom={"0"}
-                            marginLeft={"0"}
-                            marginRight={"0"}
-                            LorR={"L"}
-                            lineHeight={"1.4"}
-                            color={"black"}
-                        >
-                            <span className="remarkEng">{image["4"]["txtEng"]}</span>
-                            <span className="remarkKor">{image["4"]["txtKor"]}</span>
-                        </Remark>
-                    </div>
-                </InnerImgBox>
                 <SubText
-                        marginTop={"8"}  
+                        marginTop={"1"}  
                         marginBottom={"0"}  
                         marginLeft={"0"}  
                         marginRight={"0"}
-                        textWidth={"50"}
-                        LorR={"L"}
-                        HorV={"V"}
+                        textWidth={"40"}
+                        LorR={"R"}
+                        HorV={"H"}
                         textColor={"black"}
                 >
                     <div className="engContents" >
@@ -205,10 +200,10 @@ const _WeDel = () => {
                 </SubText>
             </InnerImgBoxBackground>
             <OuterImgBox 
-                marginTop={"5"}
+                marginTop={"3"}
                 marginLeft={"9"}
                 width={"100"}
-                height={"70"}
+                height={"40"}
                 LorR={"L"}
                 outlineYorN={"N"}
                 filterYorN={"N"}
@@ -217,6 +212,115 @@ const _WeDel = () => {
                     <img className="img" alt="" src={image["2"]["img"]}/>
                 </div>
             </OuterImgBox>
+            <OuterImgBox 
+                marginTop={"5"}
+                marginLeft={"18"}
+                width={"34.5"}
+                height={"20"}
+                LorR={"L"}
+                outlineYorN={"N"}
+                filterYorN={"N"}
+            >
+                <div className="box">
+                    <img className="img" alt="" src={image["10"]["img"]}/>
+                </div>
+            </OuterImgBox>
+            <OuterImgBox 
+                marginTop={"-20"}
+                marginLeft={"9"}
+                width={"54"}
+                height={"24"}
+                LorR={"R"}
+                outlineYorN={"N"}
+                filterYorN={"N"}
+            >
+                <div className="box">
+                    <img className="img" alt="" src={image["11"]["img"]}/>
+                </div>
+            </OuterImgBox>
+            <OuterImgBox 
+                marginTop={"4"}
+                marginLeft={"10"}
+                width={"45"}
+                height={"40"}
+                LorR={"L"}
+                outlineYorN={"Y"}
+                filterYorN={"N"}
+            >
+                <div className="box">
+                    <img className="img" alt="" src={image["12"]["img"]}/>
+                </div>
+            </OuterImgBox>
+            <MainText 
+                ref={styRefs.current[2]}
+                marginTop={"12"}
+                marginBottom={"0"}
+                color={color["sub"]}
+            >
+                <div 
+                    className="engContents"
+                    dangerouslySetInnerHTML={{
+                        __html : marking(
+                            mainText["0"]["eng"],
+                            mainText["0"]["mark"]["title"],
+                            `<mark>
+                                <span class="text">
+                                    ${mainText["0"]["mark"]["title"]} <span class="num">${mainText["0"]["mark"]["num"]}</span>
+                                </span>
+                                <div class="markBoxInner">
+                                    <span class="titleText">${mainText["0"]["mark"]["title"]}/</span>
+                                    <span class="engText">${mainText["0"]["mark"]["textEng"]}</span>
+                                    <span class="korText">${mainText["0"]["mark"]["textKor"]}</span>
+                                </div>
+                            </mark>`
+                    )}}
+                />
+                <div 
+                    className="korContents"
+                    dangerouslySetInnerHTML={{
+                        __html : numbering(
+                            mainText["0"]["kor"],
+                            `<span class="korNum">`,
+                            `</span>`
+                    )}}
+                />
+            </MainText>
+            <OuterImgBox 
+                marginTop={"5"}
+                marginLeft={"36"}
+                width={"55"}
+                height={"25"}
+                LorR={"L"}
+                outlineYorN={"N"}
+                filterYorN={"N"}
+            >
+                <div className="box">
+                    <img className="img" alt="" src={image["13"]["img"]}/>
+                    <Remark
+                        marginTop={"2"}
+                        marginBottom={"0"}
+                        marginLeft={"0"}
+                        marginRight={"3"}
+                        LorR={"R"}
+                        lineHeight={"1.4"}
+                        color={""}
+                    >
+                        <span className="remarkEng">{image["13"]["txtEng"]}</span>
+                        <span className="remarkKor">{image["13"]["txtKor"]}</span>
+                    </Remark>
+                </div>
+            </OuterImgBox>
+            <InnerImgBoxBackground 
+                paddingTop={"5"}
+                paddingBottom={"7"}
+                paddingLeft={"5"}
+                paddingRight={"5"}
+                marginTop={"0"}
+                marginBottom={"0"}
+                color={"#d3e6cc"}
+                ref={styRefs.current[1]}
+            >
+            </InnerImgBoxBackground>
             <SubTitle
                 marginTop={"10"}
                 marginLeft={"10"}
