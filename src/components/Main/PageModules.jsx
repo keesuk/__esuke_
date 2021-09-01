@@ -235,6 +235,36 @@ const SubText = styled.div`
     line-height: 1.8rem;
     vertical-align: top;
     
+    .titleContents {
+        display: flex;
+        flex-direction: row;
+        width: ${({textWidth}) => textWidth}%;
+        color: ${({color}) => color};
+        align-self: ${({LorR, HorV}) => 
+            LorR === "L" ? "flex-start" : (
+            HorV === "V" ? "flex-end" : "flex-start"
+        )};
+
+        .eng {
+            order: ${({LorR}) => LorR === "L" ? "2" : "1"};
+            font-size: ${fontObjs["subText"]["title"]["eng"]["fontSize"]};
+            font-family: ${fontObjs["subText"]["title"]["eng"]["fontFamily"]};
+            font-weight: ${fontObjs["subText"]["title"]["eng"]["fontWeight"]};
+            letter-spacing: -.05rem;
+            &:after {
+                content: " / ";
+                margin-left: -.6rem; 
+        }}
+        .kor {
+            order: ${({LorR}) => LorR === "L" ? "1" : "2"};
+            font-size: ${fontObjs["subText"]["title"]["kor"]["fontSize"]};
+            font-weight: ${fontObjs["subText"]["title"]["kor"]["fontWeight"]};
+            font-family: ${fontObjs["subText"]["title"]["kor"]["fontFamily"]};
+            letter-spacing: -.1rem;
+            margin-left: .2rem; 
+            margin-top: .15rem;
+        }  
+    }
     .engContents {
         font-size: ${fontObjs["subText"]["eng"]["fontSize"]};
         font-family: ${fontObjs["subText"]["eng"]["fontFamily"]};
@@ -245,13 +275,9 @@ const SubText = styled.div`
             HorV === "V" ? "flex-end" : "flex-start"
         )};
         text-align: justify;
-        word-spacing: 0rem;
+        word-spacing: -0.08rem;
         letter-spacing: -.0265rem;
         width: ${({textWidth}) => textWidth}%;
-        &::selection {
-            color: black;
-            background-color: ${colorObjs["mark"]};
-        }
     }
     .korContents {
         font-size: ${fontObjs["subText"]["kor"]["fontSize"]};
@@ -265,19 +291,17 @@ const SubText = styled.div`
         word-spacing: .16rem;
         width: ${({textWidth}) => textWidth}%;
         text-align: justify;
-        
+
+        .korNum {
+            font-size: ${fontObjs["subText"]["kor"]["num"]["fontSize"]};
+            font-family: ${fontObjs["subText"]["kor"]["num"]["fontFamily"]};
+            font-weight: ${fontObjs["subText"]["kor"]["num"]["fontWeight"]};
+        }
+    }
+    .titleContents, .korContents, .engContents {
         &::selection {
             color: black;
             background-color: ${colorObjs["mark"]};
-        }
-        .korNum {
-        font-size: ${fontObjs["subText"]["kor"]["num"]["fontSize"]};
-        font-family: ${fontObjs["subText"]["kor"]["num"]["fontFamily"]};
-        font-weight: ${fontObjs["subText"]["kor"]["num"]["fontWeight"]};
-            &::selection {
-                color: black;
-                background-color: ${colorObjs["mark"]};
-            }
         }
     }
 `;
@@ -317,6 +341,7 @@ const InnerImgBoxBackground = styled.div`
 const InnerImgBox = styled.div`
     height: ${({height}) => height}vw;
     margin-top: ${({marginTop}) => marginTop}vw;
+    margin-left: ${({marginLeft}) => marginLeft}vw;
     position: relative;
     .box {
         width: ${({width}) => width}%;

@@ -258,10 +258,22 @@ const fontObjs = {
         },
     },
     "subText" : {
+        "title" : {
+            "eng" : {
+                "fontWeight" : fontWeights["semiBold"],
+                "fontFamily" : fontFamilys["engMono"],
+                "fontSize" : fontSizes["A3"],
+            },
+            "kor" : {
+                "fontWeight" : fontWeights["bold"],
+                "fontFamily" : fontFamilys["korSans"],
+                "fontSize" : fontSizes["A4"]
+            }
+        },
         "eng" : {
             "fontWeight" : fontWeights["regular"],
             "fontFamily" : fontFamilys["engMono"],
-            "fontSize" : fontSizes["A9"],
+            "fontSize" : fontSizes["A10"],
             "fontStyle" : "italic",
         },
         "kor" : {

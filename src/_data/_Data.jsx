@@ -55,7 +55,7 @@ import Seoul_Content1 from "./img/Seoul_Content/Seoul-1.gif"
 import Seoul_Content2 from "./img/Seoul_Content/Seoul-12.jpg"
 import Seoul_Content3 from "./img/Seoul_Content/Seoul-13.jpg"
 import Seoul_Content4 from "./img/Seoul_Content/Seoul-14.gif"
-import Seoul_Content5 from "./img/Seoul_Content/Seoul-15.png"
+import Seoul_Content5 from "./img/Seoul_Content/Seoul-15.gif"
 import Seoul_Content6 from "./img/Seoul_Content/Seoul-16.png"
 import Seoul_Content7 from "./img/Seoul_Content/Seoul-17.png"
 import Seoul_Content8 from "./img/Seoul_Content/Seoul-18.png"
@@ -89,6 +89,11 @@ import WeDel_Content14 from "./img/WeDel_Content/WeDel-24.jpg"
 import WeDel_Content15 from "./img/WeDel_Content/WeDel-25.jpg"
 import WeDel_Content16 from "./img/WeDel_Content/WeDel-26.gif"
 import WeDel_Content17 from "./img/WeDel_Content/WeDel-27.jpg"
+import WeDel_Content18 from "./img/WeDel_Content/WeDel-28.gif"
+import WeDel_Content19 from "./img/WeDel_Content/WeDel-29.png"
+import WeDel_Content20 from "./img/WeDel_Content/WeDel-30.png"
+import WeDel_Content21 from "./img/WeDel_Content/WeDel-31.gif"
+import WeDel_Content22 from "./img/WeDel_Content/WeDel-32.png"
 
 import Gakka from "../pages/Gakka.js"
 import GakkaImg from "./img/Gakka.png"
@@ -567,6 +572,10 @@ export const SeoulContents = {
     subText : {
         "0" : {
             "color" : "black",
+            "title" : {
+                "txtEng" : "index page",
+                "txtKor" : "목차 페이지",
+            },
             "eng" : "is that they are temporary and provide a similar experience to consumers, such as similar guests, every year. This happens because you cannot help ",
             "kor" : "페스티벌들의 한계는 한시적이고, 매년 비슷한 방식, 비슷한 게스트 등 소비자에게 유사할 수 밖에 없는 경험을 제공한다는 것입니다. 이는 티켓파워, 고객층 유지 등 현실적인 부분을 고려하지 않을 수 없기 때문에 발생합니다. "
         },
@@ -946,9 +955,13 @@ export const WeDelContents = {
     },
     subText : {
         "0" : {
-            "color" : "white",
-            "eng" : "is that they are temporary and provide a similar experience to consumers, such as similar guests, every year. This happens because you cannot help but consider realistic aspects such as ticket power and customer base. Branded in 2017, the Grand Mint Festival not only had such chronic problems, but also had a clear lack of identity and expansion. In addition, the concept of the 2017 Grand Mint Festival was considered to be insufficient branding to convey the originally intended",
-            "kor" : "페스티벌들의 한계는 한시적이고, 매년 비슷한 방식, 비슷한 게스트 등 소비자에게 유사할 수 밖에 없는 경험을 제공한다는 것입니다. 이는 티켓파워, 고객층 유지 등 현실적인 부분을 고려하지 않을 수 없기 때문에 발생합니다. 2017년 브랜딩된 ‘그랜드 민트 페스티벌’은 그러한 고질적인 문제를 담고 있었습니다. 인디밴드 플랫폼 민트페이퍼 산하의 페스티벌이고, 2007년 인디밴드 라인업으로 진행했던 체제와 다르게 2017년이 된 지금에서는 장르 분문 다양한 아티스트들이 출현 하고 있습니다."
+            "color" : "black",
+            "title" : {
+                "txtEng" : "index page",
+                "txtKor" : "목차 페이지",
+            },
+            "eng" : "is that they are temporary and provide a similar experience to consumers, such as similar guests, every year. This happens because you cannot help ",
+            "kor" : "페스티벌들의 한계는 한시적이고, 매년 비슷한 방식, 비슷한 게스트 등 소비자에게 유사할 수 밖에 없는 경험을 제공한다는 것입니다. 이는 티켓파워, 고객층 유지 등 현실적인 부분을 고려하지 않을 수 없기 때문에 발생합니다. "
         },
     },
     image : {
@@ -1051,6 +1064,36 @@ export const WeDelContents = {
         },
         "16" : {
             "img" : WeDel_Content17,
+            "txtEng" : "Brand Sound",
+            "txtKor" : "브랜드 사운드",
+            "color" : "white",
+        },
+        "17" : {
+            "img" : WeDel_Content18,
+            "txtEng" : "Brand Sound",
+            "txtKor" : "브랜드 사운드",
+            "color" : "white",
+        },
+        "18" : {
+            "img" : WeDel_Content19,
+            "txtEng" : "Brand Sound",
+            "txtKor" : "브랜드 사운드",
+            "color" : "white",
+        },
+        "19" : {
+            "img" : WeDel_Content20,
+            "txtEng" : "Brand Sound",
+            "txtKor" : "브랜드 사운드",
+            "color" : "white",
+        },
+        "20" : {
+            "img" : WeDel_Content21,
+            "txtEng" : "Brand Sound",
+            "txtKor" : "브랜드 사운드",
+            "color" : "white",
+        },
+        "21" : {
+            "img" : WeDel_Content22,
             "txtEng" : "Brand Sound",
             "txtKor" : "브랜드 사운드",
             "color" : "white",
