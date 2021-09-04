@@ -2,7 +2,7 @@ import { useState, useEffect } from "react";
 import styled from "styled-components";
 
 import theme from "../../css/_Theme.jsx";
-import craft from "../../_data/img/craft.png"
+import craft from "../../_data/img/_Source/craft.png"
 import { CopyToClipboard } from 'react-copy-to-clipboard';
 
 const prfWidth = "325px"

@@ -1,6 +1,6 @@
 import styled from "styled-components";
 import theme from "../../css/_Theme.jsx";
-import craft from "../../_data/img/craft.png";
+import craft from "../../_data/img/_Source/craft.png";
 
 export const TagIntro = styled.div`
     margin-top: 1rem;

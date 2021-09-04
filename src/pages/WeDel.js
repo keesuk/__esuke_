@@ -13,7 +13,7 @@ import { marking, numbering } from "../_data/_Functions.jsx";
 
 const _WeDel = () => {
     const { name, pageStyle, title, category, color, logo, mainText, subText, image } = WeDelContents
-    const { SubTitle, Remark, MainText, SubText, OuterImgBox, InnerImgBoxBackground, InnerImgBox } = pageModules
+    const { SubTitle, Remark, MainText, SubText, OuterImgBox, InnerImgBoxBackground, InnerImgBox, InnerIphoneMockupBox } = pageModules
 
     const scrRef = useRef()
     const styRefs = useRef([])  
@@ -388,7 +388,7 @@ const _WeDel = () => {
             </OuterImgBox>
             <InnerImgBoxBackground 
                 paddingTop={"5"}
-                paddingBottom={"7"}
+                paddingBottom={"0"}
                 paddingLeft={"5"}
                 paddingRight={"5"}
                 marginTop={"0"}
@@ -396,19 +396,18 @@ const _WeDel = () => {
                 color={"#FFE8DD"}
                 ref={styRefs.current[3]}
             >
-                <InnerImgBox 
+                <InnerIphoneMockupBox
                     width={"40"}
-                    height={"40"}
                     LorR={"L"}
                     marginTop={"3"}
-                    marginLeft={"3"}
+                    marginLeft={"-3"}
                 >
                     <div className="box">
                         <img className="img" alt="" src={image["17"]["img"]}/>
                     </div>
-                </InnerImgBox>
+                </InnerIphoneMockupBox>
                 <SubText
-                        marginTop={"-40"}  
+                        marginTop={"35"}  
                         marginBottom={"0"}  
                         marginLeft={"0"}  
                         marginRight={"0"}
@@ -438,7 +437,7 @@ const _WeDel = () => {
                     width={"85"}
                     height={"35"}
                     LorR={"L"}
-                    marginTop={"10"}
+                    marginTop={"5"}
                     marginLeft={"0"}
                 >
                     <div className="box">
@@ -447,7 +446,7 @@ const _WeDel = () => {
                 </InnerImgBox>
                 <InnerImgBox 
                     width={"65"}
-                    height={"45"}
+                    height={"46"}
                     LorR={"L"}
                     marginTop={"0"}
                     marginLeft={"0"}
@@ -456,19 +455,18 @@ const _WeDel = () => {
                         <img className="img" alt="" src={image["19"]["img"]}/>
                     </div>
                 </InnerImgBox>
-                <InnerImgBox 
+                <InnerIphoneMockupBox
                     width={"40"}
-                    height={"40"}
                     LorR={"L"}
                     marginTop={"0"}
-                    marginLeft={"3"}
+                    marginLeft={"-3"}
                 >
                     <div className="box">
                         <img className="img" alt="" src={image["20"]["img"]}/>
                     </div>
-                </InnerImgBox>
+                </InnerIphoneMockupBox>
                 <SubText
-                        marginTop={"-40"}  
+                        marginTop={"32"}  
                         marginBottom={"0"}  
                         marginLeft={"0"}  
                         marginRight={"0"}
@@ -495,14 +493,133 @@ const _WeDel = () => {
                     />
                 </SubText>
                 <InnerImgBox 
-                    width={"95"}
-                    height={"60"}
+                    width={"34"}
+                    height={"2"}
+                    LorR={"L"}
+                    marginTop={"3"}
+                    marginLeft={"4.5"}
+                >
+                    <div className="box">
+                        <img className="img" alt="" src={image["22"]["img"]}/>
+                    </div>
+                </InnerImgBox>
+                <InnerImgBox 
+                    width={"100"}
+                    height={"70"}
                     LorR={"R"}
-                    marginTop={"10"}
+                    marginTop={"0"}
                     marginLeft={"0"}
                 >
                     <div className="box">
                         <img className="img" alt="" src={image["21"]["img"]}/>
+                    </div>
+                </InnerImgBox>
+                <SubText
+                        marginTop={"10"}  
+                        marginBottom={"0"}  
+                        marginLeft={"0"}  
+                        marginRight={"0"}
+                        textWidth={"52"}
+                        LorR={"L"}
+                        HorV={"V"}
+                        textColor={"black"}
+                >
+                    <div className="titleContents">
+                        <div className="eng">{subText["0"]["title"]["txtEng"]}</div>
+                        <div className="kor">{subText["0"]["title"]["txtKor"]}</div>
+                    </div>
+                    <div className="engContents" >
+                        {subText["0"]["eng"]}
+                    </div>
+                    <div 
+                        className="korContents"
+                        dangerouslySetInnerHTML={{
+                            __html : 
+                                numbering(subText["0"]["kor"],
+                                `<span class="korNum">`,
+                                `</span>`
+                        )}}
+                    />
+                </SubText>
+                <InnerImgBox 
+                    width={"100"}
+                    height={"10"}
+                    LorR={"R"}
+                    marginTop={"5"}
+                    marginLeft={"0"}
+                >
+                    <div className="box">
+                        <img className="img" alt="" src={image["23"]["img"]}/>
+                    </div>
+                </InnerImgBox>
+                <InnerIphoneMockupBox
+                    width={"40"}
+                    LorR={"R"}
+                    marginTop={"-5"}
+                    marginLeft={"0"}
+                    marginRight={"7"}
+                >
+                    <div className="box">
+                        <img className="img" alt="" src={image["25"]["img"]}/>
+                    </div>
+                </InnerIphoneMockupBox>
+                <InnerImgBox 
+                    width={"36.5"}
+                    height={"50"}
+                    LorR={"L"}
+                    marginTop={"8"}
+                    marginLeft={"3"}
+                >
+                    <div className="box">
+                        <img className="img" alt="" src={image["24"]["img"]}/>
+                    </div>
+                </InnerImgBox>
+                <InnerIphoneMockupBox
+                    width={"40"}
+                    LorR={"L"}
+                    marginTop={"5"}
+                    marginLeft={"-3"}
+                >
+                    <div className="box">
+                        <img className="img" alt="" src={image["26"]["img"]}/>
+                    </div>
+                </InnerIphoneMockupBox>
+                <SubText
+                        marginTop={"12"}  
+                        marginBottom={"0"}  
+                        marginLeft={"0"}  
+                        marginRight={"0"}
+                        textWidth={"80"}
+                        LorR={"R"}
+                        HorV={"V"}
+                        textColor={"black"}
+                >
+                    <div className="titleContents">
+                        <div className="eng">{subText["0"]["title"]["txtEng"]}</div>
+                        <div className="kor">{subText["0"]["title"]["txtKor"]}</div>
+                    </div>
+                    <div className="engContents" >
+                        {subText["0"]["eng"]}
+                    </div>
+                    <div 
+                        className="korContents"
+                        dangerouslySetInnerHTML={{
+                            __html : 
+                                numbering(subText["0"]["kor"],
+                                `<span class="korNum">`,
+                                `</span>`
+                        )}}
+                    />
+                </SubText>
+                <InnerImgBox 
+                    width={"55"}
+                    height={"20"}
+                    LorR={"L"}
+                    marginTop={"8"}
+                    marginLeft={"27.5"}
+                >
+                    <div className="box">
+                        <img className="img" alt="" src={image["27"]["img"]}/>
                     </div>
                 </InnerImgBox>
             </InnerImgBoxBackground>

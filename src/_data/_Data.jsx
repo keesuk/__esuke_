@@ -19,7 +19,7 @@ import Ruler from "../pages/Ruler.js"
 import RulerImg from "./img/Ruler.png"
 import RulerLogo from "./img/_RulerLogo.jsx"
 import Ruler_Content1 from "./img/Ruler_Content/Ruler-1.png"
-import Ruler_Content2 from "./img/Ruler_Content/Ruler-12.png"
+import Ruler_Content2 from "./img/Ruler_Content/Ruler-12.jpg"
 import Ruler_Content3 from "./img/Ruler_Content/Ruler-13.png"
 import Ruler_Content4 from "./img/Ruler_Content/Ruler-14.png"
 import Ruler_Content5 from "./img/Ruler_Content/Ruler-15.png"
@@ -94,6 +94,12 @@ import WeDel_Content19 from "./img/WeDel_Content/WeDel-29.png"
 import WeDel_Content20 from "./img/WeDel_Content/WeDel-30.png"
 import WeDel_Content21 from "./img/WeDel_Content/WeDel-31.gif"
 import WeDel_Content22 from "./img/WeDel_Content/WeDel-32.png"
+import WeDel_Content23 from "./img/WeDel_Content/WeDel-33.gif"
+import WeDel_Content24 from "./img/WeDel_Content/WeDel-34.png"
+import WeDel_Content25 from "./img/WeDel_Content/WeDel-35.png"
+import WeDel_Content26 from "./img/WeDel_Content/WeDel-36.gif"
+import WeDel_Content27 from "./img/WeDel_Content/WeDel-37.gif"
+import WeDel_Content28 from "./img/WeDel_Content/WeDel-38.gif"
 
 import Gakka from "../pages/Gakka.js"
 import GakkaImg from "./img/Gakka.png"
@@ -1094,6 +1100,42 @@ export const WeDelContents = {
         },
         "21" : {
             "img" : WeDel_Content22,
+            "txtEng" : "Brand Sound",
+            "txtKor" : "브랜드 사운드",
+            "color" : "white",
+        },
+        "22" : {
+            "img" : WeDel_Content23,
+            "txtEng" : "Brand Sound",
+            "txtKor" : "브랜드 사운드",
+            "color" : "white",
+        },
+        "23" : {
+            "img" : WeDel_Content24,
+            "txtEng" : "Brand Sound",
+            "txtKor" : "브랜드 사운드",
+            "color" : "white",
+        },
+        "24" : {
+            "img" : WeDel_Content25,
+            "txtEng" : "Brand Sound",
+            "txtKor" : "브랜드 사운드",
+            "color" : "white",
+        },
+        "25" : {
+            "img" : WeDel_Content26,
+            "txtEng" : "Brand Sound",
+            "txtKor" : "브랜드 사운드",
+            "color" : "white",
+        },
+        "26" : {
+            "img" : WeDel_Content27,
+            "txtEng" : "Brand Sound",
+            "txtKor" : "브랜드 사운드",
+            "color" : "white",
+        },
+        "27" : {
+            "img" : WeDel_Content28,
             "txtEng" : "Brand Sound",
             "txtKor" : "브랜드 사운드",
             "color" : "white",

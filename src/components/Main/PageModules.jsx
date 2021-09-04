@@ -1,5 +1,6 @@
 import styled from "styled-components";
 import theme from "../../css/_Theme.jsx"
+import Iphone from "../../_data/img/_Source/Iphone.png";
 
 const { 
     fontObjs, 
@@ -246,7 +247,7 @@ const SubText = styled.div`
         )};
 
         .eng {
-            order: ${({LorR}) => LorR === "L" ? "2" : "1"};
+            order: 1;
             font-size: ${fontObjs["subText"]["title"]["eng"]["fontSize"]};
             font-family: ${fontObjs["subText"]["title"]["eng"]["fontFamily"]};
             font-weight: ${fontObjs["subText"]["title"]["eng"]["fontWeight"]};
@@ -256,7 +257,7 @@ const SubText = styled.div`
                 margin-left: -.6rem; 
         }}
         .kor {
-            order: ${({LorR}) => LorR === "L" ? "1" : "2"};
+            order: 2;
             font-size: ${fontObjs["subText"]["title"]["kor"]["fontSize"]};
             font-weight: ${fontObjs["subText"]["title"]["kor"]["fontWeight"]};
             font-family: ${fontObjs["subText"]["title"]["kor"]["fontFamily"]};
@@ -351,6 +352,34 @@ const InnerImgBox = styled.div`
             height: auto;
             width: 100%;
         }
+    }
+`;
+const InnerIphoneMockupBox = styled.div`
+    height: ${({width}) => width}vw;
+    width: ${({width}) => width}%;
+    margin-top: ${({marginTop}) => marginTop}vw;
+    margin-left: ${({marginLeft}) => marginLeft}vw;
+    margin-right: ${({marginRight}) => marginRight}vw;
+    float: ${({LorR}) => LorR === "L" ? "left" : "right"};
+    position: relative;
+
+    .box {
+        width: 115%;
+        height: 100%;
+        background-image: url("${Iphone}");
+        background-position: center; 
+        background-repeat: no-repeat;
+        background-size: cover;
+        .img {
+            display: block;
+            height: auto;
+            width: 62%;
+            float: right;
+            margin-top: 21%;
+            margin-right: 7%;
+            border: .02rem solid #ccc;
+        }
+        
     }
 `;
 const MarkBox = styled.mark`
@@ -465,6 +494,7 @@ const pageModules = {
     OuterImgBox,
     InnerImgBoxBackground,
     InnerImgBox,
+    InnerIphoneMockupBox,
     MarkBox,
 }
 

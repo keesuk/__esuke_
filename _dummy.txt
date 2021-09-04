@@ -1748,3 +1748,28 @@ class Menu extends Component {
 }
 
 export default Menu;
+
+
+    height: ${({height}) => height}vw;
+    width: ${({width}) => width}%;
+    margin-top: ${({marginTop}) => marginTop}vw;
+    margin-left: ${({marginLeft}) => marginLeft}vw;
+    position: relative;
+
+    .box {
+        width: 115%;
+        height: 100%;
+        float: ${({LorR}) => LorR === "L" ? "left" : "right"};
+        background-image: url("${Iphone}");
+        background-position: center; 
+        background-repeat: no-repeat;
+        background-size: cover;
+        .img {
+            display: block;
+            height: auto;
+            width: 62%;
+            float: right;
+            margin-top: 21%;
+            margin-right: 7%;
+            border: .02rem solid #ccc;
+        }

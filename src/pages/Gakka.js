@@ -100,32 +100,6 @@ const _Gakka = () => {
                     <img className="img" alt="" src={image["0"]["img"]}/>
                 </div>
             </OuterImgBox>
-            <OuterImgBox 
-                marginTop={"4"}
-                marginLeft={"0"}
-                width={"38"}
-                height={"45"}
-                LorR={"R"}
-                outlineYorN={"Y"}
-                filterYorN={"N"}
-            >
-                <div className="box">
-                    <img className="img" alt="" src={image["1"]["img"]}/>
-                </div>
-            </OuterImgBox>
-            <OuterImgBox 
-                marginTop={"-23"}
-                marginLeft={"14"}
-                width={"49"}
-                height={"45"}
-                LorR={"L"}
-                outlineYorN={"Y"}
-                filterYorN={"N"}
-            >
-                <div className="box">
-                    <img className="img" alt="" src={image["2"]["img"]}/>
-                </div>
-            </OuterImgBox>
             <InnerImgBoxBackground 
                 paddingTop={"5"}
                 paddingBottom={"5"}
@@ -201,6 +175,32 @@ const _Gakka = () => {
             >
                 <div className="box">
                     <img className="img" alt="" src={image["6"]["img"]}/>
+                </div>
+            </OuterImgBox>
+            <OuterImgBox 
+                marginTop={"4"}
+                marginLeft={"0"}
+                width={"38"}
+                height={"45"}
+                LorR={"R"}
+                outlineYorN={"Y"}
+                filterYorN={"N"}
+            >
+                <div className="box">
+                    <img className="img" alt="" src={image["1"]["img"]}/>
+                </div>
+            </OuterImgBox>
+            <OuterImgBox 
+                marginTop={"-23"}
+                marginLeft={"14"}
+                width={"49"}
+                height={"45"}
+                LorR={"L"}
+                outlineYorN={"Y"}
+                filterYorN={"N"}
+            >
+                <div className="box">
+                    <img className="img" alt="" src={image["2"]["img"]}/>
                 </div>
             </OuterImgBox>
             <MainText 
