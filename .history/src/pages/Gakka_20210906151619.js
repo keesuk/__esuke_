@@ -101,7 +101,7 @@ const _Gakka = () => {
                 </div>
             </OuterImgBox>
             <OuterImgBox 
-                marginTop={"4"}
+                marginTop={"7"}
                 marginLeft={"8"}
                 width={"60"}
                 height={"40"}

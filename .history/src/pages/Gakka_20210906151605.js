@@ -97,11 +97,11 @@ const _Gakka = () => {
                 filterYorN={"N"}
             >
                 <div className="box">
-                    <img className="img" alt="" src={image["10"]["img"]}/>
+                    <img className="img" alt="" src={image["11"]["img"]}/>
                 </div>
             </OuterImgBox>
             <OuterImgBox 
-                marginTop={"4"}
+                marginTop={"7"}
                 marginLeft={"8"}
                 width={"60"}
                 height={"40"}
