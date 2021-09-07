@@ -113,8 +113,10 @@ import Gakka_Content6 from "./img/Gakka_Content/Gakka-16.png"
 import Gakka_Content7 from "./img/Gakka_Content/Gakka-17.jpg"
 import Gakka_Content8 from "./img/Gakka_Content/Gakka-18.png"
 import Gakka_Content9 from "./img/Gakka_Content/Gakka-19.png"
-import Gakka_Content10 from "./img/Gakka_Content/Gakka-20.png"
+import Gakka_Content10 from "./img/Gakka_Content/Gakka-20.jpg"
 import Gakka_Content11 from "./img/Gakka_Content/Gakka-21.jpg"
+import Gakka_Content12 from "./img/Gakka_Content/Gakka-22.jpg"
+import Gakka_Content13 from "./img/Gakka_Content/Gakka-23.png"
 
 
 //-------------홈페이지--------------
@@ -932,6 +934,18 @@ export const GakkaContents = {
         },
         "10" : {
             "img" : Gakka_Content11,
+            "txtEng" : "about Pigeon",
+            "txtKor" : "피죤 브랜드 소개",
+            "color" : "white",
+        },
+        "11" : {
+            "img" : Gakka_Content12,
+            "txtEng" : "about Pigeon",
+            "txtKor" : "피죤 브랜드 소개",
+            "color" : "white",
+        },
+        "12" : {
+            "img" : Gakka_Content13,
             "txtEng" : "about Pigeon",
             "txtKor" : "피죤 브랜드 소개",
             "color" : "white",

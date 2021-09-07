@@ -298,7 +298,20 @@ const _Gakka = () => {
                 marginTop={"5"}
                 marginLeft={"10"}
                 width={"100"}
-                height={"37"}
+                height={"30"}
+                LorR={"L"}
+                outlineYorN={"N"}
+                filterYorN={"N"}
+            >
+                <div className="box">
+                    <img className="img" alt="" src={image["12"]["img"]}/>
+                </div>
+            </OuterImgBox>
+            <OuterImgBox 
+                marginTop={"5"}
+                marginLeft={"10"}
+                width={"70"}
+                height={"40"}
                 LorR={"L"}
                 outlineYorN={"N"}
                 filterYorN={"N"}
