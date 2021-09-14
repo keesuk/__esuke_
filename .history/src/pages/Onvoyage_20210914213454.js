@@ -1,0 +1,286 @@
+import { useRef, useEffect } from "react";
+import { OnvoyageContents } from "../_data/_Data.jsx";
+
+import { MainLayout } from "../components/_Layout.jsx";
+import MainTitle from "../components/Main/MainTitle.jsx";
+import LogoBox from "../components/Main/LogoBox.jsx";
+import Footnote from "../components/Main/Footnote.jsx";
+import FolioList from "../components/Main/FolioList.jsx"; 
+
+import { marking, numbering } from "../_data/_Functions.jsx";    
+
+
+const _Onvoyage = () => {
+    const { name, footnote, title, category, color, logo, mainText, subText, image } = OnvoyageContents
+
+    const scrRef = useRef()
+    
+    useEffect(() => {
+        scrRef.current.scrollIntoView()
+    }, [])
+    
+    return(
+        <MainLayout
+            ref={scrRef}
+        >
+            <MainTitle
+                color={color["sub"]}
+                TorB={color["TorB"]}
+                title={title}
+                category={category}
+            />
+            <LogoBox 
+                backGroundColor={color["main"]}
+                logoTypeColor={"white"}
+                logoBackColor={"black"}
+                paddingTopBottom={"14"}
+                paddingLeftRight={"26"}
+                logo={logo}
+            />
+            <MainText 
+                ref={styRefs.current[0]}
+                marginTop={"8"}
+                marginBottom={"0"}
+                color={color["sub"]}
+            >
+                <div 
+                    className="engContents"
+                    dangerouslySetInnerHTML={{
+                        __html : marking(
+                            mainText["0"]["eng"],
+                            mainText["0"]["mark"]["title"],
+                            `<mark>
+                                <span class="text">
+                                    ${mainText["0"]["mark"]["title"]} <span class="num">${mainText["0"]["mark"]["num"]}</span>
+                                </span>
+                                <div class="markBoxInner">
+                                    <span class="titleText">${mainText["0"]["mark"]["title"]}/</span>
+                                    <span class="engText">${mainText["0"]["mark"]["textEng"]}</span>
+                                    <span class="korText">${mainText["0"]["mark"]["textKor"]}</span>
+                                </div>
+                            </mark>`
+                    )}}
+                />
+                <div 
+                    className="korContents"
+                    dangerouslySetInnerHTML={{
+                        __html : numbering(
+                            mainText["0"]["kor"],
+                            `<span class="korNum">`,
+                            `</span>`
+                    )}}
+                />
+            </MainText>
+            <OuterImgBox 
+                marginTop={"4"}
+                marginLeft={"0"}
+                width={"60"}
+                height={"45"}
+                LorR={"R"}
+                outlineYorN={"N"}
+                filterYorN={"N"}
+            >
+                <div className="box">
+                    <img className="img" alt="" src={image["0"]["img"]}/>
+                    <Remark
+                        marginTop={"0"}
+                        marginBottom={"0"}
+                        marginLeft={"0"}
+                        marginRight={"0"}
+                        LorR={"L"}
+                        lineHeight={"1.4"}
+                        color={""}
+                    >
+                        <span className="remarkEng">{image["0"]["txtEng"]}</span>
+                        <span className="remarkKor">{image["0"]["txtKor"]}</span>
+                    </Remark>
+                </div>
+            </OuterImgBox>
+            <InnerImgBoxBackground 
+                paddingTop={"5"}
+                paddingBottom={"13"}
+                paddingLeft={"5"}
+                paddingRight={"5"}
+                marginTop={"0"}
+                marginBottom={"0"}
+                color={"#242424"}
+                ref={styRefs.current[1]}
+            >
+                <InnerHorizontalBrowserMockupBox
+                    width={"100"}
+                    LorR={"L"}
+                    marginTop={"8"}
+                    marginLeft={"-2"}
+                >
+                    <div className="box">
+                        <img className="img" alt="" src={image["1"]["img"]}/>
+                    </div>
+                </InnerHorizontalBrowserMockupBox>
+                <SubText
+                        marginTop={"80"}  
+                        marginBottom={"0"}  
+                        marginLeft={"0"}  
+                        marginRight={"0"}
+                        textWidth={"60"}
+                        LorR={"R"}
+                        HorV={"V"}
+                        textColor={"white"}
+                >
+                    <div className="titleContents">
+                        <div className="eng">{subText["0"]["title"]["txtEng"]}</div>
+                        <div className="kor">{subText["0"]["title"]["txtKor"]}</div>
+                    </div>
+                    <div className="engContents" >
+                        {subText["0"]["eng"]}
+                    </div>
+                    <div 
+                        className="korContents"
+                        dangerouslySetInnerHTML={{
+                            __html : 
+                                numbering(subText["0"]["kor"],
+                                `<span class="korNum">`,
+                                `</span>`
+                        )}}
+                    />
+                </SubText>
+                
+                <InnerHorizontalBrowserMockupBox
+                    width={"100"}
+                    LorR={"R"}
+                    marginTop={"10"}
+                    marginLeft={"0"}
+                    marginRight={"-2"}
+                >
+                    <div className="box">
+                        <img className="img" alt="" src={image["2"]["img"]}/>
+                    </div>
+                </InnerHorizontalBrowserMockupBox>
+                <InnerHorizontalBrowserMockupBox
+                    width={"60"}
+                    LorR={"L"}
+                    marginTop={"3"}
+                    marginLeft={"-2"}
+                    marginRight={"0"}
+                >
+                    <div className="box">
+                        <img className="img" alt="" src={image["3"]["img"]}/>
+                    </div>
+                </InnerHorizontalBrowserMockupBox>
+                <InnerHorizontalBrowserMockupBox
+                    width={"60"}
+                    LorR={"L"}
+                    marginTop={"-5"}
+                    marginLeft={"0"}
+                    marginRight={"0"}
+                >
+                    <div className="box">
+                        <img className="img" alt="" src={image["5"]["img"]}/>
+                    </div>
+                </InnerHorizontalBrowserMockupBox>
+                <InnerHorizontalBrowserMockupBox
+                    width={"60"}
+                    LorR={"L"}
+                    marginTop={"-5"}
+                    marginLeft={"2"}
+                    marginRight={"0"}
+                >
+                    <div className="box">
+                        <img className="img" alt="" src={image["4"]["img"]}/>
+                    </div>
+                </InnerHorizontalBrowserMockupBox>
+                <SubText
+                        marginTop={"180"}  
+                        marginBottom={"0"}  
+                        marginLeft={"0"}  
+                        marginRight={"0"}
+                        textWidth={"60"}
+                        LorR={"R"}
+                        HorV={"V"}
+                        textColor={"white"}
+                >
+                    <div className="titleContents">
+                        <div className="eng">{subText["0"]["title"]["txtEng"]}</div>
+                        <div className="kor">{subText["0"]["title"]["txtKor"]}</div>
+                    </div>
+                    <div className="engContents" >
+                        {subText["0"]["eng"]}
+                    </div>
+                    <div 
+                        className="korContents"
+                        dangerouslySetInnerHTML={{
+                            __html : 
+                                numbering(subText["0"]["kor"],
+                                `<span class="korNum">`,
+                                `</span>`
+                        )}}
+                    />
+                </SubText>
+
+                <InnerHorizontalBrowserMockupBox
+                    width={"100"}
+                    LorR={"R"}
+                    marginTop={"10"}
+                    marginLeft={"0"}
+                    marginRight={"-2"}
+                >
+                    <div className="box">
+                        <img className="img" alt="" src={image["6"]["img"]}/>
+                    </div>
+                </InnerHorizontalBrowserMockupBox>
+                <InnerHorizontalBrowserMockupBox
+                    width={"60"}
+                    LorR={"L"}
+                    marginTop={"3"}
+                    marginLeft={"-2"}
+                    marginRight={"0"}
+                >
+                    <div className="box">
+                        <img className="img" alt="" src={image["7"]["img"]}/>
+                    </div>
+                </InnerHorizontalBrowserMockupBox>
+                <SubText
+                        marginTop={"125"}  
+                        marginBottom={"0"}  
+                        marginLeft={"0"}  
+                        marginRight={"0"}
+                        textWidth={"60"}
+                        LorR={"R"}
+                        HorV={"V"}
+                        textColor={"white"}
+                >
+                    <div className="titleContents">
+                        <div className="eng">{subText["0"]["title"]["txtEng"]}</div>
+                        <div className="kor">{subText["0"]["title"]["txtKor"]}</div>
+                    </div>
+                    <div className="engContents" >
+                        {subText["0"]["eng"]}
+                    </div>
+                    <div 
+                        className="korContents"
+                        dangerouslySetInnerHTML={{
+                            __html : 
+                                numbering(subText["0"]["kor"],
+                                `<span class="korNum">`,
+                                `</span>`
+                        )}}
+                    />
+                </SubText>
+            </InnerImgBoxBackground>
+            <FolioList
+                category={category}
+                exceptionName={name}
+                marginTop={"4"}
+                marginLeft={"10"}
+                marginRight={"5"}
+                marginBottom={"5"}
+                subTitle={{
+                    text:"see More",
+                    marginTop: "10",
+                    marginLeft: "10"
+                }}
+            />
+        </MainLayout>
+    )
+}
+
+export default _Onvoyage;
