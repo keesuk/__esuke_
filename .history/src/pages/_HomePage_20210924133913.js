@@ -1,0 +1,23 @@
+import { MainLayout } from "../components/_Layout.jsx";
+import MainTitle from "../components/Main/MainTitle.jsx";
+import FolioList from "../components/Main/FolioList.jsx";
+import { welcomeMention, otherSiteLink } from "../_data/_Data.jsx";
+
+
+const HomePage = () => {
+    return(
+        <MainLayout>
+            <MainTitle
+                title={welcomeMention}
+                link={otherSiteLink}
+                isThin={false}
+                color={"home"}
+            />
+            <FolioList
+                subTitle={null}
+            />
+        </MainLayout>
+    )
+}
+
+export default HomePage;
