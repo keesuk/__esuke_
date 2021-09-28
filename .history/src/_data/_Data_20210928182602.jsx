@@ -14,11 +14,11 @@ import Gakka from "./Projects/Gakka.jsx"
 export const portFolioContents = [
     Pigeon, 
     Samsara, 
-    Ruler, 
     Onvoyage, 
-    Gakka,
-    WeDel,
     Seoul, 
+    Ruler, 
+    WeDel,
+    Gakka
 ]
 
 export const welcomeMention = {
@@ -64,13 +64,13 @@ export const menuAboutMe = [
     {
         "content" : "",
         "width" : "18rem",
-        "color" : "#ffffff",
+        "color" : "white",
         "borColor" : "#aaaaaa",
         "img" : "",
     },{
         "content" : "",
         "width" : "18rem",
-        "color" : "#ffffff",
+        "color" : "white",
         "borColor" : "#aaaaaa",
         "img" : "",
     },{   

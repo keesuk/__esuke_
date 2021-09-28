@@ -34,7 +34,7 @@ import image30 from "../img/WeDel_Content/WeDel-40.jpg"
 
 
 const name = "We Eat Delight"
-const category = "Branding"
+const category = "UI/UX"
 const title = "We Eat Delight"
 const year = "2019"
 const logo = <Logo/>

@@ -19,7 +19,6 @@ import image14 from "../img/Gakka_Content/Gakka-24.jpg"
 const title = "Walk Task Force, Gakka"
 const category = "Branding"
 const name = "Gakka"
-const year = "2020"
 const logo = <Logo/>
 const image = [
     image1,
@@ -111,7 +110,7 @@ const bottomText = [
     }
 ]
 
-const comp = [
+const comps = [
     { 
         type: "MainTitle",
         category: category,
@@ -367,42 +366,24 @@ const comp = [
         remark: null,
     },{
         type: "OuterImg",
-        marginBottom: {deskTop: null, mobile: null},
-        marginRight: {deskTop: null, mobile: "10"},
-        marginLeft: {deskTop: "10", mobile: "10"},
-        marginTop: {deskTop: "5", mobile: "15"},
-        height: {deskTop: "40",  mobile: "80"},
-        width: {deskTop: "70", mobile: "100"},
-        image: image[9],
+        marginTop: "5",
+        marginLeft: "10",
+        width: "70",
+        height: "40",
+        isLeft: true,
         isOutline: false,
         isFilter: false,
-        isLeft: true,
+        image: image[9],
         remark: null,
     },{
         type: "OuterImg",
-        marginBottom: {deskTop: null, mobile: null},
-        marginRight: {deskTop: null, mobile: "10"},
-        marginLeft: {deskTop: "10", mobile: "10"},
-        marginTop: {deskTop: "0", mobile: "15"},
-        height: {deskTop: "45",  mobile: "80"},
-        width: {deskTop: "49", mobile: "100"},
-        image: image[7],
+        marginTop: "",
+        marginLeft: "10",
+        width: "49",
+        height: "45",
+        isLeft: true,
         isOutline: true,
         isFilter: false,
-        isLeft: true,
-        remark: null,
-    }
-]
-
-const contents = {
-    thumbnail : thumbnail, 
-    keyColor : color.sub,
-    category : category,
-    title : title,
-    name : name,
-    year : year,
-    comp : comp,
-    tag : tag
-}
-
-export default contents
+        image: image[7],
+        remark: null},
+        ,

@@ -19,7 +19,6 @@ import image14 from "../img/Gakka_Content/Gakka-24.jpg"
 const title = "Walk Task Force, Gakka"
 const category = "Branding"
 const name = "Gakka"
-const year = "2020"
 const logo = <Logo/>
 const image = [
     image1,
@@ -111,7 +110,7 @@ const bottomText = [
     }
 ]
 
-const comp = [
+const comps = [
     { 
         type: "MainTitle",
         category: category,
@@ -340,69 +339,48 @@ const comp = [
             isLeft: true, 
             remark: null
         },{
-            type: "Text", 
-            marginBottom: {deskTop: "0", mobile: null},
-            marginRight: {deskTop: "0", mobile: "0"},
-            marginLeft: {deskTop: "0", mobile: "8"},
-            marginTop: {deskTop: "5", mobile: "3"}, 
-            height: {deskTop: null, mobile: null},
-            width: {deskTop: "50", mobile: "90"}, 
-            text: subText[1],
-            isHorizon: false,
-            isLeft: false,
-            color: "black",
+                type: "Text", 
+                marginTop: "0", 
+                marginBottom: "0",
+                marginLeft: "0",
+                marginRight: "0",
+                width: "50",
+                isLeft: false,
+                isHorizon: false,
+                color: "black",
+                text: subText[1]
         }]
     },{
-        type: "OuterImg",
-        marginBottom: {deskTop: null, mobile: null},
-        marginRight: {deskTop: null, mobile: "10"},
-        marginLeft: {deskTop: "10", mobile: "10"},
-        marginTop: {deskTop: "5", mobile: "15"},
-        height: {deskTop: "30",  mobile: "80"},
-        width: {deskTop: "100", mobile: "100"},
-        image: image[12],
-        isOutline: false,
-        isFilter: false,
-        isLeft: true,
-        remark: null,
-    },{
-        type: "OuterImg",
-        marginBottom: {deskTop: null, mobile: null},
-        marginRight: {deskTop: null, mobile: "10"},
-        marginLeft: {deskTop: "10", mobile: "10"},
-        marginTop: {deskTop: "5", mobile: "15"},
-        height: {deskTop: "40",  mobile: "80"},
-        width: {deskTop: "70", mobile: "100"},
-        image: image[9],
-        isOutline: false,
-        isFilter: false,
-        isLeft: true,
-        remark: null,
-    },{
-        type: "OuterImg",
-        marginBottom: {deskTop: null, mobile: null},
-        marginRight: {deskTop: null, mobile: "10"},
-        marginLeft: {deskTop: "10", mobile: "10"},
-        marginTop: {deskTop: "0", mobile: "15"},
-        height: {deskTop: "45",  mobile: "80"},
-        width: {deskTop: "49", mobile: "100"},
-        image: image[7],
-        isOutline: true,
-        isFilter: false,
-        isLeft: true,
-        remark: null,
-    }
-]
-
-const contents = {
-    thumbnail : thumbnail, 
-    keyColor : color.sub,
-    category : category,
-    title : title,
-    name : name,
-    year : year,
-    comp : comp,
-    tag : tag
-}
-
-export default contents
+                type: "OuterImg",
+                marginTop: "5",
+                marginLeft: "10",
+                width: "100",
+                height: "30",
+                isLeft: true,
+                isOutline: false,
+                isFilter: false,
+                image: image[12],
+                remark: null,
+            },{
+                type: "OuterImg",
+                marginTop: "5",
+                marginLeft: "10",
+                width: "70",
+                height: "40",
+                isLeft: true,
+                isOutline: false,
+                isFilter: false,
+                image: image[9],
+                remark: null,
+            },{
+                type: "OuterImg",
+                marginTop: "",
+                marginLeft: "10",
+                width: "49",
+                height: "45",
+                isLeft: true,
+                isOutline: true,
+                isFilter: false,
+                image: image[7],
+                remark: null},
+                ,

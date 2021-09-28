@@ -66,10 +66,10 @@ const subText = [
 const comp = [
     { 
         type: "MainTitle",
-        category: category,
         color: color.sub,
-        text: title,
+        category: category,
         isThin: false,
+        text: title,
     },{ 
         type: "Logo",
         color: color.main,
@@ -234,7 +234,7 @@ const comp = [
 
 const contents = {
     thumbnail : thumbnail, 
-    keyColor : "white",
+    keyColor : color.sub,
     category : category,
     title : title,
     name : name,

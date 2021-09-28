@@ -19,7 +19,6 @@ import image14 from "../img/Gakka_Content/Gakka-24.jpg"
 const title = "Walk Task Force, Gakka"
 const category = "Branding"
 const name = "Gakka"
-const year = "2020"
 const logo = <Logo/>
 const image = [
     image1,
@@ -111,7 +110,7 @@ const bottomText = [
     }
 ]
 
-const comp = [
+const comps = [
     { 
         type: "MainTitle",
         category: category,
@@ -393,16 +392,3 @@ const comp = [
         remark: null,
     }
 ]
-
-const contents = {
-    thumbnail : thumbnail, 
-    keyColor : color.sub,
-    category : category,
-    title : title,
-    name : name,
-    year : year,
-    comp : comp,
-    tag : tag
-}
-
-export default contents

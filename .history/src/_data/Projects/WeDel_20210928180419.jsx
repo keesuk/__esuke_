@@ -34,9 +34,7 @@ import image30 from "../img/WeDel_Content/WeDel-40.jpg"
 
 
 const name = "We Eat Delight"
-const category = "Branding"
 const title = "We Eat Delight"
-const year = "2019"
 const logo = <Logo/>
 const image = [
     image1,
@@ -699,16 +697,3 @@ const comp = [
         remark: null,
     }
 ]
-
-const contents = {
-    thumbnail : thumbnail, 
-    keyColor : color.sub,
-    category : category,
-    title : title,
-    name : name,
-    year : year,
-    comp : comp,
-    tag : tag
-}
-
-export default contents

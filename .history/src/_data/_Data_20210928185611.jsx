@@ -16,9 +16,9 @@ export const portFolioContents = [
     Samsara, 
     Ruler, 
     Onvoyage, 
-    Gakka,
-    WeDel,
     Seoul, 
+    WeDel,
+    Gakka
 ]
 
 export const welcomeMention = {

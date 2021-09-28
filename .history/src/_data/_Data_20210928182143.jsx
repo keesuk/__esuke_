@@ -9,36 +9,34 @@ import Onvoyage from "./Projects/Onvoyage.jsx"
 import Seoul from "./Projects/Seoul.jsx"
 import Ruler from "./Projects/Ruler.jsx"
 import WeDel from "./Projects/WeDel.jsx"
-import Gakka from "./Projects/Gakka.jsx"
 
 export const portFolioContents = [
-    Pigeon, 
-    Samsara, 
-    Ruler, 
-    Onvoyage, 
-    Gakka,
-    WeDel,
-    Seoul, 
+    Pigeon, Samsara, Onvoyage, Seoul, Ruler, WeDel
 ]
 
 export const welcomeMention = {
     "text" : "Keesuk Lee is a Graphic Designer and Developer living in Seoul, S.Korea.",
     "mark" : [
-        { "title" : "Graphic Designer"},
-        { "title" : "Developer"}
+        {
+            "title" : "Graphic Designer"
+        },{
+            "title" : "Developer"
+        }
     ]
 }
-export const otherSiteLink = [{
+export const otherSiteLink = [
+    {
         "title" : "Instagram", 
         "link" : "https://www.instagram.com/keesukeeeeee/", 
-        "color": "#F58529, #DD2A7B, #8134AF, #515BD4",
+        "color": theme.colorObjs["instagramColor"]
     },{
         "title" : "Github", 
         "link" : "https://github.com/keesuk", 
-        "color": "#216e39, #30a14e, #40c463",
-}]
+        "color": theme.colorObjs["githubColor"],
+    }
+]
 export const mentInEmptyCell = [
-    "Empty Cell", "Empty Cell", "Empty Cell", "Empty Cell",
+    "Empty Cell","Empty Cell","Empty Cell","Empty Cell",
 ]
 export const menuButton = {   
         "title" : "About", 
@@ -64,13 +62,13 @@ export const menuAboutMe = [
     {
         "content" : "",
         "width" : "18rem",
-        "color" : "#ffffff",
+        "color" : "white",
         "borColor" : "#aaaaaa",
         "img" : "",
     },{
         "content" : "",
         "width" : "18rem",
-        "color" : "#ffffff",
+        "color" : "white",
         "borColor" : "#aaaaaa",
         "img" : "",
     },{   

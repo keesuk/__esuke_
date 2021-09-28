@@ -14,11 +14,11 @@ import Gakka from "./Projects/Gakka.jsx"
 export const portFolioContents = [
     Pigeon, 
     Samsara, 
-    Ruler, 
     Onvoyage, 
-    Gakka,
-    WeDel,
     Seoul, 
+    Ruler, 
+    WeDel,
+    Gakka
 ]
 
 export const welcomeMention = {
@@ -28,17 +28,19 @@ export const welcomeMention = {
         { "title" : "Developer"}
     ]
 }
-export const otherSiteLink = [{
+export const otherSiteLink = [
+    {
         "title" : "Instagram", 
         "link" : "https://www.instagram.com/keesukeeeeee/", 
-        "color": "#F58529, #DD2A7B, #8134AF, #515BD4",
+        "color": theme.colorObjs["instagramColor"]
     },{
         "title" : "Github", 
         "link" : "https://github.com/keesuk", 
-        "color": "#216e39, #30a14e, #40c463",
-}]
+        "color": theme.colorObjs["githubColor"],
+    }
+]
 export const mentInEmptyCell = [
-    "Empty Cell", "Empty Cell", "Empty Cell", "Empty Cell",
+    "Empty Cell","Empty Cell","Empty Cell","Empty Cell",
 ]
 export const menuButton = {   
         "title" : "About", 
@@ -64,13 +66,13 @@ export const menuAboutMe = [
     {
         "content" : "",
         "width" : "18rem",
-        "color" : "#ffffff",
+        "color" : "white",
         "borColor" : "#aaaaaa",
         "img" : "",
     },{
         "content" : "",
         "width" : "18rem",
-        "color" : "#ffffff",
+        "color" : "white",
         "borColor" : "#aaaaaa",
         "img" : "",
     },{   

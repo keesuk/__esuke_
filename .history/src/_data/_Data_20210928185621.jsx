@@ -16,8 +16,8 @@ export const portFolioContents = [
     Samsara, 
     Ruler, 
     Onvoyage, 
-    Gakka,
     WeDel,
+    Gakka,
     Seoul, 
 ]
 

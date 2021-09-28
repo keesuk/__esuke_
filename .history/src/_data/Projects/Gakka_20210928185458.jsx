@@ -19,7 +19,6 @@ import image14 from "../img/Gakka_Content/Gakka-24.jpg"
 const title = "Walk Task Force, Gakka"
 const category = "Branding"
 const name = "Gakka"
-const year = "2020"
 const logo = <Logo/>
 const image = [
     image1,

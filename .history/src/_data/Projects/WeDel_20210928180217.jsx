@@ -34,9 +34,7 @@ import image30 from "../img/WeDel_Content/WeDel-40.jpg"
 
 
 const name = "We Eat Delight"
-const category = "Branding"
 const title = "We Eat Delight"
-const year = "2019"
 const logo = <Logo/>
 const image = [
     image1,
@@ -661,54 +659,34 @@ const comp = [
             color: "black",
         },{
             type: "Image", 
-            marginBottom: {deskTop: null, mobile: null},
-            marginRight: {deskTop: null, mobile: "0"},
-            marginLeft: {deskTop: "27.5", mobile: "8"},
-            marginTop: {deskTop: "8", mobile: "3"}, 
-            height: {deskTop: "20", mobile: null},
-            width: {deskTop: "55", mobile: "78"}, 
-            image: image[27],
+            width: "55", 
+            height: "20", 
             isLeft: true, 
+            marginTop: "8", 
+            marginLeft: "27.5", 
+            image: image[27],
             remark: null
-        }]
+    }]}
     },{ 
         type: "OuterImg",
-        marginBottom: {deskTop: null, mobile: null},
-        marginRight: {deskTop: null, mobile: "0"},
-        marginLeft: {deskTop: "20", mobile: "8"},
-        marginTop: {deskTop: "5", mobile: "3"}, 
-        height: {deskTop: "27", mobile: null},
-        width: {deskTop: "90", mobile: "78"}, 
-        image: image[28],
-        isOutline: false,
-        isFilter: false,
-        isLeft: false,
-        remark: null,
+                marginTop: "5",
+                marginLeft: "20",
+                width: "90",
+                height: "27",
+                isLeft: false,
+                isOutline: false,
+                isFilter: false,
+                image: image[28],
+                remark: null,
     },{ 
         type: "OuterImg",
-        marginBottom: {deskTop: null, mobile: null},
-        marginRight: {deskTop: null, mobile: "0"},
-        marginLeft: {deskTop: "0", mobile: "8"},
-        marginTop: {deskTop: "0", mobile: "3"}, 
-        height: {deskTop: "40", mobile: null},
-        width: {deskTop: "40", mobile: "78"}, 
-        image: image[29],
-        isOutline: false,
-        isFilter: false,
-        isLeft: false,
-        remark: null,
-    }
-]
-
-const contents = {
-    thumbnail : thumbnail, 
-    keyColor : color.sub,
-    category : category,
-    title : title,
-    name : name,
-    year : year,
-    comp : comp,
-    tag : tag
-}
-
-export default contents
+                marginTop: "0",
+                marginLeft: "0",
+                width: "40",
+                height: "40",
+                isLeft: false,
+                isOutline: false,
+                isFilter: false,
+                image: image[29],
+                remark: null,
+            />

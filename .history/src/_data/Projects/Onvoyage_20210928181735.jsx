@@ -66,10 +66,10 @@ const subText = [
 const comp = [
     { 
         type: "MainTitle",
-        category: category,
         color: color.sub,
-        text: title,
+        category: category,
         isThin: false,
+        text: title,
     },{ 
         type: "Logo",
         color: color.main,
@@ -203,38 +203,34 @@ const comp = [
             marginTop: {deskTop: "10", mobile: "3"}, 
             height: {deskTop: null, mobile: null},
             width: {deskTop: "100", mobile: "90"}, 
-            image: image[6],
+            image: image[6]
             isHorizon: true,
             isLeft: false, 
         },{
             type: "Browser",
-            marginBottom: {deskTop: null, mobile: null},
-            marginRight: {deskTop: "0", mobile: "0"},
-            marginLeft: {deskTop: "-2", mobile: "8"},
-            marginTop: {deskTop: "4", mobile: "3"}, 
-            height: {deskTop: null, mobile: null},
-            width: {deskTop: "55", mobile: "90"}, 
-            image: image[9],
-            isHorizon: true,
+            width: "55", 
             isLeft: true, 
+            isHorizon: true,
+            marginTop: "4", 
+            marginLeft:"-2",
+            marginRight: "0",
+            image: image[9]
         },{
             type: "Browser",
-            marginBottom: {deskTop: null, mobile: null},
-            marginRight: {deskTop: "0", mobile: "0"},
-            marginLeft: {deskTop: "-2", mobile: "8"},
-            marginTop: {deskTop: "0", mobile: "3"}, 
-            height: {deskTop: null, mobile: null},
-            width: {deskTop: "55", mobile: "90"}, 
-            image: image[7],
-            isHorizon: true,
+            width: "55", 
             isLeft: true, 
+            isHorizon: true,
+            marginTop: "0", 
+            marginLeft:"-2",
+            marginRight: "0",
+            image: image[7]
         }]
     }
 ]
 
 const contents = {
     thumbnail : thumbnail, 
-    keyColor : "white",
+    keyColor : color.sub,
     category : category,
     title : title,
     name : name,

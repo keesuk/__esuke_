@@ -14,11 +14,11 @@ import Gakka from "./Projects/Gakka.jsx"
 export const portFolioContents = [
     Pigeon, 
     Samsara, 
-    Ruler, 
     Onvoyage, 
-    Gakka,
-    WeDel,
+    Ruler, 
     Seoul, 
+    WeDel,
+    Gakka
 ]
 
 export const welcomeMention = {
