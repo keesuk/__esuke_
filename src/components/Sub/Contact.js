@@ -21,7 +21,7 @@ const ProfileButton = styled.button`
     };
     height: ${height};
     width: ${width};
-    box-shadow: .1rem .1rem .3rem rgba(0, 0, 0, .4);
+    box-shadow: .1rem .2rem .4rem rgba(0, 0, 0, .1);
     background-repeat: no-repeat;
     background-position: center;
     transition: bottom .5s ease;
@@ -42,12 +42,12 @@ const ProfileButton = styled.button`
     }
 
     .message {
-        opacity: ${({copy, buttonOn}) => copy 
+        opacity: ${({copy}) => copy 
             ? "1" 
             : "0"
         };
         background-image: url(${craft});
-        box-shadow: .1rem .1rem .2rem rgba(0, 0, 0, .4);
+        box-shadow: .05rem .05rem .2rem rgba(0, 0, 0, .4);
         background-repeat: no-repeat;
         padding: 20px 25px 12px 25px;
         background-position: center; 

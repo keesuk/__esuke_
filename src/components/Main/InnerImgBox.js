@@ -197,7 +197,7 @@ const ImageDiv = styled.div`
         }
     }
 `
-const Image = ({marginTop, marginLeft, marginRight, width, height, isLeft, outlineYorN, filterYorN, image, remark}) => {
+const Image = ({marginTop, marginLeft, marginRight, width, height, isLeft, image, remark}) => {
     
     return(
         <ImageDiv 

@@ -1,9 +1,9 @@
-import React from "react";
-import App from "../shared/App.js";
+import React from "react"
+import App from "../shared/App.js"
 
 
 const Root = () => {
-    return <App/>;
-};
+    return <App/>
+}
 
-export default Root;
+export default Root

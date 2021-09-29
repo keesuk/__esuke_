@@ -24,28 +24,28 @@ export const portFolioContents = [
 export const welcomeMention = {
     "text" : "Keesuk Lee is a Graphic Designer and Developer living in Seoul, S.Korea.",
     "mark" : [
-        { "title" : "Graphic Designer"},
-        { "title" : "Developer"}
+        { 
+            "title" : "Graphic Designer"
+        },{ 
+            "title" : "Developer"
+        }
     ]
 }
-export const otherSiteLink = [{
-        "title" : "Instagram", 
-        "link" : "https://www.instagram.com/keesukeeeeee/", 
-        "color": "#F58529, #DD2A7B, #8134AF, #515BD4",
-    },{
-        "title" : "Github", 
-        "link" : "https://github.com/keesuk", 
-        "color": "#216e39, #30a14e, #40c463",
-}]
 export const mentInEmptyCell = [
-    "Empty Cell", "Empty Cell", "Empty Cell", "Empty Cell",
+    "Empty Cell",
+    "Empty Cell",
+    "Empty Cell",
+    "Empty Cell",
 ]
 export const menuButton = {   
-        "title" : "About", 
-        "color": theme.colorObjs["subMenuAboutMeColor"],
-        "line" : theme.lines["subMenuAboutMeLine"],
-        "order" : 1,
-        "content" : ["About", "Contact"]
+    "title" : "About", 
+    "color": theme.colorObjs["subMenuAboutMeColor"],
+    "line" : theme.lines["subMenuAboutMeLine"],
+    "order" : 1,
+    "content" : [
+        "About", 
+        "Contact"
+    ]
 }
 export const menuMenu = [
     {   
@@ -124,7 +124,16 @@ export const subPageIntroTag = {
             </>
     },
     "date" : `${getDate()[0]}, ${getDate()[1]}, ${getDate()[2]}`,
-    "sign" : null,
-    "hoverColor" : "hotpink",
     "rotate" : -4,
 }
+export const otherSiteLink = [
+    {
+        title: "Instagram", 
+        link: "https://www.instagram.com/keesukeeeeee/", 
+        color: "#F58529, #DD2A7B, #8134AF, #515BD4",
+    },{
+        title: "Github", 
+        link: "https://github.com/keesuk", 
+        color: "#216e39, #30a14e, #40c463",
+    }
+]

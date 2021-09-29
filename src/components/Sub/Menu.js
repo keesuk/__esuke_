@@ -225,7 +225,14 @@ class Menu extends Component {
             {menu["About"] 
                 ?   <> 
                     {menuAboutMe.map((v, i) => aboutMe[i]["bool"] 
-                        ?    <AboutMe 
+                        ?   <>
+                            <Contact 
+                                prfFront={menuContact["front"]}
+                                prfBack={menuContact["back"]}
+                                mail={menuContact["mail"]}
+                                onContact={menu["Contact"] ? true : false}
+                            /> 
+                            <AboutMe 
                                 order={this.postItReorder}
                                 close={this.postItClose}
                                 zValue={aboutMe[i]["zValue"]} 
@@ -239,6 +246,7 @@ class Menu extends Component {
                                 X={X}
                                 Y={Y}
                             />
+                            </>
                         :   null
                     )}
                     <Trash
@@ -283,11 +291,3 @@ class Menu extends Component {
 }
 
 export default Menu
-
-
-            // <Contact 
-            //     prfFront={menuContact["front"]}
-            //     prfBack={menuContact["back"]}
-            //     mail={menuContact["mail"]}
-            //     onContact={menu["Contact"] ? true : false}
-            // />

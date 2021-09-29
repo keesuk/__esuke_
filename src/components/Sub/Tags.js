@@ -428,9 +428,10 @@ export const TagAbout = styled.div`
             
             strong {
                 letter-spacing: -0.03rem;
-                font-style: normal;
+                white-space: nowrap;
                 margin-left: -9%;
                 margin-right: 3%;
+                font-weight: 600;
             }
         }
         .tagContentList {
@@ -455,11 +456,12 @@ export const TagAbout = styled.div`
 
             strong {
                 font-size: ${theme.fontObjs["subTag"]["pageContentList"]["strong"]["fontSize"]};
+                white-space: nowrap;
                 margin-top: -1.5rem;
                 position: absolute;
-                font-style: normal;
                 margin-right: auto;
                 margin-left: auto;
+                font-weight: 600;
             }
         }
         .tagContentInfo {
@@ -477,11 +479,12 @@ export const TagAbout = styled.div`
 
             strong {
                 font-size: ${theme.fontObjs["subTag"]["pageContentList"]["strong"]["fontSize"]};
+                white-space: nowrap;
                 margin-top: -1.5rem;
                 margin-right: auto;
                 position: absolute;
-                font-style: normal;
                 margin-left: auto;
+                font-weight: 600;
             }
         }
     `}
