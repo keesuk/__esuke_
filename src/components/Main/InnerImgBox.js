@@ -251,10 +251,6 @@ const TextDiv = styled.div`
     display: flex;
     
     .titleContents {
-        align-self: ${({isLeft}) => isLeft 
-            ? "flex-start" 
-            : "flex-end"
-        };
         width: ${({width}) => width}%;
         flex-direction: row;
         margin-bottom: 1vw;
@@ -295,7 +291,7 @@ const TextDiv = styled.div`
     .engContents {
         ${({theme, width}) => theme.deskTop` 
             font-size: ${theme.fontObjs["subText"]["eng"]["fontSize"]};
-            width: ${width}%;
+            width: ${width.deskTop}%;
             letter-spacing: -.035rem;
             word-spacing: -0.05rem;
             text-align: justify;
@@ -326,7 +322,7 @@ const TextDiv = styled.div`
             ? "flex-start" 
             : "flex-end"
         };
-        width: ${({width}) => width}%;
+        width: ${({width}) => width.deskTop}%;
         letter-spacing: -.015rem;
         word-spacing: .16rem;
         text-align: justify;

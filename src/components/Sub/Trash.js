@@ -1,16 +1,20 @@
 import styled from 'styled-components'
 
-const Trash = styled.div`
+const TrashDiv = styled.div`
+    top: ${({toggle, width}) => toggle
+        ? "10"
+        : "-300"
+    }px; 
     border-radius: ${({radius}) => radius}px;
     height: ${({height}) => height}px; 
     width: ${({width}) => width}px; 
     box-shadow: 2px 2px 2px #666666;
+    transition: top .5s ease;
     border: 2px solid black;
     background-color: white;
     position: absolute;
     z-index: 1000;
-    right: 20px; 
-    top: 20px; 
+    left: 58vw; 
     
     &:after {
         transform: translate(-50%,-50%);
@@ -125,5 +129,22 @@ const Trash = styled.div`
         top: 50%;
     }
 `
-
+const Trash = ({width, height, radius, toggle}) => {
+    
+    return(
+        <TrashDiv
+            height={height}
+            radius={radius}
+            toggle={toggle}
+            width={width}
+        >
+            <div className="trashInner">
+                <div className="trashInnerInner">
+                    <div className="trashInnerInnerInner">
+                    </div>
+                </div>
+            </div>
+        </TrashDiv>
+    )
+}
 export default Trash

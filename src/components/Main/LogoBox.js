@@ -140,8 +140,9 @@ const TitleBoxLogoDiv = styled.div`
         padding-right: ${({paddingRight}) => paddingRight.deskTop}%;
         padding-left: ${({paddingLeft}) => paddingLeft.deskTop}%;
         padding-top: ${({paddingTop}) => paddingTop.deskTop}%;
-        margin-left: ${theme.layoutRatio["leftMargin"]}vw;
         margin-top: ${theme.layoutRatio["leftMargin"]}vw;
+        margin-left: -18%;
+        margin-right: -18%;
     `}
     ${({theme, hover, color}) => theme.mobile`
         padding-left: calc(${({paddingLeft}) => paddingLeft.mobile}% + 3.5vw);

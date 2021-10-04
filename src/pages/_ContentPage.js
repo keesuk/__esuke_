@@ -1,6 +1,8 @@
 import React from "react"
 
-import { MainLayout } from "../components/_Layout.jsx"
+import { TagWrapper } from "../components/Sub/Tags.js"
+
+import Layout from "../components/_Layout.jsx"
 import OuterImgBox from "../components/Main/OuterImgBox.js"  
 import InnerImgBox from "../components/Main/InnerImgBox.js"  
 import MainTitleBox from "../components/Main/MainTitle.js"
@@ -12,7 +14,10 @@ import LogoBox from "../components/Main/LogoBox.js"
 
 const ContentPage = ({comp, name, category}) => {
     return(
-        <MainLayout>
+        <Layout>
+            <TagWrapper
+                location={name}
+            />
             {comp.map((v, i) => {
                 let Component
 
@@ -76,7 +81,7 @@ const ContentPage = ({comp, name, category}) => {
                     text:"see More",
                 }}
             />
-        </MainLayout>
+        </Layout>
     )
 }
 

@@ -87,7 +87,7 @@ const colors = {
 
 
 const fontSizes = {
-    "A1" : "2.8rem",
+    "A1" : "3.2rem",
     "A2" : "1.7rem",
     "A3" : "1.6rem",
     "A4" : "1.4rem",

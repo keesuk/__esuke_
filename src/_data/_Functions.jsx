@@ -186,7 +186,7 @@ export function getSize(width, value) {
 export function getGrid(width) {
     if(width >= 0 && width < 1024)return 2
     else if(width >= 1024 && width < 1200)return 3
-    else if(width >= 1200)return 4
+    else if(width >= 1200)return 3
 }
 
 export function getDate() {

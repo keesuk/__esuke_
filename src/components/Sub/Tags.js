@@ -1,24 +1,31 @@
+import { useState } from "react"
+import Draggable from "react-draggable"
 import styled from "styled-components"
 
+import { getKeyByValue } from '../../_data/_Functions.jsx'
+import { portFolioContents } from "../../_data/_Data.jsx"
 import craft from "../../_data/img/_Source/craft.png"
 
 
-export const TagIntro = styled.div`
+const TagIntroDiv = styled.div`
     ${({theme}) => theme.deskTop`
         background-color: ${theme.colorObjs["subTagBackColor"]};
-        margin-top: 1rem;
+        margin-left: 14%;
+        margin-top: 4%;
+        margin-bottom: 3%;
+        width: 23.5%;
     `}
     ${({theme}) => theme.mobile`
         background-color: white;
         margin-top: 1rem;
+        margin-left: 20%;
+        width: 72%;
     `}
     border: ${({theme}) => theme.lines["subTagLineBold"]};
     border-radius: .5rem;
     justify-self: start;
     position: relative;
-    margin-left: 20%;
     padding: .1rem;
-    width: 72%;
 
     &:before {
         border: ${({theme}) => theme.lines["subTagLineLight"]};
@@ -166,13 +173,31 @@ export const TagIntro = styled.div`
         bottom: 26%;
     }
 `
+export const TagIntro = ({text, date, rotate}) => {
 
-export const TagSticker = styled.div`
+    return(
+        <TagIntroDiv rotate={rotate}>
+            <div className="tagContentExp">
+                <div className="eng">
+                    {text["eng"]}
+                </div>
+                <div className="kor">
+                    {text["kor"]}
+                </div>
+            </div>
+            <div className="tagSubText">
+                {date}
+            </div>
+        </TagIntroDiv>
+    )
+}
+
+const TagStickerDiv = styled.div`
     ${({theme}) => theme.mobile`
         display: none;
     `}
     top: ${({isHome}) => isHome 
-        ? "42" 
+        ? "45" 
         : "47"
     }%;
     position: fixed;
@@ -263,7 +288,7 @@ export const TagStickerInner = styled.div`
     transition: all .2s;
 
     .stkCircle {
-        background-color: ${({mainColor}) => mainColor};
+        background-color: ${({color}) => color};
         box-shadow: .02rem .02rem .001rem rgba(0, 0, 0, 0.1);
         border-radius: .6rem;
         margin-bottom: .7rem;
@@ -295,7 +320,57 @@ export const TagStickerInner = styled.div`
         }
     }
 `
-export const TagWrapper = styled.div`
+export const TagSticker = ({isHome }) => {
+    const [stkArr, setStkArr] = useState(portFolioContents.map(() => Array(10).fill(false)))
+    
+    const updateStkArr = (i, j) => {
+        let newArr = [...stkArr]
+        newArr[i][j] = !newArr[i][j]
+
+        setStkArr(newArr)
+    }
+
+    return(
+        <Draggable 
+            handle=".checkOutTag"
+            bounds={{
+                bottom: 240,
+                right: 220, 
+                left: -20, 
+                top: -400, 
+            }}
+            grid={[20, 20]}
+        >
+            <TagStickerDiv isHome={isHome}>
+                <div className="checkOutTag">
+                    <div className="up">Drag Here</div>
+                    <div className="down">Score</div>
+                </div>
+                <div className="stkBack">
+                    {portFolioContents.map((v, i) => 
+                        <TagStickerInner 
+                            color={v.keyColor}
+                            key={v.keyColor}
+                        >
+                            {stkArr[i].map((value, j) => 
+                                <div 
+                                    onMouseLeave={() => updateStkArr(i,j)}
+                                    onMouseOver={() => updateStkArr(i,j)} 
+                                    className={stkArr[i][j]
+                                        ? "stkCircleOff" 
+                                        : "stkCircle"
+                                    }
+                                    key={v.keyColor + j}
+                                />
+                            )}
+                        </TagStickerInner>
+                    )}
+                </div>
+            </TagStickerDiv>
+        </Draggable>
+    )
+}
+const TagWrapperDiv = styled.div`
     ${({theme}) => theme.mobile`
         border: ${theme.lines["subTagLineBold"]};
         border-radius: .5rem;
@@ -323,9 +398,8 @@ export const TagWrapper = styled.div`
         } 
     `}
 `
-
 export const TagAbout = styled.div`
-    ${({theme, rotate}) => theme.mobile`
+    ${({theme}) => theme.mobile`
         letter-spacing: -.045rem;
         word-spacing: -0.1rem;
         line-height: 1.6rem;
@@ -374,9 +448,9 @@ export const TagAbout = styled.div`
         justify-self: start;
         position: relative;
         margin-top: 1rem;
-        margin-left: 19%;
+        margin-left: 14%;
         padding: .1rem;
-        width: 73%;
+        width: 25%;
         &:before {
             border: ${theme.lines["subTagLineLight"]};
             justify-content: center;
@@ -489,3 +563,41 @@ export const TagAbout = styled.div`
         }
     `}
 `
+export const TagWrapper = ({location}) => {
+    const Arr = Object.entries(getKeyByValue(portFolioContents, location).tag)
+
+    return(
+        <TagWrapperDiv>
+            {Arr.map(([k, v], i) => 
+                <TagAbout 
+                    content={v["kor"]}
+                    rotate={i}
+                    key={k}
+                >
+                    {k === "Assignment" ? 
+                        <div className="tagContentExp">
+                            <strong>{k}</strong>
+                            {v["eng"]} 
+                        </div> :
+                    (k === "Project Includes" ? 
+                        <div className="tagContentList">
+                            <strong>{k}</strong> 
+                            {v.map(value => 
+                                <div 
+                                    className="tag"
+                                    key={value} 
+                                >
+                                    {value}
+                                </div>)}
+                            </div> : 
+                    (k === "Information" ? 
+                        <div className="tagContentInfo">
+                            <strong>{k}</strong>
+                            {v}
+                        </div> : 
+                    null))}
+                </TagAbout>
+            )}
+        </TagWrapperDiv>
+    )
+}

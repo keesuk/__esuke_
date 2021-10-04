@@ -37,81 +37,61 @@ export const mentInEmptyCell = [
     "Empty Cell",
     "Empty Cell",
 ]
-export const menuButton = {   
-    "title" : "About", 
-    "color": theme.colorObjs["subMenuAboutMeColor"],
-    "line" : theme.lines["subMenuAboutMeLine"],
-    "order" : 1,
-    "content" : [
-        "About", 
-        "Contact"
-    ]
+export const menuContact = {
+    profile : {
+        front: <ProfileFront/>, 
+        back : <ProfileBack/>,
+    },
+    mail: "keesukee@naver.com",
 }
-export const menuMenu = [
-    {   
-        "title" : "About", 
-        "color": theme.colorObjs["subMenuAboutMeColor"],
-        "line" : theme.lines["subMenuAboutMeLine"],
-        "order" : 1,
-    },{
-        "title" : "Contact", 
-        "color": theme.colorObjs["subMenuContactColor"],
-        "line" : theme.lines["subMenuContactLine"],
-        "order" : 2,
-    }
-]
 export const menuAboutMe = [
     {
-        "content" : "",
-        "width" : "18rem",
-        "color" : "#ffffff",
-        "borColor" : "#aaaaaa",
-        "img" : "",
+        borColor : "#aaaaaa",
+        color : "#ffffff",
+        width : "18",
+        content : "",
+        image : "",
     },{
-        "content" : "",
-        "width" : "18rem",
-        "color" : "#ffffff",
-        "borColor" : "#aaaaaa",
-        "img" : "",
+        borColor : "#aaaaaa",
+        color : "#ffffff",
+        width : "18",
+        content : "",
+        image : "",
     },{   
-        "content" : "",
-        "width" : "12rem",
-        "color" : "#A7EFFF",
-        "borColor" : "#4DC2DC",
-        "img" : null,
+        borColor : "#4DC2DC",
+        color : "#A7EFFF",
+        width : "12",
+        content : "",
+        image : null,
     },{
-        "content" : "",
-        "width" : "12rem",
-        "color" : "#A7EFFF",
-        "borColor" : "#4DC2DC",
-        "img" : null,
+        borColor : "#4DC2DC",
+        color : "#A7EFFF",
+        width : "12",
+        content : "",
+        image : null,
     },{
-        "content" : "",
-        "width" : "12rem",
-        "color" : theme.colorObjs["subMenuColor"],
-        "borColor" : theme.colorObjs["subMenuBorColor"],
-        "img" : null,
+        borColor : theme.colorObjs["subMenuBorColor"],
+        color : theme.colorObjs["subMenuColor"],
+        width : "12",
+        content : "",
+        image : null,
     },{
-        "content" : "",
-        "width" : "12rem",
-        "color" : theme.colorObjs["subMenuColor"],
-        "borColor" : theme.colorObjs["subMenuBorColor"],
-        "img" : null,
+        borColor : theme.colorObjs["subMenuBorColor"],
+        color : theme.colorObjs["subMenuColor"],
+        width : "12",
+        content : "",
+        image : null,
     },{
-        "content" : "",
-        "width" : "12rem",
-        "color" : theme.colorObjs["subMenuColor"],
-        "borColor" : theme.colorObjs["subMenuBorColor"],
-        "img" : null,
+        borColor : theme.colorObjs["subMenuBorColor"],
+        color : theme.colorObjs["subMenuColor"],
+        width : "12",
+        content : "",
+        image : null,
     },
 ]
-export const menuContact = {
-    "front" : <ProfileFront/>, 
-    "back" : <ProfileBack/>,
-    "mail" : "keesukee@naver.com",
-}
+
 export const subPageIntroTag = {
-    "text" : {
+    text : {
         "eng" : <>
             Welcome! Happy that you spend precious time to me. And I hope you would enjoy.<br/><br/>
             Thank You<br/>
@@ -123,8 +103,8 @@ export const subPageIntroTag = {
             진심으로,
             </>
     },
-    "date" : `${getDate()[0]}, ${getDate()[1]}, ${getDate()[2]}`,
-    "rotate" : -4,
+    date : `${getDate()[0]}, ${getDate()[1]}, ${getDate()[2]}`,
+    rotate : -4,
 }
 export const otherSiteLink = [
     {

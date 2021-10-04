@@ -1,293 +1,158 @@
-import { Component } from "react"
+import React, {useState, useEffect} from "react"
 import styled from 'styled-components'
+
+import { scrollTrigger, UseWindowSize } from "../../_data/_Functions"
 
 import AboutMe from "./AboutMe.js"
 import Contact from "./Contact.js"
 import Trash from "./Trash.js"
 
-import { menuMenu, menuAboutMe, menuContact, menuButton } from '../../_data/_Data.jsx'
-import { scrollTrigger } from "../../_data/_Functions"
 
-
-const value = 200
-
-const MenuDiv = styled.div`
+const AreaDiv = styled.div`
+    position: fixed;
+    z-index: 3;
+    left: 29vw;
+    bottom: 0;
+    top: 0;
+`
+const MenuButton = styled.div`
     ${({theme}) => theme.deskTop`
-        left: ${theme.layoutRatio["sub"]}%;
-        z-index: 1;
-        top: 3rem;
+        left: -4.2rem;;
+        top: 5rem;
+
+        &:hover button {
+            box-shadow: .1rem .1rem .4rem rgba(0, 0, 0, .3);
+            margin-left: 1.5rem;
+        }
+
+        &:hover .hoverOn {
+            display: block;
+        }
     `}
     ${({theme, scroll}) => theme.mobile` 
-        ${scroll 
-            ? "left: 3rem;" 
-            : "left: 1.6rem;"
-        };
-        transform-origin: left top;
-        transform: scaleX(-1);
-        transition: all .2s;
-        z-index: 1000000;
+        left: ${scroll 
+            ? "3" 
+            : "1.6"
+        }rem;
         top: 4.5rem;
     `}
-    box-sizing: border-box;
-    color: transparent;
     position: fixed;
-    width: 8rem;
+    width: 13rem;
+    z-index: 100;
 
     button {
         ${({theme}) => theme.deskTop` 
-            box-shadow: 0rem 0rem .15rem rgba(0, 0, 0, .5);
+            box-shadow: 0rem 0rem .15rem rgba(0, 0, 0, .6);
         `}
         ${({theme, scroll}) => theme.mobile` 
-            ${scroll 
-                ? "box-shadow: -0.2rem 0.2rem .5rem rgba(0, 0, 0, .4);" 
-                : "box-shadow: 0rem 0rem .2rem rgba(0, 0, 0, .4);"
+            box-shadow: ${scroll 
+                ? "-0.2rem 0.2rem .5rem rgba(0, 0, 0, .4)" 
+                : "0rem 0rem .2rem rgba(0, 0, 0, .4)"
             };
         `}
-        margin-left: ${({active}) => active 
-            ? "-6" 
-            : "-4"
+        margin-left: ${({toggle}) => toggle 
+            ? "1.5" 
+            : "0"
         }rem;
         background-color: white;
         box-sizing: border-box;
         transition: all .2s;
         position: relative;
         padding: .2rem;
-        width: 120%;
+        width: 100%;
 
         .inner {
             ${({theme}) => theme.deskTop` 
-                border: .3rem double #F72D0D;
-                padding-left: 1rem;
-                height: 1.2rem;
+                border: .35rem double #F72D0D;
+                height: 1.8rem;
             `}
             ${({theme}) => theme.mobile` 
                 border: .35rem double #F72D0D;
-                padding-left: 4rem;
                 height: 1.8rem;
             `}
-            color: ${({active}) => active 
-                ? "black" 
-                : "white"
-            };
-            background-color: white;
             padding-bottom: .3rem;
             display: block;
 
-            .text {
-                ${({theme}) => theme.mobile` 
-                    transform-origin: left;
-                    transform: scaleX(-1); 
-                `}
+            &:after {
+                color: ${({toggle}) => toggle 
+                    ? "black" 
+                    : "transparent"
+                };
                 letter-spacing: -.05rem;
+                margin-right: 1rem;
                 white-space: nowrap;
                 font-style: italic;
                 font-size: 1.2rem;
                 font-weight: 600;
+                content: "close";
+                display: block;
+                float: right;
             }
         }
     }
 
-    ${({theme}) => theme.deskTop`
-        &:hover button {
-            box-shadow: .1rem .1rem .15rem rgba(0, 0, 0, .3);
-            margin-left: -6.5rem;
-        }
-        &:active button {
-            box-shadow: .1rem .1rem .15rem rgba(0, 0, 0, .3);
-            margin-left: -5rem;
-            color: black;
+    &:active button {
+        box-shadow: .02rem .02rem .2rem rgba(0, 0, 0, .6);
+        margin-left: 1rem;
+    }
 
-            &:before {
-                color: black;
-            }
-        }
-        &:hover .hoverOn {
-            padding: .2rem .15rem .2rem .15rem;
-            background-color: black;
-            position: absolute;
-            line-height: 1rem;
-            font-size: 1.2rem;
-            right: 15.5rem;
-            display: block;
-            color: white;
-            top: .3rem;
-        }
-    `}
-    ${({theme}) => theme.mobile`
-        &:active button {
-            box-shadow: .1rem .1rem .15rem rgba(0, 0, 0, .3);
-            margin-left: -6.5rem;
-        }
-    `}
+    .hoverOn {
+        padding: .2rem .15rem .2rem .15rem;
+        background-color: black;
+        position: absolute;
+        line-height: 1rem;
+        font-size: 1.2rem;
+        display: none;
+        left: 16rem;
+        color: white;
+        top: .3rem;
+    }
 `
 
-class Menu extends Component {
-    constructor(props){
-        super(props)
-        this.state = {
-            menu: {}, 
-            aboutMe: {},
-            cor: {}
-        }
-        this.postItHandler = this.postItHandler.bind(this)
-        this.postItDouble = this.postItDouble.bind(this)
-        this.postItReorder = this.postItReorder.bind(this)
-        this.postItClose = this.postItClose.bind(this)
-    }
+const value = 200 
 
-    componentDidMount(){
-        this._menu()
-        this._aboutMe()
+const Menu = ({ scroll }) => {
+    const [menu, setMenu] = useState(false)
+    const [trashCor, setTrashCor] = useState({X: 0, Y: 0})
 
-        this.setState({ cor : {
-            clientWidth : document.body.clientWidth,
+    const winSize = UseWindowSize().width
+
+    useEffect(() => {
+        setTrashCor({
             X: document.body.clientWidth-value,
             Y: value
-        }})
-    }
-
-    componentDidUpdate(){
-        const width = document.body.clientWidth
-
-        if(this.state.cor.clientWidth !== width){
-            this.setState({ cor : {
-                clientWidth : width,
-                X: document.body.clientWidth-value,
-                Y: value
-            }})
-        }
-    }
-
-    _menu(){
-        const menuObj = {}
-        
-        menuMenu.map(v => Object.assign(menuObj, {
-            [v.title] : false
-        }))
-        this.setState({ menu : menuObj })
-    }
-    _aboutMe(){
-        const aboutMeObj = {}
-
-        menuAboutMe.map(v => Object.assign(aboutMeObj, {
-            [menuAboutMe.indexOf(v)] : {
-                "zValue": menuAboutMe.indexOf(v),
-                "bool" : false
-        }}))
-        this.setState({ aboutMe : aboutMeObj })
-    }
-    postItDouble(about, contact){
-        this.postItHandler(about)
-        this.postItHandler(contact)    
-    }
-    postItHandler(v){
-        const aboutMeObj = this.state.aboutMe
-        const menuObj = this.state.menu
-        const bool = this.state.menu[v]
-        
-        if(v === "About"){
-            if(bool === true){
-                for(let key in aboutMeObj){
-                    aboutMeObj[key]["zValue"] = parseInt(key)
-                    aboutMeObj[key]["bool"] = false
-            }}else{ 
-                for(let key in aboutMeObj){
-                    aboutMeObj[key]["bool"] = true    
-        }}}
-        menuObj[v] = !bool
-
-        this.setState({
-            aboutMe : aboutMeObj,
-            menu : menuObj,
         })
-    }
-    postItClose(num){
-        const aboutMeObj = this.state.aboutMe
-        aboutMeObj[num]["bool"] = false
+    }, [winSize])
 
-        this.setState({ aboutMe : aboutMeObj })
-    }
-    postItReorder(num){
-        const aboutMeObj = this.state.aboutMe
-        const last = Object.keys(aboutMeObj).length-1
+    const toggle = () => { setMenu(!menu) }
 
-        for(let key in aboutMeObj) aboutMeObj[key]["zValue"]--
-
-        aboutMeObj[num]["zValue"] = last
-        this.setState({ aboutMe : aboutMeObj })
-    }
-
-    render(){
-        const { menu, aboutMe, cor }  = this.state
-        const { X, Y } = cor
-
-        return(<>
-            {menu["About"] 
-                ?   <> 
-                    {menuAboutMe.map((v, i) => aboutMe[i]["bool"] 
-                        ?   <>
-                            <Contact 
-                                prfFront={menuContact["front"]}
-                                prfBack={menuContact["back"]}
-                                mail={menuContact["mail"]}
-                                onContact={menu["Contact"] ? true : false}
-                            /> 
-                            <AboutMe 
-                                order={this.postItReorder}
-                                close={this.postItClose}
-                                zValue={aboutMe[i]["zValue"]} 
-                                borColor={v["borColor"]}
-                                content={v["content"]}
-                                width={v["width"]}
-                                color={v["color"]}
-                                img={v["img"]}
-                                key={i}
-                                num={i}
-                                X={X}
-                                Y={Y}
-                            />
-                            </>
-                        :   null
-                    )}
-                    <Trash
-                        width={document.body.clientWidth-X}
-                        height={Y} 
-                        radius={Y}
-                    >
-                        <div className="trashInner">
-                            <div className="trashInnerInner">
-                                <div className="trashInnerInnerInner">
-                                </div>
-                            </div>
-                        </div>
-                    </Trash>
-                    </>
-                :   null
-            }
-            <MenuDiv
-                scroll={scrollTrigger(this.props.scroll, 200)}
-                active={menu[menuButton["title"]] 
-                    ? true 
-                    : false
-                }
-            >
-                <button 
-                    onClick={()=> this.postItDouble(
-                        menuButton["content"][0], 
-                        menuButton["content"][1]
-                )}>
-                    <div className="inner">
-                        <div className="text">
-                            close
-                        </div>
-                    </div>
-                </button>
-                <div className="hoverOn">
-                    About
-                </div>
-            </MenuDiv>
-        </>)
-    }
+    return(<>
+        <MenuButton
+            scroll={scrollTrigger(scroll, 200)}
+            toggle={menu}
+        >
+            <button onClick={() => toggle()}>
+                <div className="inner"/>
+            </button>
+            <div className="hoverOn">
+                About
+            </div>
+        </MenuButton>
+        <AreaDiv>
+            <Contact toggle={menu}/> 
+            <AboutMe 
+                X={trashCor.X}
+                Y={trashCor.Y}
+                toggle={menu}
+            />
+            <Trash
+                height={value}
+                radius={value}
+                width={value}
+                toggle={menu}
+            />
+        </AreaDiv>
+    </>)
 }
 
 export default Menu

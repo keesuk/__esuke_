@@ -55,10 +55,10 @@ const IndexDiv = styled.div`
         background-color: white;
         position: absolute;
         display: block;
-        height: 100%;
+        height: 100vh;
         width: 10rem;
         content: "";
-        top: 0;
+        top: 0px;
     }
 `
 const IndexObjectDiv = styled.div`

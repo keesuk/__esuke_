@@ -4,8 +4,14 @@ import { marking } from "../../_data/_Functions.jsx"
 
 
 const MainTitleDiv = styled.div`
-    margin-right: 14%;
-    margin-left: 7%;
+    ${({theme}) => theme.deskTop`
+        margin-right: 7%;
+        margin-left: 14%;
+    `}
+    ${({theme}) => theme.mobile`
+        margin-right: 14%;
+        margin-left: 7%;
+    `}
 
     .text {
         ${({theme}) => theme.mobile`
@@ -20,7 +26,7 @@ const MainTitleDiv = styled.div`
         font-family: ${({theme}) => theme.fontObjs["mainTitle"]["fontFamily"]};
         font-size: ${({theme}) => theme.fontObjs["mainTitle"]["fontSize"]};
         letter-spacing: -0.06rem;
-        line-height: 4.4rem;
+        line-height: 5rem;
 
         .mark {
             background: linear-gradient(to top, transparent 45%, 
@@ -51,14 +57,17 @@ const MainTitleDiv = styled.div`
                     ? theme.fontObjs["mainTitle"]["mark"]["fontStyle"]["home"]
                     : theme.fontObjs["mainTitle"]["mark"]["fontStyle"]["page"]
                 };
+                white-space: ${({color}) => color === "home"
+                    ? "nowrap"
+                    : ""
+                };
                 color: black;
             }
         }
         
         .category {
             ${({theme}) => theme.deskTop`
-                letter-spacing: -.07rem;
-                font-size: 2rem;
+                letter-spacing: -0.1rem;
             `}
             ${({theme}) => theme.mobile`
                 letter-spacing: -.05rem;
@@ -92,9 +101,6 @@ const MainTitleBox = ({color, isThin, text, category, link}) => {
                             <span className="titleText">
                                 {text}:
                             </span>
-                        </span><br/>
-                        <span className="category">
-                            {category}
                         </span>
                     </div>
             }

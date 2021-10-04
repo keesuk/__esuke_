@@ -328,16 +328,6 @@ const comp = [
             image: image[4],
             isLeft: true, 
             remark: null
-        },{
-            type: "Text", 
-            marginBottom: {deskTop: "0", mobile: "15"},
-            marginRight: {deskTop: "0", mobile: null},
-            marginLeft: {deskTop: "0", mobile: "8"},
-            marginTop: {deskTop: "0", mobile: "90"}, 
-            width: {deskTop: "50", mobile: "100"}, 
-            text: subText[0],
-            isLeft: false,
-            color: "black",
         }]
     },{ 
         type: "OuterImg",

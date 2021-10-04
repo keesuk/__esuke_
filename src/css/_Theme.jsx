@@ -8,7 +8,6 @@ const {
 
 
 const colorObjs = {
-
     "mainLayoutBackColor" : colors["white"],
     "mainLayoutLineColor" : colors["black"],
 
@@ -25,7 +24,7 @@ const colorObjs = {
     "subPageTitleColor" : colors["black"],
     "subPageLineColor" : colors["black"],
 
-    "subTagBackColor" : colors["lightGrey"],
+    "subTagBackColor" : colors["white"],
     "subTagTranslateLineColor" : colors["deepDeepYellow"],
     "subTagTranslateTextColor" : colors["white"],
     "subTagTranslateTapeColor" : "rgba(900, 900, 900, .6)",
@@ -68,7 +67,7 @@ const lines = {
     "subMenuContactLine": `0.12rem solid ${colorObjs["subMenuContactDeepColor"]}`,
     "postItContentLine" : `0.12rem solid `,
 
-    "cellEmptyLine": `0.15rem dashed ${colorObjs["cellEmptyLineColor"]}`,
+    "cellEmptyLine": `0.2rem dashed ${colorObjs["cellEmptyLineColor"]}`,
     "cellEmptyLineMobile": `0.2rem dashed ${colorObjs["cellEmptyLineColor"]}`,
 
     "pageModulesOuterImgBoxLine" : `.05rem solid ${colorObjs["pageModulesOuterImgBoxLineColor"]}`,
@@ -109,7 +108,7 @@ const fontObjs = {
     "cellEmpty" : {
         "fontWeight" : fontWeights["semiBold"],
         "fontFamily" : fontFamilys["engMono"],
-        "fontSize" : fontSizes["A11"],
+        "fontSize" : fontSizes["A10"],
         "fontStyle" : "italic",
     },
     "subTag" : {
@@ -259,8 +258,8 @@ const layoutRatio = {
     "leftMargin" : 2.7,
     "topMargin" : 6.8,
     "ratio" : 1.45,
-    "main" : 71,
-    "sub" : 29,
+    "main" : 74,
+    "sub" : 26,
 }
 
 const theme = {

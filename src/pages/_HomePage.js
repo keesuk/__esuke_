@@ -1,12 +1,18 @@
-import { welcomeMention, otherSiteLink } from "../_data/_Data.jsx"
-import { MainLayout } from "../components/_Layout.jsx"
+import { welcomeMention, otherSiteLink, subPageIntroTag } from "../_data/_Data.jsx"
+import Layout from "../components/_Layout.jsx"
 import MainTitle from "../components/Main/MainTitle.js"
 import FolioList from "../components/Main/FolioList.js"
+import { TagIntro } from "../components/Sub/Tags.js"
 
 
 const HomePage = () => {
     return(
-        <MainLayout>
+        <Layout>
+            <TagIntro
+               text={subPageIntroTag.text} 
+               date={subPageIntroTag.date} 
+               rotate={subPageIntroTag.rotate} 
+            />
             <MainTitle
                 text={welcomeMention}
                 link={otherSiteLink}
@@ -16,7 +22,7 @@ const HomePage = () => {
             <FolioList
                 subTitle={null}
             />
-        </MainLayout>
+        </Layout>
     )
 }
 

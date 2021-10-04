@@ -1,7 +1,8 @@
-import { CopyToClipboard } from 'react-copy-to-clipboard'
 import { useState } from "react"
+import { CopyToClipboard } from 'react-copy-to-clipboard'
 import styled from "styled-components"
 
+import { menuContact } from '../../_data/_Data.jsx'
 import craft from "../../_data/img/_Source/craft.png"
 
 
@@ -13,15 +14,14 @@ const bottom = `calc(-${prfHeight} * ${ratio+.3})`
 const height = `calc(${prfHeight} * ${ratio})`
 const width = `calc(${prfWidth} * ${ratio})`
 
-
 const ProfileButton = styled.button`
     bottom: ${({buttonOn}) => buttonOn 
-        ? "0vw" 
+        ? "0" 
         : bottom
     };
     height: ${height};
     width: ${width};
-    box-shadow: .1rem .2rem .4rem rgba(0, 0, 0, .1);
+    box-shadow: .1rem .1rem .4rem rgba(0, 0, 0, .5);
     background-repeat: no-repeat;
     background-position: center;
     transition: bottom .5s ease;
@@ -29,7 +29,7 @@ const ProfileButton = styled.button`
     background-size: cover;
     position: absolute;
     z-index: 10;
-    left: 16vw;
+    left: -10vw;
 
     &:active > .message { 
         transform: rotate(20deg);
@@ -101,19 +101,18 @@ const ProfileButton = styled.button`
     }
 `
 
-const Contact = ({prfFront, prfBack, mail, onContact}) => {
-
+const Contact = ({toggle}) => {
     const [copied, setCopied] = useState(false)
     const [hover, setHover] = useState(false)
 
     return (
         <CopyToClipboard 
             onCopy={() => setCopied(true)}
-            text={mail}
+            text={menuContact.mail}
         >
             <ProfileButton
                 onClick={() => setHover(!hover)}
-                buttonOn={onContact}
+                buttonOn={toggle}
                 copy={copied}
             >
                 <div className="message">
@@ -121,9 +120,9 @@ const Contact = ({prfFront, prfBack, mail, onContact}) => {
                         mail's been copied<br/> 
                         to clipboard
                 </div>
-                {!hover 
-                    ? prfFront 
-                    : prfBack
+                {hover 
+                    ? menuContact.profile.back
+                    : menuContact.profile.front
                 }
             </ProfileButton>
         </CopyToClipboard>

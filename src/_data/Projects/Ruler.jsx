@@ -8,7 +8,7 @@ import image5 from "../img/Ruler_Content/Ruler-15.png"
 import image6 from "../img/Ruler_Content/Ruler-16.png"
 
 
-const title = "Magnified Ordinary Things, Ruler"
+const title = "Magnified Ordinary Things"
 const category = "Editorial"
 const name = "Ruler"
 const year = "2018"

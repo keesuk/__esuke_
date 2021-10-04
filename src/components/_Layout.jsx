@@ -1,13 +1,11 @@
 import styled from "styled-components"
 
 
-export const MainLayout = styled.div`
+const Layout = styled.div`
     ${({theme}) => theme.deskTop`
-        border-left: ${theme.lines["mainLayoutLine"]}; 
         width: ${theme.layoutRatio["main"]}%;
-        left: ${theme.layoutRatio["sub"]}%;
-        padding-top: 6rem;
-        z-index: 2;
+        margin-right: auto;
+        margin-left: auto;
     `}
     ${({theme}) => theme.mobile`
         padding-top: 4rem;
@@ -15,19 +13,14 @@ export const MainLayout = styled.div`
         z-index: 0;
         left: 0%;
     `}
-    background-color: ${({theme}) => theme.colorObjs["mainLayoutBackColor"]}; 
     position: relative;
 `
 export const SubLayout = styled.div`
     ${({theme}) => theme.deskTop`
-        background-color: ${theme.colorObjs["subLayoutBackColor"]}; 
-        border-right: ${theme.lines["mainLayoutLine"]}; 
-        width: ${theme.layoutRatio["sub"]}%;
-        position: fixed;
-        z-index: 0;
-        bottom: 0;
-        left: 0;
-        top: 0;
+        height: 10rem;
+        margin-top: 2rem;
+        margin-left: 17rem;
+        z-index: 1;
     `}
     ${({theme}) => theme.mobile`
         background-color: white; 
@@ -36,3 +29,5 @@ export const SubLayout = styled.div`
         z-index: 1;
     `}
 `
+
+export default Layout

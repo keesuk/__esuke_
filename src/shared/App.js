@@ -4,13 +4,11 @@ import { Route, HashRouter as Router } from "react-router-dom"
 import { ThemeProvider } from "styled-components"
 import smoothscroll from "smoothscroll-polyfill"
 
-import Index from "../components/Sub/Index.js"
 import Home from "../components/Sub/Home.js"
 import Menu from "../components/Sub/Menu.js"
 
 import ContentPage from "../pages/_ContentPage.js"
 import HomePage from "../pages/_HomePage.js"
-import SubPage from "../pages/_SubPage.js"
 
 import { portFolioContents } from "../_data/_Data.jsx"
 import { ScrollToTop } from "../_data/_Functions"
@@ -30,9 +28,7 @@ const App = () => {
                 <Route path="/">
                     <Home scroll={scroll}/>
                     <Menu scroll={scroll}/>
-                    <Index/>
                 </Route>
-                <Route component={SubPage} path="/"/>
                 <Route component={HomePage} exact path="/"/>
                 {portFolioContents.map(v => 
                     <Route 

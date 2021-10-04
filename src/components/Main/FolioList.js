@@ -7,7 +7,7 @@ import { portFolioContents, mentInEmptyCell } from "../../_data/_Data.jsx"
 
 const FolioCellsDiv = styled.div`
     ${({theme}) => theme.deskTop`
-        grid-gap: 1.2rem 1.4rem;
+        grid-gap: 1.7rem 1.9rem;
     `}
     ${({theme}) => theme.mobile`
         grid-gap: 1rem 1.2rem;
@@ -23,8 +23,8 @@ const FolioCellsDiv = styled.div`
 FolioCellsDiv.defaultProps = {
     marginTop: "10",
     marginBottom: "10",
-    marginLeft: "3.5",
-    marginRight: "6",
+    marginLeft: "14",
+    marginRight: "14",
 }
 
 const FolioCell = styled.div`
@@ -118,15 +118,10 @@ const FolioCellEmpty = styled.div`
     height: 96%;
     
     &:before {
-        ${({theme}) => theme.deskTop`
-            font-size: 1.8rem;
-        `}
-        ${({theme}) => theme.mobile`
-            font-size: 2.4rem;
-        `}
+        font-size: 2.4rem;
         color: ${({theme}) => theme.colorObjs["cellEmptyTextColor"]};
         position: absolute;
-        margin-top: -.9rem;
+        margin-top: -1rem;
         content: "✂";
         left: 45%;
     }
@@ -134,7 +129,7 @@ const FolioCellEmpty = styled.div`
         ${({theme}) => theme.deskTop`
             font-weight: ${theme.fontObjs["cellEmpty"]["fontWeight"]};
             font-size: ${theme.fontObjs["cellEmpty"]["fontSize"]};
-            bottom: 0;
+            bottom: .5rem;
         `}
         ${({theme}) => theme.mobile`
             letter-spacing: -.01rem;
@@ -215,7 +210,7 @@ const FolioList = ({ category, exceptionName, marginTop, marginBottom, marginLef
                         <FolioCellText
                             category={v.category}
                         >
-                            <div className="category">{v.category}</div>
+                            <div className="category">{v.year}</div>
                             <div className="title">{v.name}</div> 
                             <div className="year">{v.year}</div>
                         </FolioCellText>
