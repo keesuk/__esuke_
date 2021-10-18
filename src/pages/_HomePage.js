@@ -1,8 +1,8 @@
+import React from "react"
 import { welcomeMention, otherSiteLink, subPageIntroTag } from "../_data/_Data.jsx"
-import Layout from "../components/_Layout.jsx"
-import MainTitle from "../components/Main/MainTitle.js"
-import FolioList from "../components/Main/FolioList.js"
-import { TagIntro } from "../components/Sub/Tags.js"
+import Layout from "../css/_Layout.jsx"
+import MainTitle from "../components/MainTitle.js"
+import { TagIntro } from "../components/Tags.js"
 
 
 const HomePage = () => {
@@ -18,9 +18,6 @@ const HomePage = () => {
                 link={otherSiteLink}
                 isThin={false}
                 color={"home"}
-            />
-            <FolioList
-                subTitle={null}
             />
         </Layout>
     )

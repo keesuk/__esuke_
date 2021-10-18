@@ -55,7 +55,7 @@ const lines = {
 
     "subPageLine" : `0.12rem dashed ${colorObjs["subPageLineColor"]}`,
     "subTagLineBold": `0.25rem solid ${colorObjs["subTagLineColor"]}`,
-    "subTagLineLight": `0.1rem solid ${colorObjs["subTagLineColor"]}`,
+    "subTagLineLight": `0.09rem solid ${colorObjs["subTagLineColor"]}`,
     "subTagLineLightDashed": `0.15rem dashed ${colorObjs["subTagLineColor"]}`,
     "subTagInLineBold": `0.13rem solid ${colorObjs["subTagLineColor"]}`,
     "subTagInLineLight": `0.12rem solid ${colorObjs["subTagLineLightColor"]}`,
@@ -67,7 +67,7 @@ const lines = {
     "subMenuContactLine": `0.12rem solid ${colorObjs["subMenuContactDeepColor"]}`,
     "postItContentLine" : `0.12rem solid `,
 
-    "cellEmptyLine": `0.2rem dashed ${colorObjs["cellEmptyLineColor"]}`,
+    "cellEmptyLine": `0.15rem dashed ${colorObjs["cellEmptyLineColor"]}`,
     "cellEmptyLineMobile": `0.2rem dashed ${colorObjs["cellEmptyLineColor"]}`,
 
     "pageModulesOuterImgBoxLine" : `.05rem solid ${colorObjs["pageModulesOuterImgBoxLineColor"]}`,
@@ -255,11 +255,8 @@ const fontObjs = {
 }
 
 const layoutRatio = {
-    "leftMargin" : 2.7,
-    "topMargin" : 6.8,
-    "ratio" : 1.45,
-    "main" : 74,
-    "sub" : 26,
+    "left" : 20,
+    "right" : 20,
 }
 
 const theme = {

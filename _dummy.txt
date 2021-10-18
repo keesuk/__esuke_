@@ -2332,4 +2332,122 @@ class Menu extends Component {
     }
 }
 
-export default Menu
+export default Menu{
+        "eng" : "Elements that were heavily considered in the logo production are 'fragrance' and 'dove', the symbol of pigeon. In this project, the work was carried out taking this point into consideration. The color was selected as a soft pink that can appeal to the fragrance, and the logo type was made by combining the curve of pigeon, the existing symbol of Pigeon, with the elegant serif.",
+        "kor" : "로고 제작에서 비중있게 고려되었던 요소는 '향기'와 피죤의 심볼인 '비둘기'이다. 본 프로젝트에서는 이 점을 고려하여 작업을 진행하였다. 컬러는 향기를 어필할 수 있는 부드러운 핑크로 선정하였고, 로고타입에서는 유려한 세리프에 피죤의 기존 심볼인 비둘기의 곡선을 결합시켜 제작하였다.",
+        "mark" : []
+    }
+
+
+
+const ImageBoxDiv = styled.div`
+    margin-top: 8%;
+    width: 80%;
+
+    .cell {
+        border: .15rem dashed ${({theme, isText}) => isText 
+            ? "#888"
+            : theme.colorObjs["cellEmptyLineColor"]
+        };
+        box-sizing: border-box;
+        transition: all .2s;
+        padding: .5rem;
+        
+        &:before {
+            color: ${({theme, isText}) =>  isText 
+                ? "#333"
+                : theme.colorObjs["cellEmptyTextColor"]
+            };
+            padding-left: ${({howMany}) => howMany}%;
+            margin-top: -1.5rem;
+            margin-bottom: 0rem;
+            font-size: 2.5rem;
+            display: flex;
+            content: "✂";
+        }
+
+        .back {
+            display: flex;
+            
+            .nextButton {
+                position: absolute;
+                display: block;
+                height: 100%;
+                width: 50%;
+                right: 0;
+                cursor: e-resize;
+                z-index: 10;
+            }
+            .preButton {
+                position: absolute;
+                display: block;
+                height: 100%;
+                width: 50%;
+                left: 0;
+                cursor: w-resize;
+                z-index: 10;
+            }
+            .image {
+                object-fit: contain;
+            }
+        }
+    }
+`
+
+
+// const imageBox = ({isText, imageArr}) => {
+
+//     return (
+//         <ImageBoxDiv>
+//             <div className="cell">
+//                 <div className="back">
+//                     <button onClick={prev} className="preButton"/>
+//                     <button onClick={next} className="nextButton"/>
+//                     {imageArr.map((v, i) => 
+//                         <img 
+//                             className="image" 
+//                             src={v} 
+//                             key={v}
+//                             alt=""
+//                         />
+//                     )}
+//                 </div>
+//             </div>
+//         </ImageBoxDiv>
+//     )
+        
+// }
+
+const subText = [
+    {
+        "title" : {
+            "eng" : "OnBoard",
+            "kor" : "온보드",
+        },
+        "eng" : "When entering the service, it provides hints for the next action through a button that induces clicks and a way of speaking.",
+        "kor" : "서비스에 진입하게 되면 클릭을 유도하는 버튼과 말을 건네는 방식을 통해 다음 행동에 대한 힌트를 제시한다."
+    },{
+        "title" : {
+            "eng" : "Input",
+            "kor" : "인풋",
+        },
+        "eng" : "Users enter data about an area they know or are familiar with. The image appears as a refined form rather than a familiar photograph. This is because refinement can lead to consensus about familiar areas from the user's point of view, along with whether or not to confirm that they know exactly from the data point of view. Click on the image to transform the ornaments.",
+        "kor" : "사용자는 자신이 알거나 익숙한 지역에 대한 데이터를 입력한다. 해당 이미지는 흔히 알고 있는 사진이 아닌 정제된 형태로서 나타난다. 정제는 데이터적 관점에서 정확히 알고 있는지에 대한 확인여부와 함께 사용자 관점에서 익숙한 지역에 대해 공감대를 이끌 수 있기 때문이다. 이미지를 클릭하면 구성하는 오너먼트들을 변형시킨다. "
+    },{
+        "title" : {
+            "eng" : "Output",
+            "kor" : "아웃풋",
+        },
+        "eng" : "The data presented by the input is presented to the station to indicate the level of knowledge about the area. This serves as a reward for clearing a mission and a motivation to perform other missions at the same time. In addition, you can see the output data that sums up other people's data through the bottom bar of the main screen. The first poster page presents a one-line review with dominant category data for randomly selected regions. In addition, additional data not displayed on the poster can be viewed on the bottom page.",
+        "kor" : "인풋에서 제시한 데이터를 해당 역에 제시하여 그 지역에 대해 알고 있는 정도를 알려준다. 이는 미션을 클리어했을 때의 보상과 동시에 다른 미션을 수행하기 위한 동기부여로서 작용한다. 또한, 메인화면 하단바를 통해 다른 사람들의 데이터를 총합한 아웃풋 데이터를 볼 수 있다. 첫번째 포스터 페이지는 임의로 선정한 지역에 대한 우세한 카테고리 데이터와 함께 한줄평을 제시한다. 또한, 포스터에 나타나지 않은 부가데이터는 하단 페이지에서 볼 수 있다."
+    }
+]
+
+
+
+    useEffect(() => {
+        slideRef.current.style.transform = `translateX(-${currentSlide}00%)`
+      }, [currentSlide])
+
+
+                <div className="slider" ref={slideRef}>

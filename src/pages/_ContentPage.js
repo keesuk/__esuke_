@@ -1,85 +1,97 @@
-import React from "react"
+import { useState } from "react"
+import MainTextBox from "../components/MainText.js"
+import Layout from "../css/_Layout.jsx"
+import styled from "styled-components"
+import ImageSlider from "../components/ImageSlider.js"
 
-import { TagWrapper } from "../components/Sub/Tags.js"
+const Container = styled.div`
+    ${({theme, width, isLeft}) => theme.deskTop`
+        width: ${width}%;
+        margin-top: 18%;
+        ${isLeft 
+            ? ""
+            : "margin-left: auto; margin-right: 0;"
+        }
+    `}
+    ${({theme}) => theme.mobile`
+        width: 100%;
+        margin-top: 5%;
+    `}
+    position: relative;
 
-import Layout from "../components/_Layout.jsx"
-import OuterImgBox from "../components/Main/OuterImgBox.js"  
-import InnerImgBox from "../components/Main/InnerImgBox.js"  
-import MainTitleBox from "../components/Main/MainTitle.js"
-import FolioList from "../components/Main/FolioList.js"
-import MainTextBox from "../components/Main/MainText.js"
-import FootnoteBox from "../components/Main/Footnote.js"  
-import LogoBox from "../components/Main/LogoBox.js" 
+    .bottomText {
+        ${({theme}) => theme.mobile` 
+            letter-spacing: -.065rem;
+            word-spacing: -.18rem;
+            line-height: 1.85rem;
+            font-size: 1.2rem;
+            margin-left: 2%;
+            width: 97%;
+        `}
+        ${({theme}) => theme.deskTop` 
+            letter-spacing: -.03rem;
+            word-spacing: -.02rem;
+            line-height: 1.3rem;
+            font-size: 1rem;
+        `}
+        color: ${({theme, isText}) =>  isText 
+            ? "#000"
+            : theme.colorObjs["cellEmptyTextColor"]
+        };
+        transition: all .2s;
+        margin-top: 1.3rem;
+        font-style: italic;
+        font-weight: 700;
+        cursor: pointer;
 
+        .title {
+            margin-right: 1rem;
+        }
+        .sub {
+            ${({theme}) => theme.mobile` 
+                letter-spacing: -.07rem;
+                word-spacing: -.08rem;
+                font-size: 1.1rem; 
+            `}
+            ${({theme}) => theme.deskTop` 
+                letter-spacing: -.045rem;
+                word-spacing: -.1rem;
+                font-size: .85rem;
+            `}
+            font-weight: 400;
+        }
+    }
+`
 
-const ContentPage = ({comp, name, category}) => {
+const ContentPage = ({content}) => {
+    const [isText, setIsText] = useState(false)
+    
     return(
         <Layout>
-            <TagWrapper
-                location={name}
-            />
-            {comp.map((v, i) => {
-                let Component
-
-                if(v.type === "OuterImg"){Component = OuterImgBox}
-                else if(v.type === "InnerImg"){Component = InnerImgBox}
-                else if(v.type === "MainTitle"){Component = MainTitleBox}
-                else if(v.type === "MainText"){Component = MainTextBox}
-                else if(v.type === "Footnote"){Component = FootnoteBox}
-                else if(v.type === "Logo"){Component = LogoBox}
-
-                return(
-                    <Component
-                        key={name+v.type+i}
-
-                        paddingBottom={v.paddingBottom}
-                        paddingRight={v.paddingRight}
-                        paddingLeft={v.paddingLeft}
-                        paddingTop={v.paddingTop}
-
-                        marginBottom={v.marginBottom}
-                        marginRight={v.marginRight}
-                        marginLeft={v.marginLeft}
-                        marginTop={v.marginTop}
-
-                        isHorizon={v.isHorizon}
-                        isOutline={v.isOutline}
-                        isFilter={v.isFilter}
-                        isLeft={v.isLeft}
-                        isThin={v.isThin}
-
-                        colorWidth={v.colorWidth}
-                        colorSpeed={v.colorSpeed}
-                        color={v.color}
-
-                        height={v.height}
-                        width={v.width}
-
-                        contents={v.contents}
-                        remark={v.remark}
-
-                        image={v.image}
-                        text={v.text}
-                        logo={v.logo}
-
-                        detailTop={v.detailTop}
-                        interval={v.interval}
-                        category={v.category}
-                    />
-                )
-            })}
-            <FolioList
-                category={category}
-                exceptionName={name}
-                marginBottom={"5"}
-                marginRight={"5"}
-                marginLeft={"10"}
-                marginTop={"4"}
-                subTitle={{
-                    marginLeft: "10",
-                    marginTop: "10",
-                    text:"see More",
-                }}
+            <Container 
+                isLeft={content.isLeft}
+                width={content.width}
+                isText={isText}
+            >
+                <ImageSlider
+                    imageArr={content.image}
+                    height={content.height}
+                    isText={isText}
+                />
+                <div 
+                    onClick={()=> setIsText(!isText)}
+                    className="bottomText"
+                >
+                    <span className="title">{content.title}</span>
+                    <span className="sub">{content.assign["eng"]}</span>
+                </div>
+            </Container>
+            <MainTextBox
+                text={content.mainText}
+                color={content.keyColor}
+                colorWidth={"8"}
+                colorSpeed={"1"}
+                isText={isText}
             />
         </Layout>
     )
