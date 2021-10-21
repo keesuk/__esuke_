@@ -10,8 +10,8 @@ import image6 from "../img/Pigeon_Content/Pigeon-16.jpg"
 
 const title = "Pigeon Brand Book"
 const year = "Sep 2019"
-const width = "82"
-const height = "37"
+const width = "84"
+const height = "38"
 const isLeft = true
 const logo = <Logo/>
 const color = "#ff677f"
@@ -39,17 +39,30 @@ const mainText = {
 
 const image = [
     {
+        type: "logo",
         paddingLR: {deskTop: "4", mobile: "10"},
         paddingTB: {deskTop: "23", mobile: "10"},
         color: color,
         logo: logo,
-    },
-    image1,
-    image2,
-    image3,
-    image4,
-    image5,
-    image6,
+    },{
+        type: "image",
+        image: image1
+    },{
+        type: "image",
+        image: image2
+    },{
+        type: "image",
+        image: image3
+    },{
+        type: "image",
+        image: image4
+    },{
+        type: "image",
+        image: image5
+    },{
+        type: "image",
+        image: image6
+    }
 ]
 
 const contents = {

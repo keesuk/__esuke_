@@ -1,6 +1,6 @@
 import { useState, useCallback, useEffect } from "react"
 import styled from "styled-components"
-import {LogoImage, Image} from "./ImageModule"
+import {LogoImage, BrowserImage, Image} from "./ImageModule"
 
 
 const Container = styled.div`
@@ -65,7 +65,6 @@ const Container = styled.div`
         }
     }
 `
-
 const SlideDiv = styled.div`
     display: ${({active}) => active 
         ? ""
@@ -82,9 +81,10 @@ const ImageSlider = ({isText, imageArr, height}) => {
     const [logoSec, setLogoSec] = useState(false)
     const [isRight, setIsRight] = useState(true)
 
-    const found = imageArr.findIndex(v => v.logo !== undefined)
+    const found = imageArr.findIndex(v => v.type === "logo")
     const totalSlide = imageArr.length-1
 
+    
     const nextSlide = () => {
         if (currentSlide >= totalSlide) setCurrentSlide(0)
         else setCurrentSlide(currentSlide + 1)
@@ -98,6 +98,7 @@ const ImageSlider = ({isText, imageArr, height}) => {
 
         setIsRight(false)
     }
+
 
     useEffect(() => {
         if(currentSlide === found) setLogoSec(true)
@@ -121,7 +122,8 @@ const ImageSlider = ({isText, imageArr, height}) => {
                 {imageArr.map((v, i) => {
                     let Component
                     
-                    if(v.logo !== undefined) Component = LogoImage
+                    if(v.type === "logo") Component = LogoImage
+                    else if(v.type === "browser") Component = BrowserImage
                     else Component = Image
 
                     return (
@@ -130,15 +132,14 @@ const ImageSlider = ({isText, imageArr, height}) => {
                                 ? true 
                                 : false
                             }
-                            key={v}
+                            key={v.image || v.logo}
                         >
                             <Component 
                                 paddingLR={v.paddingLR}
                                 paddingTB={v.paddingTB}
+                                image={v.image} 
                                 color={v.color}
                                 logo={v.logo}
-                                src={v} 
-                                alt=""
                             />
                         </SlideDiv>
                     )

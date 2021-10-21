@@ -5,11 +5,12 @@ import { marking } from "../_data/_Functions.jsx"
 
 const MainTitleDiv = styled.div`
     ${({theme}) => theme.mobile`
-        margin-left: 7%;
-        margin-right: 7%;
-        margin-top: 15%;
         margin-bottom: 10%;
+        margin-right: 7%;
+        margin-left: 7%;
+        margin-top: 15%;
     `}
+    margin-bottom: 15%;
     margin-right: 20%;
 
     .text {

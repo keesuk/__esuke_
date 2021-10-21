@@ -5,7 +5,6 @@ import { ProfileFront, ProfileBack } from "./img/_Source/_Profile_Card.jsx"
 
 import Pigeon from "./Projects/Pigeon.jsx"
 import Samsara from "./Projects/Samsara.jsx"
-import Onvoyage from "./Projects/Onvoyage.jsx"
 import Seoul from "./Projects/Seoul.jsx"
 import Ruler from "./Projects/Ruler.jsx"
 import WeDel from "./Projects/WeDel.jsx"
@@ -13,11 +12,11 @@ import Gakka from "./Projects/Gakka.jsx"
 
 export const portFolioContents = [
     Pigeon, 
+    Ruler,
     Samsara, 
-    Ruler, 
-    // Gakka,
-    // WeDel,
     Seoul, 
+    WeDel,
+    // Gakka, 
 ]
 
 export const welcomeMention = {

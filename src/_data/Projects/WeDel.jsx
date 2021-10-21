@@ -1,41 +1,14 @@
 import Logo from "../img/WeDel_Content/_WeDelLogo.jsx"
 import thumbnail from "../img/WeDel_Content/Wedel-Thumbnail.png"
-import image1 from "../img/WeDel_Content/WeDel-1.jpg"
+import image1 from "../img/WeDel_Content/WeDel-11.jpg"
 import image2 from "../img/WeDel_Content/WeDel-12.jpg"
 import image3 from "../img/WeDel_Content/WeDel-13.jpg"
-import image4 from "../img/WeDel_Content/WeDel-14.jpg"
-import image5 from "../img/WeDel_Content/WeDel-15.png"
-import image6 from "../img/WeDel_Content/WeDel-16.png"
-import image7 from "../img/WeDel_Content/WeDel-17.png"
-import image8 from "../img/WeDel_Content/WeDel-18.png"
-import image9 from "../img/WeDel_Content/WeDel-19.png"
-import image10 from "../img/WeDel_Content/WeDel-20.jpg"
-import image11 from "../img/WeDel_Content/WeDel-21.jpg"
-import image12 from "../img/WeDel_Content/WeDel-22.jpg"
-import image13 from "../img/WeDel_Content/WeDel-23.jpg"
-import image14 from "../img/WeDel_Content/WeDel-24.jpg"
-import image15 from "../img/WeDel_Content/WeDel-25.jpg"
-import image16 from "../img/WeDel_Content/WeDel-26.gif"
-import image17 from "../img/WeDel_Content/WeDel-27.jpg"
-import image18 from "../img/WeDel_Content/WeDel-28.gif"
-import image19 from "../img/WeDel_Content/WeDel-29.png"
-import image20 from "../img/WeDel_Content/WeDel-30.png"
-import image21 from "../img/WeDel_Content/WeDel-31.gif"
-import image22 from "../img/WeDel_Content/WeDel-32.png"
-import image23 from "../img/WeDel_Content/WeDel-33.gif"
-import image24 from "../img/WeDel_Content/WeDel-34.png"
-import image25 from "../img/WeDel_Content/WeDel-35.png"
-import image26 from "../img/WeDel_Content/WeDel-36.gif"
-import image27 from "../img/WeDel_Content/WeDel-37.gif"
-import image28 from "../img/WeDel_Content/WeDel-38.gif"
-import image29 from "../img/WeDel_Content/WeDel-39.jpg"
-import image30 from "../img/WeDel_Content/WeDel-40.jpg"
 
 
 
 const title = "We Eat Delight"
 const width = "100"
-const height = "30"
+const height = "49"
 const year = "Sep 2019"
 const isLeft = true
 const logo = <Logo/>
@@ -86,36 +59,22 @@ const mainText =
     // }
 
 const image = [
-    image1,
-    image2,
-    image3,
-    image4,
-    image5,
-    image6,
-    image7,
-    image8,
-    image9,
-    image10,
-    image11,
-    image12,
-    image13,
-    image14,
-    image15,
-    image16,
-    image17,
-    image18,
-    image19,
-    image20,
-    image21,
-    image22,
-    image23,
-    image24,
-    image25,
-    image26,
-    image27,
-    image28,
-    image29,
-    image30,
+    {
+        type: "image",
+        image: image1
+    },{
+        type: "logo",
+        paddingLR: {deskTop: "30", mobile: "10"},
+        paddingTB: {deskTop: "15", mobile: "10"},
+        color: color,
+        logo: logo,
+    },{
+        type: "image",
+        image: image3
+    },{
+        type: "image",
+        image: image2
+    }
 ]
 
 

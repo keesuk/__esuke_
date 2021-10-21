@@ -11,13 +11,13 @@ import Trash from "./Trash.js"
 const AreaDiv = styled.div`
     position: fixed;
     z-index: 20;
-    left: 29vw;
     bottom: 0;
-    top: 0;
+    right: 0;
+    left: 0;
 `
 const MenuButton = styled.div`
     ${({theme}) => theme.deskTop`
-        left: -4.2rem;;
+        left: -4.2rem;
         top: 5rem;
 
         &:hover button {
@@ -136,22 +136,22 @@ const Menu = ({ scroll }) => {
                 <div className="inner"/>
             </button>
             <div className="hoverOn">
-                About
+                Contact
             </div>
         </MenuButton>
         <AreaDiv>
             <Contact toggle={menu}/> 
-            <AboutMe 
+            {/* <AboutMe 
                 X={trashCor.X}
                 Y={trashCor.Y}
                 toggle={menu}
-            />
-            <Trash
+            /> */}
+            {/* <Trash
                 height={value}
                 radius={value}
                 width={value}
                 toggle={menu}
-            />
+            /> */}
         </AreaDiv>
     </>)
 }

@@ -34,9 +34,16 @@ const mainText =
     }
 
 const image = [
-    image2,
-    image1,
-    image3,
+    {
+        type: "image",
+        image: image2
+    },{
+        type: "image",
+        image: image1
+    },{
+        type: "image",
+        image: image3
+    }
 ]
 
 const contents = {

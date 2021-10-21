@@ -60,11 +60,10 @@ const CursorDiv = styled.div`
         }
     }
 `
-
 const LogoBox = ({
     detectedEnvironment: {isMouseDetected, isTouchDetected},
-    position: {x, y},
     isPositionOutside, 
+    position: {x, y},
     isActive,
     conCor,
     logo }) => {
@@ -132,7 +131,6 @@ const LogoBox = ({
         </>
     )
 }
-
 const LogoBoxDiv = styled.div`
     ${({theme, paddingLR, paddingTB}) => theme.deskTop`
         background-color: ${({color, hover}) => hover 
@@ -170,7 +168,6 @@ const LogoBoxDiv = styled.div`
         }
     }
 `
-
 export const LogoImage = ({ color, paddingTB, paddingLR, logo}) => {
 
     const [conCor, setConCor] = useState({})
@@ -210,105 +207,64 @@ export const LogoImage = ({ color, paddingTB, paddingLR, logo}) => {
 }
 
 
-export const Image = styled.img`
+const ImageImg = styled.img`
     object-fit: cover;
     height: 100%;
     width: 100%;
 `
+export const Image = ({image}) => {
+    return (
+        <ImageImg
+            src={image}
+            alt=""
+        />
+    )
+}
 
+//img size 832 1392
 const BrowserMockupDiv  = styled.div`
-    ${({theme, width, marginTop, marginLeft, marginRight}) => theme.deskTop`
-        margin-right: ${marginRight.deskTop}vw;
-        margin-left: ${marginLeft.deskTop}vw;
-        margin-top: ${marginTop.deskTop}vw;
-        width: ${({width}) => width.deskTop}%;
-        height: ${({isHorizon, width}) => isHorizon 
-            ? width.deskTop / 3
-            : width.deskTop
-        }vw;
-    `}
-    ${({theme, width, marginTop, marginLeft, marginRight}) => theme.mobile`
-        margin-right: ${marginRight.mobile}vw;
-        margin-left: ${marginLeft.mobile}vw;
-        margin-top: ${marginTop.mobile}vw;
-        width: ${({width}) => width.mobile}%;
-        height: ${({isHorizon, width}) => isHorizon 
-            ? width.mobile / 3
-            : width.mobile
-        }vw;
-    `}
-    float: ${({isLeft}) => isLeft
-        ? "left" 
-        : "right"
-    };
     position: relative;
+    height: 100%;
+    width: 100%;
 
-    .box {
-        ${({theme, isHorizon}) => theme.deskTop`
-            height: ${isHorizon 
-                ? "110"
-                : "104" 
-            }%;
-            width: ${isHorizon
-                ? "110" 
-                : "111"
-            }%;
-        `}
-        ${({theme, isHorizon}) => theme.mobile`
-            height: ${isHorizon 
-                ? "110"
-                : "153" 
-            }%;
-            width: ${isHorizon
-                ? "110" 
-                : "99.5"
-            }%;
-        `}
+    .browser {
         background-image: url("${({isHorizon}) => isHorizon
             ? HorizontalBrowserDark
             : VerticalBrowserWhite 
         }");
-        background-position: center; 
         background-repeat: no-repeat;
+        background-position: center; 
         background-size: cover;
-
-        .img {
-            margin-right: ${({isHorizon}) => isHorizon 
-                ? "2.9"
-                : "4.2" 
-            }%;
-            margin-top: ${({isHorizon}) => isHorizon 
-                ? "5.7"
-                : "8.9" 
-            }%;
-            width: ${({isHorizon}) => isHorizon 
-                ? "91.6"
-                : "86.2" 
-            }%;
-            display: block;
-            height: auto;
-            float: right;
-        }  
+        height: 100%;
+        width: 100%;
     }
+
+    .image {
+        width: ${({isHorizon}) => isHorizon 
+            ? "91.6"
+            : "85.5" 
+        }%;
+        position: absolute;
+        margin: auto;
+        z-index: -1;
+        bottom: 0;
+        right: 0;
+        left: 0;
+        top: 0;
+    }  
 `
-export const BrowserImage = ({width, isLeft, marginTop, marginLeft, marginRight, image, isHorizon}) => {
+export const BrowserImage = ({image, isHorizon}) => {
     
     return(
         <BrowserMockupDiv
-            marginRight={marginRight}
-            marginLeft={marginLeft}
-            marginTop={marginTop}
             isHorizon={isHorizon}
-            isLeft={isLeft}
-            width={width}
         >
-            <div className="box">
-                <img 
-                    src={image}
-                    className="img" 
-                    alt="" 
-                />
-            </div>
+            <div className="browser"/>
+            <img 
+                src={image}
+                className="image" 
+                alt="" 
+            />
         </BrowserMockupDiv>
     )
 }

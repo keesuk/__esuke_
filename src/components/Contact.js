@@ -1,18 +1,20 @@
-import { useState } from "react"
+import { useEffect, useState } from "react"
 import { CopyToClipboard } from 'react-copy-to-clipboard'
 import styled from "styled-components"
 
 import { menuContact } from "../_data/_Data.jsx"
+import { UseWindowSize } from "../_data/_Functions.jsx"
 import craft from "../_data/img/_Source/craft.png"
 
 
-const prfHeight = "196px"
-const prfWidth = "325px"
-const ratio = 1.5
+const prfHeight = 10
+const prfWidth = 17
+const criteria = 2490
+const ratio = 1.8
 
-const bottom = `calc(-${prfHeight} * ${ratio+.3})`
-const height = `calc(${prfHeight} * ${ratio})`
-const width = `calc(${prfWidth} * ${ratio})`
+const bottom = `calc(-${prfHeight}rem * ${ratio+.3})`
+const height = `calc(${prfHeight}rem * ${ratio})`
+const width = `calc(${prfWidth}rem * ${ratio})`
 
 const ProfileButton = styled.button`
     bottom: ${({buttonOn}) => buttonOn 
@@ -21,15 +23,16 @@ const ProfileButton = styled.button`
     };
     height: ${height};
     width: ${width};
-    box-shadow: .1rem .1rem .4rem rgba(0, 0, 0, .5);
+    box-shadow: .3rem .2rem 1rem rgba(0, 0, 0, .3);
     background-repeat: no-repeat;
     background-position: center;
     transition: bottom .5s ease;
+    transform: translateX(-50%);
     background-color: white;
     background-size: cover;
     position: absolute;
     z-index: 10;
-    left: -10vw;
+    left: 50%;
 
     &:active > .message { 
         transform: rotate(20deg);
@@ -47,24 +50,26 @@ const ProfileButton = styled.button`
             : "0"
         };
         background-image: url(${craft});
-        box-shadow: .05rem .05rem .2rem rgba(0, 0, 0, .4);
+        box-shadow: .05rem .05rem .2rem rgba(0, 0, 0, .2);
+        padding: 1.2rem 1rem .8rem 1rem;
         background-repeat: no-repeat;
-        padding: 20px 25px 12px 25px;
         background-position: center; 
-        border: 1.5px solid #A7844F;
+        border: .1rem solid #A7844F;
+        letter-spacing: -.02rem;
         background-size: cover;
+        line-height: 1.25rem; 
         position: absolute;
         border-left: none;
         border-top: none;
-        font-size: 15px;
-        color: white;
+        font-size: .85rem;
+        color: #fefefe;
         right: 10px;
         top: 10px;
     }
 
     .paperclip {
-        box-shadow: .1rem .1rem .1rem rgba(0, 0, 0, .4);
-        transform: scale(0.8) rotate(20deg);
+        transform: scale(${({size}) => size}) rotate(20deg);
+        box-shadow: .1rem .1rem .1rem rgba(0, 0, 0, .2);
         border-radius: 0 0 90px 90px;
         border: 2px groove #DDDDDD;
         box-sizing: border-box;
@@ -97,13 +102,25 @@ const ProfileButton = styled.button`
         height: 30px;
         width: 26px;
         left: -2px;
-        top: -30px;
+        top: -32px;
     }
 `
 
 const Contact = ({toggle}) => {
+    const winWidth = UseWindowSize().width
+
     const [copied, setCopied] = useState(false)
     const [hover, setHover] = useState(false)
+    const [size, setSize] = useState(1)
+
+    useEffect(() => {
+        setSize(winWidth/criteria)
+    }, [winWidth])
+
+    useEffect(() => {
+        setCopied(false)
+        setHover(false)
+    }, [toggle === false])
 
     return (
         <CopyToClipboard 
@@ -113,6 +130,7 @@ const Contact = ({toggle}) => {
             <ProfileButton
                 onClick={() => setHover(!hover)}
                 buttonOn={toggle}
+                size={size}
                 copy={copied}
             >
                 <div className="message">

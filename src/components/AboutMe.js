@@ -32,8 +32,8 @@ const PostIt = styled.div`
     border-top: ${({theme}) => theme.lines["postItContentLine"]} rgba(255, 255, 255, 0.3);
     animation-duration: .${({num}) => num}s;
     background-color: ${({color}) => color};
-    height: ${({width}) => width}rem;
-    width: ${({width}) => width}rem;
+    height: ${({width}) => width}vw;
+    width: ${({width}) => width}vw;
     animation-iteration-count: 1;
     animation-name: effect;
     position: absolute;

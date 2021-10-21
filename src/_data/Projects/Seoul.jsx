@@ -5,6 +5,12 @@ import image2 from "../img/Seoul_Content/Seoul-12.jpg"
 import image3 from "../img/Seoul_Content/Seoul-13.jpg"
 import image4 from "../img/Seoul_Content/Seoul-14.gif"
 import image5 from "../img/Seoul_Content/Seoul-15.gif"
+import image6 from "../img/Seoul_Content/Seoul-16.gif"
+import image7 from "../img/Seoul_Content/Seoul-17.gif"
+import image8 from "../img/Seoul_Content/Seoul-18.gif"
+import image9 from "../img/Seoul_Content/Seoul-19.jpg"
+import image10 from "../img/Seoul_Content/Seoul-20.jpg"
+import image11 from "../img/Seoul_Content/Seoul-21.jpg"
 
 
 const title = "Seoul That We See"
@@ -32,17 +38,46 @@ const mainText =
 
 
 const image = [
-    image1,
     {
+        type: "image",
+        image: image1
+    },{
+        type: "logo",
         paddingLR: {deskTop: "1", mobile: "10"},
         paddingTB: {deskTop: "60", mobile: "10"},
         color: color,
         logo: logo,
-    },
-    image2,
-    image3,
-    image4,
-    image5,
+    },{
+        type: "image",
+        image: image2
+    },{
+        type: "image",
+        image: image3
+    },{
+        type: "browser",
+        image: image4
+    },{
+        type: "browser",
+        image: image5
+    },{
+        type: "browser",
+        image: image7
+    },{
+        type: "browser",
+        image: image6
+    },{
+        type: "browser",
+        image: image8
+    },{
+        type: "image",
+        image: image9
+    },{
+        type: "image",
+        image: image10
+    },{
+        type: "image",
+        image: image11
+    }
 ]
 
 const contents = {

@@ -9,8 +9,8 @@ import image6 from "../img/Ruler_Content/Ruler-16.jpg"
 
 const title = "Magnified Ordinary Things"
 const year = "Mar 2018"
-const width = "80"
-const height = "40"
+const width = "77"
+const height = "39"
 const isLeft = true
 const color = "#3B44AC"
 const assign = {
@@ -24,12 +24,25 @@ const tag = [
 ]
 
 const image = [
-    image1,
-    image2,
-    image3,
-    image4,
-    image5,
-    image6,
+    {
+        type: "image",
+        image: image1
+    },{
+        type: "image",
+        image: image2
+    },{
+        type: "image",
+        image: image3
+    },{
+        type: "image",
+        image: image4
+    },{
+        type: "image",
+        image: image5
+    },{
+        type: "image",
+        image: image6
+    }
 ]
 const mainText = {
     "eng" : "There are things around us that we didn't know well because we were used to it. Dolls, cameras, bicycles, erasers, etc. are familiar, but we do not know deeply about these things. Magnified Ordinary Things is a group project that reinterprets the familiar but missed objects around us. Each of them composed content that could give an interesting interpretation of the given object, and edited 8 pages to match it. Among them, I approached the ruler, and also dealt with expandable objects such as protractors and figures connected to the ruler. The approach used the visual language of analysis to actively express the growing physical properties, and the logical expression method of disassembling and recombining it appropriate for this was mainly shown.",

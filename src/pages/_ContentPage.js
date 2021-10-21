@@ -6,16 +6,20 @@ import ImageSlider from "../components/ImageSlider.js"
 
 const Container = styled.div`
     ${({theme, width, isLeft}) => theme.deskTop`
-        width: ${width}%;
-        margin-top: 18%;
-        ${isLeft 
+        margin-right: ${isLeft 
             ? ""
-            : "margin-left: auto; margin-right: 0;"
-        }
+            : "0"
+        };
+        margin-left: ${isLeft 
+            ? ""
+            : "auto"
+        };
+        width: ${width}%;
+        margin-top: 12%;
     `}
     ${({theme}) => theme.mobile`
-        width: 100%;
         margin-top: 5%;
+        width: 100%;
     `}
     position: relative;
 
