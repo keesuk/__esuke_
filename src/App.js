@@ -1,5 +1,4 @@
 import React from "react"
-import { useScrollYPosition } from "react-use-scroll-position"
 import { Route, HashRouter as Router } from "react-router-dom"
 import { ThemeProvider } from "styled-components"
 import smoothscroll from "smoothscroll-polyfill"
@@ -8,6 +7,7 @@ import Home from "./components/Home.js"
 import Menu from "./components/Menu.js"
 
 import ContentPage from "./pages/_ContentPage.js"
+import FooterPage from "./pages/_FooterPage.js"
 import HomePage from "./pages/_HomePage.js"
 
 import { portFolioContents } from "./_data/_Data.jsx"
@@ -18,7 +18,6 @@ import "./app.css"
 
 
 const App = () => {
-    const scroll = useScrollYPosition()
     smoothscroll.polyfill()
 
     return (
@@ -26,8 +25,8 @@ const App = () => {
             <Router basename="/">
                 <ScrollToTop/>
                 <Route path="/">
-                    <Home scroll={scroll}/>
-                    <Menu scroll={scroll}/>
+                    <Home />
+                    <Menu />
                 </Route>
                 <Route component={HomePage} exact path="/"/>
                 <Route path="/">
@@ -38,6 +37,7 @@ const App = () => {
                         />
                     )}
                 </Route>
+                <Route component={FooterPage} exact path="/"/>
             </Router>
         </ThemeProvider>
     )

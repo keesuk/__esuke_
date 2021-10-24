@@ -9,6 +9,8 @@ import Seoul from "./Projects/Seoul.jsx"
 import Ruler from "./Projects/Ruler.jsx"
 import WeDel from "./Projects/WeDel.jsx"
 import Gakka from "./Projects/Gakka.jsx"
+import WeEat from "./Projects/WeEat.jsx"
+import WeCat from "./Projects/WeCat.jsx"
 
 export const portFolioContents = [
     Pigeon, 
@@ -16,6 +18,8 @@ export const portFolioContents = [
     Samsara, 
     Seoul, 
     WeDel,
+    WeCat,
+    WeEat,
     // Gakka, 
 ]
 

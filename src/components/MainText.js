@@ -1,6 +1,5 @@
-import { useEffect, useState } from "react";
-import styled from "styled-components"
 import { marking, numbering } from "../_data/_Functions.jsx"  
+import styled from "styled-components"
 
 
 const MainTextMarkBox = (color, colorWidth, colorSpeed) => `

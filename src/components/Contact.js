@@ -120,7 +120,7 @@ const Contact = ({toggle}) => {
     useEffect(() => {
         setCopied(false)
         setHover(false)
-    }, [toggle === false])
+    }, [toggle])
 
     return (
         <CopyToClipboard 
@@ -135,8 +135,8 @@ const Contact = ({toggle}) => {
             >
                 <div className="message">
                     <div className="paperclip"/>
-                        mail's been copied<br/> 
-                        to clipboard
+                    mail's been copied<br/> 
+                    to clipboard
                 </div>
                 {hover 
                     ? menuContact.profile.back

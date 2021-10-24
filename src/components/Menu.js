@@ -1,11 +1,10 @@
-import React, {useState, useEffect} from "react"
+import { useScrollYPosition } from "react-use-scroll-position"
+import React, {useState} from "react"
 import styled from 'styled-components'
 
-import { scrollTrigger, UseWindowSize } from "../_data/_Functions"
+import { scrollTrigger } from "../_data/_Functions"
 
-import AboutMe from "./AboutMe.js"
 import Contact from "./Contact.js"
-import Trash from "./Trash.js"
 
 
 const AreaDiv = styled.div`
@@ -110,20 +109,10 @@ const MenuButton = styled.div`
     }
 `
 
-const value = 200 
 
-const Menu = ({ scroll }) => {
+const Menu = () => {
     const [menu, setMenu] = useState(false)
-    const [trashCor, setTrashCor] = useState({X: 0, Y: 0})
-
-    const winSize = UseWindowSize().width
-
-    useEffect(() => {
-        setTrashCor({
-            X: document.body.clientWidth-value,
-            Y: value
-        })
-    }, [winSize])
+    const scroll = useScrollYPosition()
 
     const toggle = () => { setMenu(!menu) }
 
@@ -141,17 +130,6 @@ const Menu = ({ scroll }) => {
         </MenuButton>
         <AreaDiv>
             <Contact toggle={menu}/> 
-            {/* <AboutMe 
-                X={trashCor.X}
-                Y={trashCor.Y}
-                toggle={menu}
-            /> */}
-            {/* <Trash
-                height={value}
-                radius={value}
-                width={value}
-                toggle={menu}
-            /> */}
         </AreaDiv>
     </>)
 }

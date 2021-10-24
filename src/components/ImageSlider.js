@@ -1,6 +1,6 @@
-import { useState, useCallback, useEffect } from "react"
+import { LogoImage, BrowserImage, Image } from "./ImageModule"
+import { useState, useEffect } from "react"
 import styled from "styled-components"
-import {LogoImage, BrowserImage, Image} from "./ImageModule"
 
 
 const Container = styled.div`
@@ -104,7 +104,7 @@ const ImageSlider = ({isText, imageArr, height}) => {
         if(currentSlide === found) setLogoSec(true)
         else setLogoSec(false)
 
-    }, [currentSlide])
+    }, [currentSlide, found])
 
 
     return (

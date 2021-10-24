@@ -1,3 +1,4 @@
+import { useScrollYPosition } from "react-use-scroll-position"
 import { Link } from "react-router-dom"
 import styled from "styled-components"
 import React from "react"
@@ -87,8 +88,8 @@ const HomeButton = styled.div`
     }
 `
 
-const Home = ({scroll}) => {
-    
+const Home = () => {
+    const scroll = useScrollYPosition()
     return(
         <Link to="/">
             <HomeButton

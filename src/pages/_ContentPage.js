@@ -1,8 +1,8 @@
-import { useState } from "react"
+import ImageSlider from "../components/ImageSlider.js"
 import MainTextBox from "../components/MainText.js"
 import Layout from "../css/_Layout.jsx"
 import styled from "styled-components"
-import ImageSlider from "../components/ImageSlider.js"
+import { useState } from "react"
 
 const Container = styled.div`
     ${({theme, width, isLeft}) => theme.deskTop`
