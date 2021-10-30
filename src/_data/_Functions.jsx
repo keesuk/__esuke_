@@ -190,9 +190,9 @@ export function getGrid(width) {
 }
 
 export function getDate() {
-    let someDate = new Date();
-    let numberOfDaysToAdd = 6;
-    someDate.setDate(someDate.getDate() + numberOfDaysToAdd); 
+    let someDate = new Date()
+    let numberOfDaysToAdd = 6
+    someDate.setDate(someDate.getDate() + numberOfDaysToAdd) 
 
     let dd = someDate.getDate()
     let mm = someDate.getMonth() + 1

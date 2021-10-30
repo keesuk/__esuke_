@@ -11,6 +11,7 @@ import WeDel from "./Projects/WeDel.jsx"
 import Gakka from "./Projects/Gakka.jsx"
 import WeEat from "./Projects/WeEat.jsx"
 import WeCat from "./Projects/WeCat.jsx"
+import Sanchak from "./Projects/Sanchak.jsx"
 
 export const portFolioContents = [
     Pigeon, 
@@ -20,7 +21,8 @@ export const portFolioContents = [
     WeDel,
     WeCat,
     WeEat,
-    // Gakka, 
+    Gakka, 
+    Sanchak,
 ]
 
 export const welcomeMention = {

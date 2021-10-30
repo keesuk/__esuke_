@@ -1,10 +1,24 @@
 import image1 from "../img/WeEat_Content/WeEat-11.gif"
-
+import image2 from "../img/WeEat_Content/WeEat-12.jpg"
+import image3 from "../img/WeEat_Content/WeEat-13.jpg"
+import image4 from "../img/WeEat_Content/WeEat-14.jpg"
+import image5 from "../img/WeEat_Content/WeEat-15.gif"
+import image6 from "../img/WeEat_Content/WeEat-16.jpg"
+import image7 from "../img/WeEat_Content/WeEat-17.jpg"
+import image8 from "../img/WeEat_Content/WeEat-18.gif"
+import image9 from "../img/WeEat_Content/WeEat-19.png"
+import image10 from "../img/WeEat_Content/WeEat-20.gif"
+import image11 from "../img/WeEat_Content/WeEat-21.gif"
+import image12 from "../img/WeEat_Content/WeEat-22.png"
+import image13 from "../img/WeEat_Content/WeEat-23.gif"
+import image14 from "../img/WeEat_Content/WeEat-24.gif"
+import image15 from "../img/WeEat_Content/WeEat-25.jpg"
+import image16 from "../img/WeEat_Content/WeEat-26.jpg"
 
 
 const title = "We Eat Breakfast"
-const width = "50"
-const height = "60"
+const width = "65"
+const height = "52"
 const year = "Sep 2019"
 const isLeft = false
 const color = "#007336"
@@ -39,7 +53,52 @@ const image = [
     {
         type: "image",
         image: image1
-    }
+    },{
+        type: "image",
+        image: image2
+    },{
+        type: "image",
+        image: image3
+    },{
+        type: "image",
+        image: image4
+    },{
+        type: "image",
+        image: image5
+    },{
+        type: "image",
+        image: image6
+    },{
+        type: "image",
+        image: image7
+    },{
+        type: "image",
+        image: image8
+    },{
+        type: "image",
+        image: image9
+    },{
+        type: "image",
+        image: image10
+    },{
+        type: "image",
+        image: image11
+    },{
+        type: "image",
+        image: image12
+    },{
+        type: "image",
+        image: image13
+    },{
+        type: "image",
+        image: image14
+    },{
+        type: "image",
+        image: image15
+    },{
+        type: "image",
+        image: image16
+    },
 ]
 
 

@@ -4,13 +4,12 @@ import { ThemeProvider } from "styled-components"
 import smoothscroll from "smoothscroll-polyfill"
 
 import Home from "./components/Home.js"
-import Menu from "./components/Menu.js"
+import Contact from "./components/Contact.js"
 
 import ContentPage from "./pages/_ContentPage.js"
 import FooterPage from "./pages/_FooterPage.js"
 import HomePage from "./pages/_HomePage.js"
 
-import { portFolioContents } from "./_data/_Data.jsx"
 import { ScrollToTop } from "./_data/_Functions"
 import theme from "./css/_Theme.jsx"
 import media from "./css/_Media.jsx"
@@ -26,22 +25,14 @@ const App = () => {
                 <ScrollToTop/>
                 <Route path="/">
                     <Home />
-                    <Menu />
+                    <Contact />
                 </Route>
-                <Route component={HomePage} exact path="/"/>
-                <Route path="/">
-                    {portFolioContents.map((v, i) => 
-                        <ContentPage
-                            content={v}
-                            key={i}
-                        />
-                    )}
-                </Route>
-                <Route component={FooterPage} exact path="/"/>
+                <Route component={HomePage} path="/"/>
+                <Route component={ContentPage} path="/"/>
+                <Route component={FooterPage} path="/"/>
             </Router>
         </ThemeProvider>
     )
 }
 
 export default App
-

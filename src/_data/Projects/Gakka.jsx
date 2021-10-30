@@ -1,25 +1,20 @@
 import Logo from "../img/Gakka_Content/_GakkaLogo.jsx"
 import thumbnail from "../img/Gakka_Content/Gakka-Thumbnail.png"
-import image1 from "../img/Gakka_Content/Gakka-1.jpg"
-import image2 from "../img/Gakka_Content/Gakka-12.png"
-import image3 from "../img/Gakka_Content/Gakka-13.png"
-import image4 from "../img/Gakka_Content/Gakka-14.png"
+import image1 from "../img/Gakka_Content/Gakka-11.jpg"
+import image2 from "../img/Gakka_Content/Gakka-12.jpg"
+import image3 from "../img/Gakka_Content/Gakka-13.jpg"
+import image4 from "../img/Gakka_Content/Gakka-14.jpg"
 import image5 from "../img/Gakka_Content/Gakka-15.jpg"
-import image6 from "../img/Gakka_Content/Gakka-16.png"
+import image6 from "../img/Gakka_Content/Gakka-16.jpg"
 import image7 from "../img/Gakka_Content/Gakka-17.jpg"
-import image8 from "../img/Gakka_Content/Gakka-18.png"
-import image9 from "../img/Gakka_Content/Gakka-19.png"
-import image10 from "../img/Gakka_Content/Gakka-20.jpg"
-import image11 from "../img/Gakka_Content/Gakka-21.jpg"
-import image12 from "../img/Gakka_Content/Gakka-22.jpg"
-import image13 from "../img/Gakka_Content/Gakka-23.png"
-import image14 from "../img/Gakka_Content/Gakka-24.jpg"
+import image8 from "../img/Gakka_Content/Gakka-18.jpg"
+import image9 from "../img/Gakka_Content/Gakka-19.jpg"
 
 
 const title = "Walk Task Force, Gakka"
 const year = "Aug 2020"
-const width = "100"
-const height = "30"
+const width = "86"
+const height = "40"
 const isLeft = true
 const logo = <Logo/>
 const color = "#1c75bc"
@@ -33,21 +28,40 @@ const tag = [
     "Infographic"
 ]
 const image = [
-    thumbnail,
-    image1,
-    image2,
-    image3,
-    image4,
-    image5,
-    image6,
-    image7,
-    image8,
-    image9,
-    image10,
-    image11,
-    image12,
-    image13,
-    image14,
+    {
+        type: "image",
+        image: image1
+    },{
+        type: "logo",
+        paddingLR: {deskTop: "25", mobile: "10"},
+        paddingTB: {deskTop: "10", mobile: "10"},
+        color: color,
+        logo: logo,
+    },{
+        type: "image",
+        image: image2
+    },{
+        type: "image",
+        image: image3
+    },{
+        type: "image",
+        image: image4
+    },{
+        type: "image",
+        image: image5
+    },{
+        type: "image",
+        image: image6
+    },{
+        type: "image",
+        image: image7
+    },{
+        type: "image",
+        image: image8
+    },{
+        type: "image",
+        image: image9
+    },
 ]
 const mainText = 
     // {
