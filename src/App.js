@@ -27,7 +27,7 @@ const App = () => {
                     <Home />
                     <Contact />
                 </Route>
-                <Route component={HomePage} path="/"/>
+                <Route component={HomePage} exact path="/"/>
                 <Route component={ContentPage} path="/"/>
                 <Route component={FooterPage} path="/"/>
             </Router>

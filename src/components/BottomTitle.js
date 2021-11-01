@@ -11,22 +11,31 @@ const Container = styled.div`
     `}
     ${({theme}) => theme.deskTop` 
         letter-spacing: -.03rem;
-        word-spacing: -.02rem;
-        line-height: 1.3rem;
+        word-spacing: -.1rem;
+        line-height: 1.7rem;
+        margin-left: 2rem;
         font-size: 1rem;
     `}
+    border: .15rem dashed ${({theme, isText}) => isText
+        ? "#999"
+        : "#77D1E4"
+    };
     color: ${({theme, isText}) =>  isText 
         ? "#000"
         : theme.colorObjs["cellEmptyTextColor"]
     };
+    background-color: ${({theme, isText}) => isText
+        ? "#eee"
+        : theme.colorObjs["pageBackColor"]
+    };
+    padding: 1.2rem 2rem 1.4rem 2rem;
     transition: all .2s;
-    margin-top: 1.3rem;
-    font-style: italic;
+    margin-top: -.4rem;
     font-weight: 700;
     cursor: pointer;
 
     .title {
-        margin-right: 1rem;
+        margin-right: .8rem;
     }
     .sub {
         ${({theme}) => theme.mobile` 
@@ -35,9 +44,9 @@ const Container = styled.div`
             font-size: 1.1rem; 
         `}
         ${({theme}) => theme.deskTop` 
-            letter-spacing: -.045rem;
+            letter-spacing: -.06rem;
             word-spacing: -.1rem;
-            font-size: .85rem;
+            font-size: 1rem;
         `}
         font-weight: 400;
     }

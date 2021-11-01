@@ -13,12 +13,12 @@ const HomePage = () => {
                date={subPageIntroTag.date} 
                rotate={subPageIntroTag.rotate} 
             />
-            <MainTitle
+            {/* <MainTitle
                 text={welcomeMention}
                 link={otherSiteLink}
                 isThin={false}
                 color={"home"}
-            />
+            /> */}
         </Layout>
     )
 }

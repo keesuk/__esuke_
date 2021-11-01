@@ -1,28 +1,28 @@
 import theme from "../css/_Theme.jsx"
 
-import { getDate } from "./_Functions.jsx"
 import { ProfileFront, ProfileBack } from "./img/_Source/_Profile_Card.jsx"
+import { getDate } from "./_Functions.jsx"
 
-import Pigeon from "./Projects/Pigeon.jsx"
 import Samsara from "./Projects/Samsara.jsx"
+import Sanchak from "./Projects/Sanchak.jsx"
+import Pigeon from "./Projects/Pigeon.jsx"
 import Seoul from "./Projects/Seoul.jsx"
 import Ruler from "./Projects/Ruler.jsx"
 import WeDel from "./Projects/WeDel.jsx"
 import Gakka from "./Projects/Gakka.jsx"
 import WeEat from "./Projects/WeEat.jsx"
 import WeCat from "./Projects/WeCat.jsx"
-import Sanchak from "./Projects/Sanchak.jsx"
 
 export const portFolioContents = [
+    Gakka, 
+    Sanchak,
     Pigeon, 
-    Ruler,
-    Samsara, 
-    Seoul, 
+    Seoul,  
+    Samsara,
     WeDel,
     WeCat,
     WeEat,
-    Gakka, 
-    Sanchak,
+    Ruler,
 ]
 
 export const welcomeMention = {

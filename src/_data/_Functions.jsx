@@ -7,51 +7,6 @@ export function randomize(items) {
     return item
 }
 
-export function change(items) {
-    let i = 0
-
-    function changeRe(items){
-        i = (i+1) % items.length
-        return items[i]
-    }
-    return changeRe(items)
-}
-
-export function move(arr, from, to){
-    return arr.splice(to, 0, arr.splice(from, 1)[0])
-}
-
-export function findObject(obj, boolean) {
-    let arr = obj
-
-    if (!Array.isArray(arr)) arr = Object.values(arr)
-    
-    return arr.find((value) => {
-        return value.bool === boolean
-    })
-}
-
-export function findCategory(arr, category, now) {
-    let answer = []
-
-    if(category === undefined){
-        answer = arr
-    }else{
-        for(let i of arr){
-            if(i["category"] === category && i["title"] !== now)answer.push(i)
-        }
-    }
-
-    return answer
-}
-
-export function getKeyByValue(array, value) {
-    let arr = array
-    let found = arr.find(key => key.name === value)
-    
-    return found
-}
-
 export function UseWindowSize() {
     const [windowSize, setWindowSize] = React.useState(getWindowSize())
 
@@ -72,21 +27,6 @@ export function UseWindowSize() {
     return windowSize
 }
 
-export function isMobile(size, value) {
-    let mobile
-    let deskTop
-
-    if (!value){ 
-        mobile = true
-        deskTop = false
-    }else{
-        mobile = value.mobile
-        deskTop = value.deskTop
-    }
-
-    if(size.width < 1080) return mobile
-    else if(size.width > 1080) return deskTop
-}
 
 export function GetScrollPosition() {
     const [scrollPosition, setScrollPosition] = React.useState(0)
@@ -178,16 +118,6 @@ export function numbering(text, tagF, tagB) {
     return replaceAll(text, checkArr)
 }
 
-export function getSize(width, value) {
-    if(width >= 0 && width <= 1080)return value * 1.5
-    else if(width > 1080)return value * 1
-}
-
-export function getGrid(width) {
-    if(width >= 0 && width < 1024)return 2
-    else if(width >= 1024 && width < 1200)return 3
-    else if(width >= 1200)return 3
-}
 
 export function getDate() {
     let someDate = new Date()

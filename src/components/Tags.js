@@ -6,50 +6,52 @@ const TagIntroDiv = styled.div`
     ${({theme}) => theme.deskTop`
         background-color: ${theme.colorObjs["subTagBackColor"]};
         margin-bottom: 3%;
-        margin-top: 4%;
-        width: 24%;
+        margin-top: 5%;
+        width: 27%;
     `}
     ${({theme}) => theme.mobile`
         background-color: white;
-        margin-top: 10%;
         margin-bottom: 10%;
         margin-left: 24%;
+        margin-top: 10%;
         width: 65%;
     `}
     border: ${({theme}) => theme.lines["subTagLineBold"]};
-    border-radius: .5rem;
+    border-radius: .6rem;
     justify-self: start;
     position: relative;
-    padding: .1rem;
+    padding: .15rem;
 
     &:before {
         border: ${({theme}) => theme.lines["subTagLineLight"]};
-        padding-bottom: 108%;
-        border-radius: .2rem;
+        padding-bottom: 120%;
+        border-radius: .3rem;
         display: block;
         content: "";
     } 
     .tagContentExp {
+        position: absolute;
         margin-right: 9%;
         margin-left: 8%;
-        position: absolute;
-        bottom: .9rem;
-        top: 1.1rem;
+        bottom: 1.5rem;
+        top: 1.4rem;
     
         .eng {
             ${({theme}) => theme.deskTop`
-                font-size: ${theme.fontObjs["subTag"]["introContentExp"]["eng"]["fontSize"]};  
-                line-height: 1.4rem;
+                letter-spacing: -0.05rem;
+                word-spacing: -.01rem;
+                font-size: .93rem;  
+                line-height: 1.8rem;
             `}
             ${({theme}) => theme.mobile`
+                letter-spacing: -0.03rem;
+                word-spacing: 0.03rem;
                 line-height: 1.8rem;
                 font-size: .97rem;
             `}
             font-weight: ${({theme}) => theme.fontObjs["subTag"]["introContentExp"]["eng"]["fontWeight"]};
             font-family: ${({theme}) => theme.fontObjs["subTag"]["introContentExp"]["eng"]["fontFamily"]};
             font-style: ${({theme}) => theme.fontObjs["subTag"]["introContentExp"]["eng"]["fontStyle"]};
-            letter-spacing: -0.03rem;
-            word-spacing: 0.03rem;
         }
         .kor {
             font-weight: ${({theme}) => theme.fontObjs["subTag"]["introContentExp"]["kor"]["fontWeight"]};
@@ -93,8 +95,8 @@ const TagIntroDiv = styled.div`
 
         &:before {
             ${({theme}) => theme.deskTop`
-                font-size: ${theme.fontObjs["subTag"]["introContentExp"]["down"]["fontSize"]};
-                line-height: 3.5rem;
+                font-size: .8rem;
+                line-height: 4.5rem;
             `}
             ${({theme}) => theme.mobile`
                 line-height: 4rem;
@@ -112,8 +114,8 @@ const TagIntroDiv = styled.div`
         }
         &:after {
             ${({theme}) => theme.deskTop`
-                font-size: ${theme.fontObjs["subTag"]["introContentExp"]["down"]["fontSize"]};
-                line-height: 3.5rem;
+                font-size: .8rem;
+                line-height: 4.5rem;
             `}
             ${({theme}) => theme.mobile`
                 line-height: 4rem;
@@ -154,7 +156,7 @@ const TagIntroDiv = styled.div`
     `}
     .tagSubText {
         ${({theme}) => theme.deskTop`
-            font-size: ${theme.fontObjs["subTag"]["introDate"]["fontSize"]};
+            font-size: 1.6rem;
             letter-spacing: .05rem;
         `}
         ${({theme}) => theme.mobile`
@@ -165,7 +167,7 @@ const TagIntroDiv = styled.div`
         font-weight: ${({theme}) => theme.fontObjs["subTag"]["introDate"]["fontWeight"]};
         position: absolute;
         right: 7.5%;
-        bottom: 26%;
+        bottom: 27.5%;
     }
 `
 

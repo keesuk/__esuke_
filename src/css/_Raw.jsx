@@ -21,6 +21,8 @@ const colors = {
         "#DDD2B7",
     "yellow": 
         "#FFFF2F",
+    "lightYellow":
+        "#FFFCDE",
     "deepYellow": 
         "#CCAA66",
     "deepDeepYellow": 

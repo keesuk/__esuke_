@@ -13,8 +13,8 @@ import craft from "../_data/img/_Source/craft.png"
 
 const prfHeight = 10
 const prfWidth = 17
-const criteria = 2490
-const ratio = 1.8
+const criteria = 2000
+const ratio = 1.9
 
 const bottom = `calc(-${prfHeight}rem * ${ratio+.3})`
 const height = `calc(${prfHeight}rem * ${ratio})`
@@ -56,17 +56,17 @@ const ProfileButton = styled.button`
         };
         background-image: url(${craft});
         box-shadow: .05rem .05rem .2rem rgba(0, 0, 0, .2);
-        padding: 1.2rem 1rem .8rem 1rem;
+        padding: 1.4rem 1.2rem .8rem 1.2rem;
         background-repeat: no-repeat;
         background-position: center; 
         border: .1rem solid #A7844F;
         letter-spacing: -.02rem;
         background-size: cover;
-        line-height: 1.25rem; 
+        line-height: 1.5rem; 
         position: absolute;
         border-left: none;
         border-top: none;
-        font-size: .85rem;
+        font-size: .9rem;
         color: #fefefe;
         right: 10px;
         top: 10px;

@@ -1,3 +1,4 @@
+import { Link, useLocation, Route, Switch} from "react-router-dom"
 import { portFolioContents } from "../_data/_Data.jsx"
 import ImageSlider from "../components/ImageSlider.js"
 import BottomTitle from "../components/BottomTitle.js"
@@ -5,7 +6,6 @@ import MainText from "../components/MainText.js"
 import Layout from "../css/_Layout.jsx"
 import styled from "styled-components"
 import { useState } from "react"
-import { Link, useLocation, Route } from "react-router-dom"
 
 
 const Container = styled.div`
@@ -19,7 +19,7 @@ const Container = styled.div`
             : "auto"
         };
         width: ${width}%;
-        margin-top: 12%;
+        margin-top: 14%;
     `}
     ${({theme}) => theme.mobile`
         margin-top: 5%;
@@ -62,47 +62,74 @@ const ContentModule = ({content}) => {
     </>)
 }
 
-const pagePer = 4
+const pagePer = 5
 const NumBox = styled.div`
-    margin-top: 10%;
+    justify-content: center;
+    width: 30%;
+    padding: 2rem 2rem 4rem 2rem;
+    align-items: center;
+    border-radius: 1rem 0rem 0rem 0rem;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 20%;
     display: flex;
-    gap: 1.2rem;
+    gap: 1.6rem;
 
-    .num {
-        border-top: .12rem solid ${({theme}) => theme.colorObjs["cellEmptyLineColor"]};
-        color: ${({theme}) => theme.colorObjs["cellEmptyTextColor"]};
-        font-size: 1.4rem;
-        font-weight: 600;
-        cursor: pointer;
-    }
 `
 const Number = styled.div`
+    background-color: ${({numNow, theme}) => numNow 
+        ? "black"
+        : "transparent"
+    };
+    color: ${({theme, numNow}) => numNow
+        ? "black"
+        : theme.colorObjs["cellEmptyTextColor"]
+    };
+    border: .1rem solid ${({theme}) => theme.colorObjs["cellEmptyTextColor"]};
+    line-height: 2.7rem;
+    border-radius: 1rem;
+    font-size: 1.5rem;
+    font-weight: 600;
+    cursor: pointer;
 `
+// &:before {
+//     content: "-";
+//     display: block;
+//     margin-top: -2rem;
+//     color: black;
+//     position: absolute;
+//     z-index: 1;
+// }
 
 const ContentPage = () => {
     let pageNum = parseInt(useLocation().pathname.slice(1))
     let portArr = []
     let perArr = []
 
+    if(isNaN(pageNum))pageNum = 0
+    
     for(const [i, v] of portFolioContents.entries()){
         if(i % pagePer === 0 && i !== 0){
             portArr.push(perArr)
             perArr = []
             perArr.push(v)
-        }else if (i === portFolioContents.length - 1) {
-            perArr.push(v)
-            portArr.push(perArr)
-        }else{
+        }else{ 
             perArr.push(v)
         }
+        if(i === portFolioContents.length -1){
+            portArr.push(perArr)
+        }
     }
-
-    if(isNaN(pageNum))pageNum = 0
     
+    let extraArr = new Array(10-portArr.length).fill(0)
+
 
     return(
         <Layout>
-            <Route path={pageNum}>
+            <Route path={pageNum === 0 
+                ? "/"
+                : "/" + pageNum
+            }>
                 {portArr[pageNum].map((v) => 
                     <ContentModule
                         key={v.title}
@@ -112,15 +139,24 @@ const ContentPage = () => {
             </Route>
             <NumBox>
                 {portArr.map((v, i) => 
-                    <Number
-                        numNow={pageNum}
+                    <Number 
+                        numNow={pageNum === i 
+                            ? true 
+                            : false
+                        }
+                        key={i}
                     >
-                        <Link 
-                            className="num"
-                            to={"/" + i}
-                        >
+                        <Link to={i === 0 
+                            ? "/" 
+                            : "/" + i
+                        }>
                             {i+1}
                         </Link>
+                    </Number>
+                )}
+                {extraArr.map((v, i)=> 
+                    <Number>
+                        -
                     </Number>
                 )}
             </NumBox>

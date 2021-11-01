@@ -2477,3 +2477,10 @@ const subText = [
                 width={value}
                 toggle={menu}
             /> */}
+
+
+
+// border-bottom: .15rem dashed ${({theme, isText}) => isText 
+// ? "#999"
+// : theme.colorObjs["cellEmptyLineColor"]
+// };

@@ -4,14 +4,10 @@ import styled from "styled-components"
 
 
 const Container = styled.div`
-    border-bottom: .15rem dashed ${({theme, isText}) => isText 
-        ? "#999"
-        : theme.colorObjs["cellEmptyLineColor"]
-    };
     height: ${({height}) => height}rem;
     box-sizing: border-box;
     margin-bottom: .5rem;
-    padding-bottom: 2rem;
+    padding-bottom: 1.5rem;
     transition: all .1s;
     margin-top: 8%;
     width: 100%;
@@ -27,9 +23,9 @@ const Container = styled.div`
             : "-1"
         });
         transition: left .4s ease;
-        margin-top: 1.2rem;
+        margin-top: .75rem;
         position: absolute;
-        font-size: 2.4rem;
+        font-size: 3rem;
         display: flex;
         content: "✂";
     }

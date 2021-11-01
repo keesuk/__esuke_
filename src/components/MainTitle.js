@@ -10,7 +10,7 @@ const MainTitleDiv = styled.div`
         margin-left: 7%;
         margin-top: 15%;
     `}
-    margin-bottom: 15%;
+    margin-bottom: 20%;
     margin-right: 20%;
 
     .text {
