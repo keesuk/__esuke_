@@ -55,7 +55,7 @@ const lines = {
     "mainLayoutLine": `0.2rem solid ${colorObjs["mainLayoutLineColor"]}`,
 
     "subPageLine" : `0.12rem dashed ${colorObjs["subPageLineColor"]}`,
-    "subTagLineBold": `0.35rem solid ${colorObjs["subTagLineColor"]}`,
+    "subTagLineBold": `0.3rem solid ${colorObjs["subTagLineColor"]}`,
     "subTagLineLight": `0.1rem solid ${colorObjs["subTagLineColor"]}`,
     "subTagLineLightDashed": `0.15rem dashed ${colorObjs["subTagLineColor"]}`,
     "subTagInLineBold": `0.13rem solid ${colorObjs["subTagLineColor"]}`,

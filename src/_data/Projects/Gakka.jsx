@@ -13,8 +13,8 @@ import image9 from "../img/Gakka_Content/Gakka-19.jpg"
 
 const title = "Walk Task Force, Gakka"
 const year = "Aug 2020"
-const width = "86"
-const height = "40"
+const width = "92"
+const height = "43"
 const isLeft = true
 const logo = <Logo/>
 const color = "#1c75bc"
@@ -34,12 +34,9 @@ const image = [
     },{
         type: "logo",
         paddingLR: {deskTop: "25", mobile: "10"},
-        paddingTB: {deskTop: "10", mobile: "10"},
+        paddingTB: {deskTop: "12", mobile: "10"},
         color: color,
         logo: logo,
-    },{
-        type: "image",
-        image: image2
     },{
         type: "image",
         image: image3

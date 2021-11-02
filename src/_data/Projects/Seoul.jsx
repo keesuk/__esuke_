@@ -15,8 +15,8 @@ import image11 from "../img/Seoul_Content/Seoul-21.jpg"
 
 const title = "Seoul That We See"
 const year = "Mar 2020"
-const width = "45"
-const height = "54"
+const width = "62"
+const height = "55"
 const isLeft = true
 const logo = <Logo/>
 const color = "#DEDEDE"
@@ -43,8 +43,8 @@ const image = [
         image: image1
     },{
         type: "logo",
-        paddingLR: {deskTop: "1", mobile: "10"},
-        paddingTB: {deskTop: "60", mobile: "10"},
+        paddingLR: {deskTop: "5", mobile: "10"},
+        paddingTB: {deskTop: "46", mobile: "10"},
         color: color,
         logo: logo,
     },{

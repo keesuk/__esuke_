@@ -15,7 +15,7 @@ import image11 from "../img/WeDel_Content/WeDel-21.jpg"
 
 const title = "We Eat Delight"
 const width = "100"
-const height = "49"
+const height = "48"
 const year = "Sep 2019"
 const isLeft = true
 const logo = <Logo/>

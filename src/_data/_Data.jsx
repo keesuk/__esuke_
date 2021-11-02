@@ -17,10 +17,10 @@ export const portFolioContents = [
     Gakka, 
     Sanchak,
     Pigeon, 
-    Seoul,  
     Samsara,
+    Seoul,
     WeDel,
-    WeCat,
+    WeCat,  
     WeEat,
     Ruler,
 ]

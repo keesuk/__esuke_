@@ -225,7 +225,7 @@ export const Image = ({image}) => {
 const BrowserMockupDiv  = styled.div`
     position: relative;
     height: 100%;
-    width: 100%;
+    width: 75%;
 
     .browser {
         background-image: url("${({isHorizon}) => isHorizon

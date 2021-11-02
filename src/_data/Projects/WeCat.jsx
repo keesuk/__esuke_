@@ -8,8 +8,8 @@ import image6 from "../img/WeCat_Content/WeCat-16.jpg"
 
 
 const title = "We Eat Catering"
-const width = "54"
-const height = "30"
+const width = "58"
+const height = "29"
 const year = "Sep 2019"
 const isLeft = true
 const color = "#007336"

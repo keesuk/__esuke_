@@ -16,7 +16,7 @@ const Container = styled.div`
         margin-left: 2rem;
         font-size: 1rem;
     `}
-    border: .15rem dashed ${({theme, isText}) => isText
+    border: .13rem dashed ${({theme, isText}) => isText
         ? "#999"
         : "#77D1E4"
     };
@@ -30,7 +30,7 @@ const Container = styled.div`
     };
     padding: 1.2rem 2rem 1.4rem 2rem;
     transition: all .2s;
-    margin-top: -.4rem;
+    margin-top: -1rem;
     font-weight: 700;
     cursor: pointer;
 

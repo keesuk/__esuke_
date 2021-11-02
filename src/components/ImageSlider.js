@@ -23,9 +23,9 @@ const Container = styled.div`
             : "-1"
         });
         transition: left .4s ease;
-        margin-top: .75rem;
+        margin-top: .15rem;
         position: absolute;
-        font-size: 3rem;
+        font-size: 2.7rem;
         display: flex;
         content: "✂";
     }

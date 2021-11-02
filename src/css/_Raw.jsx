@@ -22,7 +22,7 @@ const colors = {
     "yellow": 
         "#FFFF2F",
     "lightYellow":
-        "#FFFCDE",
+        "#FDFBE9",
     "deepYellow": 
         "#CCAA66",
     "deepDeepYellow": 

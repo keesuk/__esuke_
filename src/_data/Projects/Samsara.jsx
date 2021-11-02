@@ -6,8 +6,8 @@ import image3 from "../img/Samsara_Content/Samsara-13.jpg"
 
 const title = "Samsara Poster"
 const year = "Mar 2019"
-const width = "55"
-const height = "50"
+const width = "56"
+const height = "49"
 const isLeft = false
 const color = "#662583"
 const assign = {

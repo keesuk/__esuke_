@@ -64,20 +64,39 @@ const ContentModule = ({content}) => {
 
 const pagePer = 5
 const NumBox = styled.div`
+    border: .15rem solid ${({theme}) => theme.colorObjs["cellEmptyTextColor"]};
+    border-bottom: .1rem solid ${({theme}) => theme.colorObjs["cellEmptyTextColor"]};
     justify-content: center;
-    width: 30%;
-    padding: 2rem 2rem 4rem 2rem;
+    width: 38%;
+    padding: .8rem 0rem .8rem 5rem;
     align-items: center;
-    border-radius: 1rem 0rem 0rem 0rem;
     margin-left: auto;
     margin-right: auto;
-    margin-top: 20%;
+    position: relative;
+    margin-top: 25%;
     display: flex;
-    gap: 1.6rem;
+    gap: 1.2rem;
+
+    &:before {
+        content: "0";
+        display: flex;
+        color: ${({theme}) => theme.colorObjs["cellEmptyTextColor"]};
+        border-right: .1rem solid ${({theme}) => theme.colorObjs["cellEmptyTextColor"]};
+        position: absolute;
+        align-items: center;
+        justify-content: center;
+        font-size: 1.6rem;
+        width: 15%;
+        font-weight: 600;
+        height: 102%;   
+        left: -.1%;
+        z-index: -1;
+        background-color: #C2F4FF;
+    }
 
 `
 const Number = styled.div`
-    background-color: ${({numNow, theme}) => numNow 
+    background-color: ${({numNow}) => numNow 
         ? "black"
         : "transparent"
     };
@@ -86,20 +105,12 @@ const Number = styled.div`
         : theme.colorObjs["cellEmptyTextColor"]
     };
     border: .1rem solid ${({theme}) => theme.colorObjs["cellEmptyTextColor"]};
-    line-height: 2.7rem;
+    line-height: 2.5rem;
     border-radius: 1rem;
-    font-size: 1.5rem;
+    font-size: 1.2rem;
     font-weight: 600;
     cursor: pointer;
 `
-// &:before {
-//     content: "-";
-//     display: block;
-//     margin-top: -2rem;
-//     color: black;
-//     position: absolute;
-//     z-index: 1;
-// }
 
 const ContentPage = () => {
     let pageNum = parseInt(useLocation().pathname.slice(1))
@@ -121,7 +132,7 @@ const ContentPage = () => {
         }
     }
     
-    let extraArr = new Array(10-portArr.length).fill(0)
+    let extraArr = new Array(9-portArr.length).fill(0)
 
 
     return(

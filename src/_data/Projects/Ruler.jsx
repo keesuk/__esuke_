@@ -9,8 +9,8 @@ import image6 from "../img/Ruler_Content/Ruler-16.jpg"
 
 const title = "Magnified Ordinary Things"
 const year = "Mar 2018"
-const width = "77"
-const height = "39"
+const width = "80"
+const height = "40"
 const isLeft = true
 const color = "#3B44AC"
 const assign = {

@@ -12,7 +12,7 @@ const title = "Pigeon Brand Book"
 const year = "Sep 2019"
 const width = "84"
 const height = "38"
-const isLeft = true
+const isLeft = false
 const logo = <Logo/>
 const color = "#ff677f"
 const assign = {
@@ -41,7 +41,7 @@ const image = [
     {
         type: "logo",
         paddingLR: {deskTop: "4", mobile: "10"},
-        paddingTB: {deskTop: "23", mobile: "10"},
+        paddingTB: {deskTop: "24", mobile: "10"},
         color: color,
         logo: logo,
     },{

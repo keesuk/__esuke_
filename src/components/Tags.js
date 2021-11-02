@@ -5,9 +5,9 @@ import craft from "../_data/img/_Source/craft.png"
 const TagIntroDiv = styled.div`
     ${({theme}) => theme.deskTop`
         background-color: ${theme.colorObjs["subTagBackColor"]};
-        margin-bottom: 3%;
-        margin-top: 5%;
-        width: 27%;
+        margin-bottom: 10%;
+        margin-top: 4%;
+        width: 23%;
     `}
     ${({theme}) => theme.mobile`
         background-color: white;
@@ -20,7 +20,7 @@ const TagIntroDiv = styled.div`
     border-radius: .6rem;
     justify-self: start;
     position: relative;
-    padding: .15rem;
+    padding: .14rem;
 
     &:before {
         border: ${({theme}) => theme.lines["subTagLineLight"]};
@@ -33,15 +33,15 @@ const TagIntroDiv = styled.div`
         position: absolute;
         margin-right: 9%;
         margin-left: 8%;
-        bottom: 1.5rem;
-        top: 1.4rem;
+        bottom: 1rem;
+        top: 1rem;
     
         .eng {
             ${({theme}) => theme.deskTop`
                 letter-spacing: -0.05rem;
-                word-spacing: -.01rem;
-                font-size: .93rem;  
-                line-height: 1.8rem;
+                word-spacing: -.03rem;
+                font-size: .85rem;  
+                line-height: 1.6rem;
             `}
             ${({theme}) => theme.mobile`
                 letter-spacing: -0.03rem;
@@ -95,8 +95,8 @@ const TagIntroDiv = styled.div`
 
         &:before {
             ${({theme}) => theme.deskTop`
-                font-size: .8rem;
-                line-height: 4.5rem;
+                font-size: .7rem;
+                line-height: 3.8rem;
             `}
             ${({theme}) => theme.mobile`
                 line-height: 4rem;
@@ -114,8 +114,8 @@ const TagIntroDiv = styled.div`
         }
         &:after {
             ${({theme}) => theme.deskTop`
-                font-size: .8rem;
-                line-height: 4.5rem;
+                font-size: .7rem;
+                line-height: 3.8rem;
             `}
             ${({theme}) => theme.mobile`
                 line-height: 4rem;
@@ -156,7 +156,7 @@ const TagIntroDiv = styled.div`
     `}
     .tagSubText {
         ${({theme}) => theme.deskTop`
-            font-size: 1.6rem;
+            font-size: 1.4rem;
             letter-spacing: .05rem;
         `}
         ${({theme}) => theme.mobile`
@@ -166,8 +166,8 @@ const TagIntroDiv = styled.div`
         font-family: ${({theme}) => theme.fontObjs["subTag"]["introDate"]["fontFamily"]};
         font-weight: ${({theme}) => theme.fontObjs["subTag"]["introDate"]["fontWeight"]};
         position: absolute;
-        right: 7.5%;
-        bottom: 27.5%;
+        right: 8%;
+        bottom: 26%;
     }
 `
 
