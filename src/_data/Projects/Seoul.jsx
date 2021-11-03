@@ -1,7 +1,6 @@
 import Logo from "../img/Seoul_Content/_SeoulLogo.jsx"
 import thumbnail from "../img/Seoul_Content/Seoul-Thumbnail.png"
 import image1 from "../img/Seoul_Content/Seoul-11.gif"
-import image2 from "../img/Seoul_Content/Seoul-12.jpg"
 import image3 from "../img/Seoul_Content/Seoul-13.jpg"
 import image4 from "../img/Seoul_Content/Seoul-14.gif"
 import image5 from "../img/Seoul_Content/Seoul-15.gif"
@@ -15,8 +14,8 @@ import image11 from "../img/Seoul_Content/Seoul-21.jpg"
 
 const title = "Seoul That We See"
 const year = "Mar 2020"
-const width = "62"
-const height = "55"
+const width = "67"
+const height = "46.5"
 const isLeft = true
 const logo = <Logo/>
 const color = "#DEDEDE"
@@ -39,34 +38,37 @@ const mainText =
 
 const image = [
     {
-        type: "image",
+        type: "browser",
+        typeDetail: {shape: "square", isWhite: true},
         image: image1
     },{
         type: "logo",
         paddingLR: {deskTop: "5", mobile: "10"},
-        paddingTB: {deskTop: "46", mobile: "10"},
+        paddingTB: {deskTop: "32", mobile: "10"},
         color: color,
         logo: logo,
-    },{
-        type: "image",
-        image: image2
     },{
         type: "image",
         image: image3
     },{
         type: "browser",
+        typeDetail: {shape: "vertical", isWhite: false},
         image: image4
     },{
         type: "browser",
+        typeDetail: {shape: "vertical", isWhite: false},
         image: image5
     },{
         type: "browser",
+        typeDetail: {shape: "vertical", isWhite: false},
         image: image7
     },{
         type: "browser",
+        typeDetail: {shape: "vertical", isWhite: false},
         image: image6
     },{
         type: "browser",
+        typeDetail: {shape: "vertical", isWhite: false},
         image: image8
     },{
         type: "image",

@@ -55,9 +55,6 @@ const image = [
         image: image1
     },{
         type: "image",
-        image: image2
-    },{
-        type: "image",
         image: image3
     },{
         type: "image",

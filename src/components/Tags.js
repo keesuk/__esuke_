@@ -34,7 +34,7 @@ const TagIntroDiv = styled.div`
         margin-right: 9%;
         margin-left: 8%;
         bottom: 1rem;
-        top: 1rem;
+        top: 1.2rem;
     
         .eng {
             ${({theme}) => theme.deskTop`
@@ -132,28 +132,28 @@ const TagIntroDiv = styled.div`
             bottom: 7%;
         }
     }
-    ${({theme}) => theme.deskTop`
-        &:hover {
-            transform: rotate(${({rotate}) => rotate}deg);
-            border-color: ${({hoverColor}) => hoverColor
-                ? hoverColor
-                : theme.colorObjs["subTagLineColor"]
-            };
-        }
-        &:hover:before, &:hover .tagContentExp:before, &:hover .tagContentExp:after {
-            border-color: ${({hoverColor}) => hoverColor
-                ? hoverColor
-                : theme.colorObjs["subTagLineColor"]
-            };
-            color: ${({hoverColor}) => hoverColor
-                ? hoverColor
-                : theme.colorObjs["subTagLineColor"]
-            };
-        }
-        &:hover .tagContentExp > .kor {
-            visibility: visible;
-        }
-    `}
+
+    &:hover {
+        transform: rotate(${({rotate}) => rotate}deg);
+        border-color: ${({hoverColor, theme}) => hoverColor
+            ? hoverColor
+            : theme.colorObjs["subTagLineColor"]
+        };
+    }
+    &:hover:before, &:hover .tagContentExp:before, &:hover .tagContentExp:after {
+        border-color: ${({hoverColor, theme}) => hoverColor
+            ? hoverColor
+            : theme.colorObjs["subTagLineColor"]
+        };
+        color: ${({hoverColor, theme}) => hoverColor
+            ? hoverColor
+            : theme.colorObjs["subTagLineColor"]
+        };
+    }
+
+    &:hover .tagContentExp > .kor {
+        visibility: visible;
+    }
     .tagSubText {
         ${({theme}) => theme.deskTop`
             font-size: 1.4rem;

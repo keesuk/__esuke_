@@ -131,6 +131,7 @@ const ImageSlider = ({isText, imageArr, height}) => {
                             key={v.image || v.logo}
                         >
                             <Component 
+                                typeDetail={v.typeDetail}
                                 paddingLR={v.paddingLR}
                                 paddingTB={v.paddingTB}
                                 image={v.image} 

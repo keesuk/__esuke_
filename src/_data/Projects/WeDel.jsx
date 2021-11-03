@@ -80,9 +80,6 @@ const image = [
         image: image2
     },{
         type: "image",
-        image: image3
-    },{
-        type: "image",
         image: image4
     },{
         type: "image",

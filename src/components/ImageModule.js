@@ -3,8 +3,9 @@ import { useState, useEffect, useRef} from "react"
 import styled from "styled-components"
 
 import { UseWindowSize } from "../_data/_Functions.jsx"     
-import HorizontalBrowserDark from "../_data/img/_Source/HorizontalBrowserDark.png"
 import VerticalBrowserWhite from "../_data/img/_Source/VerticalBrowserWhite.png"
+import VerticalBrowserDark from "../_data/img/_Source/VerticalBrowserDark.png"
+import SquareBrowserWhite from "../_data/img/_Source/SquareBrwoserWhite.png"
 import Iphone from "../_data/img/_Source/Iphone.png"
 
 
@@ -61,7 +62,7 @@ const CursorDiv = styled.div`
     }
 `
 const LogoBox = ({
-    detectedEnvironment: {isMouseDetected, isTouchDetected},
+    detectedEnvironment: {isMouseDetected},
     isPositionOutside, 
     position: {x, y},
     isActive,
@@ -90,17 +91,15 @@ const LogoBox = ({
             else setActive(false)
         }else setActive(false) 
 
-    }, [isPositionOutside, isMouseDetected, isTouchDetected, isActive])
+    }, [isPositionOutside, isMouseDetected, isActive])
 
     return (
         <>
             <CursorDiv 
-                mobile={isTouchDetected 
-                    ? true 
-                    : (isMouseDetected 
-                        ? false 
-                        : false
-                )}
+                mobile={isMouseDetected 
+                    ? false 
+                    : false
+                }
                 style={{ 
                     left: `${x}px`, 
                     top: `${y}px`
@@ -176,10 +175,9 @@ export const LogoImage = ({ color, paddingTB, paddingLR, logo}) => {
     
     const windowSize = UseWindowSize()
 
-    useEffect((event) => {
+    useEffect(() => {
         const cor = conRef.current.getBoundingClientRect()
         setConCor(cor)
-
     }, [windowSize, hover])
 
 
@@ -221,28 +219,46 @@ export const Image = ({image}) => {
     )
 }
 
-//img size 832 1392
+// vertical 832 1392
+// square 1392 1392
 const BrowserMockupDiv  = styled.div`
+    background-color: ${({isWhite}) => isWhite 
+        ? "white" 
+        : "black"
+    };
+    transform: translate(-50%, -50%);
     position: relative;
     height: 100%;
-    width: 75%;
+    width: 100%;
+    left: 50%;
+    top: 50%;
 
     .browser {
-        background-image: url("${({isHorizon}) => isHorizon
-            ? HorizontalBrowserDark
-            : VerticalBrowserWhite 
+        background-image: url("${({shape, isWhite}) => isWhite
+            ? 
+                (shape === "horizontal" ? "":
+                (shape === "vertical" ? VerticalBrowserWhite:
+                (shape === "square" ? SquareBrowserWhite
+                : null)))
+            : 
+                (shape === "horizontal" ? "":
+                (shape === "vertical" ? VerticalBrowserDark:
+                (shape === "square" ? ""
+                : null)))
         }");
         background-repeat: no-repeat;
         background-position: center; 
-        background-size: cover;
+        background-size: contain;
         height: 100%;
         width: 100%;
     }
 
     .image {
-        width: ${({isHorizon}) => isHorizon 
-            ? "91.6"
-            : "85.5" 
+        width: ${({shape}) => 
+            shape === "horizontal" ? "91.6":
+            (shape === "vertical" ? "50":
+            (shape === "square" ? "100"
+            : null)) 
         }%;
         position: absolute;
         margin: auto;
@@ -253,11 +269,12 @@ const BrowserMockupDiv  = styled.div`
         top: 0;
     }  
 `
-export const BrowserImage = ({image, isHorizon}) => {
+export const BrowserImage = ({image, typeDetail}) => {
     
     return(
         <BrowserMockupDiv
-            isHorizon={isHorizon}
+            isWhite={typeDetail.isWhite}
+            shape={typeDetail.shape}
         >
             <div className="browser"/>
             <img 

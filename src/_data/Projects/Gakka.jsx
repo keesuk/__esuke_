@@ -9,6 +9,7 @@ import image6 from "../img/Gakka_Content/Gakka-16.jpg"
 import image7 from "../img/Gakka_Content/Gakka-17.jpg"
 import image8 from "../img/Gakka_Content/Gakka-18.jpg"
 import image9 from "../img/Gakka_Content/Gakka-19.jpg"
+import image10 from "../img/Gakka_Content/Gakka-20.jpg"
 
 
 const title = "Walk Task Force, Gakka"
@@ -58,6 +59,9 @@ const image = [
     },{
         type: "image",
         image: image9
+    },{
+        type: "image",
+        image: image10
     },
 ]
 const mainText = 
