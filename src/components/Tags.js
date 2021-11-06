@@ -5,7 +5,7 @@ import craft from "../_data/img/_Source/craft.png"
 const TagIntroDiv = styled.div`
     ${({theme}) => theme.deskTop`
         background-color: ${theme.colorObjs["subTagBackColor"]};
-        margin-bottom: 10%;
+        margin-bottom: 15%;
         margin-top: 4%;
         width: 23%;
     `}

@@ -7,8 +7,8 @@ import image3 from "../img/Samsara_Content/Samsara-13.jpg"
 const title = "Samsara Poster"
 const year = "Mar 2019"
 const width = "56"
-const height = "49"
-const isLeft = false
+const height = "52"
+const isLeft = true
 const color = "#662583"
 const assign = {
     "eng" : "Posters symbolizing the creatures of the cycle of suffering in Buddhism.",

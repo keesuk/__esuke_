@@ -5,8 +5,8 @@ import image4 from "../img/Sanchak_Content/Sanchak-14.jpg"
 
 const title = "Walking Card"
 const year = "Aug 2020"
-const width = "54"
-const height = "30"
+const width = "48"
+const height = "27"
 const isLeft = true
 const color = "#1c75bc"
 const assign = {

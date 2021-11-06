@@ -19,7 +19,7 @@ const Container = styled.div`
             : "auto"
         };
         width: ${width}%;
-        margin-top: 14%;
+        margin-top: 12%;
     `}
     ${({theme}) => theme.mobile`
         margin-top: 5%;

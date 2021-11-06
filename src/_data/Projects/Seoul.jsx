@@ -1,6 +1,6 @@
 import Logo from "../img/Seoul_Content/_SeoulLogo.jsx"
 import thumbnail from "../img/Seoul_Content/Seoul-Thumbnail.png"
-import image1 from "../img/Seoul_Content/Seoul-11.gif"
+import image1 from "../img/Seoul_Content/Seoul-11.jpg"
 import image3 from "../img/Seoul_Content/Seoul-13.jpg"
 import image4 from "../img/Seoul_Content/Seoul-14.gif"
 import image5 from "../img/Seoul_Content/Seoul-15.gif"
@@ -14,9 +14,9 @@ import image11 from "../img/Seoul_Content/Seoul-21.jpg"
 
 const title = "Seoul That We See"
 const year = "Mar 2020"
-const width = "67"
-const height = "46.5"
-const isLeft = true
+const width = "79"
+const height = "43"
+const isLeft = false
 const logo = <Logo/>
 const color = "#DEDEDE"
 const assign = {
@@ -39,12 +39,12 @@ const mainText =
 const image = [
     {
         type: "browser",
-        typeDetail: {shape: "square", isWhite: true},
+        typeDetail: {shape: "horizontal", isWhite: true},
         image: image1
     },{
         type: "logo",
-        paddingLR: {deskTop: "5", mobile: "10"},
-        paddingTB: {deskTop: "32", mobile: "10"},
+        paddingLR: {deskTop: "8", mobile: "10"},
+        paddingTB: {deskTop: "23", mobile: "10"},
         color: color,
         logo: logo,
     },{

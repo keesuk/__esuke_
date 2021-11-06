@@ -6,6 +6,7 @@ import { UseWindowSize } from "../_data/_Functions.jsx"
 import VerticalBrowserWhite from "../_data/img/_Source/VerticalBrowserWhite.png"
 import VerticalBrowserDark from "../_data/img/_Source/VerticalBrowserDark.png"
 import SquareBrowserWhite from "../_data/img/_Source/SquareBrwoserWhite.png"
+import HorizontalBrowserWhite from "../_data/img/_Source/HorizontalBrwoserWhite.png"
 import Iphone from "../_data/img/_Source/Iphone.png"
 
 
@@ -236,7 +237,7 @@ const BrowserMockupDiv  = styled.div`
     .browser {
         background-image: url("${({shape, isWhite}) => isWhite
             ? 
-                (shape === "horizontal" ? "":
+                (shape === "horizontal" ? HorizontalBrowserWhite:
                 (shape === "vertical" ? VerticalBrowserWhite:
                 (shape === "square" ? SquareBrowserWhite
                 : null)))
@@ -255,8 +256,8 @@ const BrowserMockupDiv  = styled.div`
 
     .image {
         width: ${({shape}) => 
-            shape === "horizontal" ? "91.6":
-            (shape === "vertical" ? "50":
+            shape === "horizontal" ? "100":
+            (shape === "vertical" ? "40":
             (shape === "square" ? "100"
             : null)) 
         }%;
