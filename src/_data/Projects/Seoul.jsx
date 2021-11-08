@@ -1,6 +1,6 @@
 import Logo from "../img/Seoul_Content/_SeoulLogo.jsx"
 import thumbnail from "../img/Seoul_Content/Seoul-Thumbnail.png"
-import image1 from "../img/Seoul_Content/Seoul-11.jpg"
+import image1 from "../img/Seoul_Content/Seoul-11.gif"
 import image3 from "../img/Seoul_Content/Seoul-13.jpg"
 import image4 from "../img/Seoul_Content/Seoul-14.gif"
 import image5 from "../img/Seoul_Content/Seoul-15.gif"
