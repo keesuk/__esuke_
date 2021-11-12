@@ -17,8 +17,8 @@ export const portFolioContents = [
     Gakka, 
     Sanchak,
     Pigeon, 
-    Samsara,
     Seoul,
+    Samsara,
     WeDel,
     WeCat,  
     WeEat,
@@ -35,13 +35,7 @@ export const welcomeMention = {
         }
     ]
 }
-export const mentInEmptyCell = [
-    "Empty Cell",
-    "Empty Cell",
-    "Empty Cell",
-    "Empty Cell",
-]
-export const menuContact = {
+export const contact = {
     profile : {
         front: <ProfileFront/>, 
         back : <ProfileBack/>,
@@ -50,30 +44,6 @@ export const menuContact = {
 }
 export const menuAboutMe = [
     {
-        borColor : "#aaaaaa",
-        color : "#ffffff",
-        width : "18",
-        content : "",
-        image : "",
-    },{
-        borColor : "#aaaaaa",
-        color : "#ffffff",
-        width : "18",
-        content : "",
-        image : "",
-    },{   
-        borColor : "#4DC2DC",
-        color : "#A7EFFF",
-        width : "12",
-        content : "",
-        image : null,
-    },{
-        borColor : "#4DC2DC",
-        color : "#A7EFFF",
-        width : "12",
-        content : "",
-        image : null,
-    },{
         borColor : theme.colorObjs["subMenuBorColor"],
         color : theme.colorObjs["subMenuColor"],
         width : "12",
@@ -97,17 +67,18 @@ export const menuAboutMe = [
 export const subPageIntroTag = {
     text : {
         "eng" : <>
-            Welcome! Happy that you spend precious time to me. And I hope you would enjoy.<br/><br/>
+            Welcome! This is my portfolio website and hope you would enjoy with it.<br/><br/>
             Thank You<br/>
-            Sincerely,
+            Keesuk Lee,
             </>,
         "kor" : <>
-            환영합니다. 시간내어 들러주셔서 기쁩니다. 좋은 시간 되세요.<br/><br/>
-            감사합니다.<br/>
-            진심으로,
+            환영합니다! 이 곳은 저의 포트폴리오 웹사이트입니다. 좋은 시간 되세요.<br/><br/>
+            감사합니다<br/>
+            이기석 드림,
             </>
     },
-    date : `${getDate()[0]}, ${getDate()[1]}, ${getDate()[2]}`,
+    date : `${getDate().day}, ${getDate().month}, ${getDate().year}`,
+    time : `${getDate().hour}: ${getDate().minutes}: ${getDate().seconds}`,
     rotate : -4,
 }
 export const otherSiteLink = [

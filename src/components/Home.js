@@ -9,6 +9,7 @@ import { scrollTrigger } from "../_data/_Functions"
 const HomeButton = styled.div`
     ${({theme}) => theme.deskTop`
         left: -4rem;
+        top: 1rem;
 
         &:hover button {
             -webkit-filter: drop-shadow(0.1rem 0.1rem .1rem rgba(0,0,0,0.5));
@@ -25,11 +26,11 @@ const HomeButton = styled.div`
             : "-7.5"
         }rem;
         transition: left .2s;
+        botom: 1.5rem;
     `}
     position: fixed;
     width: 13rem;
     z-index: 100;
-    top: 1rem;
     
     button {
         ${({theme}) => theme.deskTop`

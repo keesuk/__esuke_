@@ -2484,3 +2484,100 @@ const subText = [
 // ? "#999"
 // : theme.colorObjs["cellEmptyLineColor"]
 // };
+
+
+
+
+const ContentPage = () => {
+    let pageNum = parseInt(useLocation().pathname.slice(1))
+    let portArr = []
+    let perArr = []
+
+    if(isNaN(pageNum))pageNum = 0
+    
+    for(const [i, v] of portFolioContents.entries()){
+        if(i % pagePer === 0 && i !== 0){
+            portArr.push(perArr)
+            perArr = []
+            perArr.push(v)
+        }else{ 
+            perArr.push(v)
+        }
+        if(i === portFolioContents.length -1){
+            portArr.push(perArr)
+        }
+    }
+    
+    let extraArr = new Array(9-portArr.length).fill(0)
+
+
+    return(
+        <Layout>
+            <Route path={pageNum === 0 
+                ? "/"
+                : "/" + pageNum
+            }>
+                {portArr[pageNum].map((v) => 
+                    <ContentModule
+                        key={v.title}
+                        content={v}
+                    />
+                )}
+            </Route>
+            <NumBox>
+                {portArr.map((v, i) => 
+                    <Number 
+                        numNow={pageNum === i 
+                            ? true 
+                            : false
+                        }
+                        key={i}
+                    >
+                        <Link to={i === 0 
+                            ? "/" 
+                            : "/" + i
+                        }>
+                            {i+1}
+                        </Link>
+                    </Number>
+                )}
+                {extraArr.map((v, i)=> 
+                    <NotNumber>
+                        -
+                    </NotNumber>
+                )}
+            </NumBox>
+        </Layout>
+    )
+}
+
+
+const NumBox = styled.div`
+    justify-content: center;
+    width: 50%;
+    line-height: 2rem;
+    font-size: 1.2rem;
+    padding: .8rem 0rem;
+    align-items: center;
+    margin-left: auto;
+    margin-right: auto;
+    position: relative;
+    margin-top: 25%;
+    display: flex;
+    gap: 2rem;
+`
+const Number = styled.div`
+    background-color: ${({numNow}) => numNow 
+        ? "black"
+        : "transparent"
+    };
+    border: .1rem solid black;
+    padding: 0 .05rem;
+    font-weight: 500;
+    cursor: pointer;
+`
+const NotNumber = styled.div`
+    border: .1rem solid black;
+    padding: 0 .05rem;
+    font-weight: 400;
+`

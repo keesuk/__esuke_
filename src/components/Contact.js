@@ -5,15 +5,14 @@ import styled from 'styled-components'
 import { scrollTrigger } from "../_data/_Functions"
 import { CopyToClipboard } from 'react-copy-to-clipboard'
 
-import { menuContact } from "../_data/_Data.jsx"
+import { contact } from "../_data/_Data.jsx"
 import { UseWindowSize } from "../_data/_Functions.jsx"
 import craft from "../_data/img/_Source/craft.png"
 
 
-
+const criteria = 2000
 const prfHeight = 10
 const prfWidth = 17
-const criteria = 2000
 const ratio = 1.9
 
 const bottom = `calc(-${prfHeight}rem * ${ratio+.3})`
@@ -130,7 +129,7 @@ const ProfileCard = ({toggle}) => {
     return (
         <CopyToClipboard 
             onCopy={() => setCopied(true)}
-            text={menuContact.mail}
+            text={contact.mail}
         >
             <ProfileButton
                 onClick={() => setHover(!hover)}
@@ -144,8 +143,8 @@ const ProfileCard = ({toggle}) => {
                     to clipboard
                 </div>
                 {hover 
-                    ? menuContact.profile.back
-                    : menuContact.profile.front
+                    ? contact.profile.back
+                    : contact.profile.front
                 }
             </ProfileButton>
         </CopyToClipboard>
@@ -178,7 +177,7 @@ const MenuButton = styled.div`
             ? "-5" 
             : "-7.5"
         }rem;
-        top: 5rem;
+        bottom: 5.5rem;
     `}
     transition: all .2s;
     position: fixed;
@@ -208,7 +207,7 @@ const MenuButton = styled.div`
 
         .inner {
             ${({theme}) => theme.deskTop` 
-                border: .34rem double #F72D0D;
+                border: .3rem double #F72D0D;
                 height: 1.8rem;
             `}
             ${({theme}) => theme.mobile` 

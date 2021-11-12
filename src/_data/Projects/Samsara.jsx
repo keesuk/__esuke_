@@ -1,4 +1,5 @@
 import thumbnail from "../img/Samsara_Content/Samsara-Thumbnail.png"
+import image0 from "../img/Samsara_Content/Samsara-10.jpg"
 import image1 from "../img/Samsara_Content/Samsara-11.jpg"
 import image2 from "../img/Samsara_Content/Samsara-12.jpg"
 import image3 from "../img/Samsara_Content/Samsara-13.jpg"
@@ -7,7 +8,7 @@ import image3 from "../img/Samsara_Content/Samsara-13.jpg"
 const title = "Samsara Poster"
 const year = "Mar 2019"
 const width = "56"
-const height = "52"
+const height = "54"
 const isLeft = true
 const color = "#662583"
 const assign = {
@@ -35,6 +36,9 @@ const mainText =
 
 const image = [
     {
+        type: "image",
+        image: image0
+    },{
         type: "image",
         image: image2
     },{

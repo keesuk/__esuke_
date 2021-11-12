@@ -14,11 +14,11 @@ import image10 from "../img/Gakka_Content/Gakka-20.jpg"
 
 const title = "Walk Task Force, Gakka"
 const year = "Aug 2020"
-const width = "88"
-const height = "44"
+const width = "92"
+const height = "47"
 const isLeft = true
 const logo = <Logo/>
-const color = "#1c75bc"
+const color = "#0a6ab2"
 const assign = {
     "eng" : "Brand identity and product development with companion animals.",
     "kor" : "반려동물과 함께하는 브랜드 아이덴티티와 해당 제품 개발.",
@@ -35,7 +35,7 @@ const image = [
     },{
         type: "logo",
         paddingLR: {deskTop: "25", mobile: "10"},
-        paddingTB: {deskTop: "14", mobile: "10"},
+        paddingTB: {deskTop: "16", mobile: "10"},
         color: color,
         logo: logo,
     },{

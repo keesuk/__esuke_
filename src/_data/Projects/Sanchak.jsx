@@ -5,10 +5,9 @@ import image4 from "../img/Sanchak_Content/Sanchak-14.jpg"
 
 const title = "Walking Card"
 const year = "Aug 2020"
-const width = "48"
+const width = "47"
 const height = "27"
 const isLeft = true
-const color = "#1c75bc"
 const assign = {
     "eng" : "Brand identity and product development with companion animals.",
     "kor" : "반려동물과 함께하는 브랜드 아이덴티티와 해당 제품 개발.",
@@ -58,7 +57,6 @@ const mainText = {
 
 const contents = {
     mainText : mainText,
-    keyColor : color,
     isLeft : isLeft,
     assign : assign,
     height : height,

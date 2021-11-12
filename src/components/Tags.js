@@ -6,7 +6,7 @@ const TagIntroDiv = styled.div`
     ${({theme}) => theme.deskTop`
         background-color: ${theme.colorObjs["subTagBackColor"]};
         margin-bottom: 15%;
-        margin-top: 4%;
+        margin-top: 2.8rem;
         width: 23%;
     `}
     ${({theme}) => theme.mobile`

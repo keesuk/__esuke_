@@ -120,17 +120,21 @@ export function numbering(text, tagF, tagB) {
 
 
 export function getDate() {
-    let someDate = new Date()
-    let numberOfDaysToAdd = 6
-    someDate.setDate(someDate.getDate() + numberOfDaysToAdd) 
+    const date = new Date()
 
-    let dd = someDate.getDate()
-    let mm = someDate.getMonth() + 1
-    let y = someDate.getFullYear()
+    const [month, day, year] = [date.getMonth() + 1, date.getDate(), date.getFullYear()]
+    const [hour, minutes, seconds] = [date.getHours(), date.getMinutes(), date.getSeconds()]
 
-    let ddmmy = [dd, mm, y]
-    
-    return ddmmy
+    const result = {
+        minutes : minutes,
+        seconds : seconds,
+        month : month,
+        year : year,
+        hour : hour,
+        day : day,
+    }
+
+    return result
 }
 
 export function ScrollToTop() {

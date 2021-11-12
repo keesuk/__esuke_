@@ -14,8 +14,8 @@ import image11 from "../img/Seoul_Content/Seoul-21.jpg"
 
 const title = "Seoul That We See"
 const year = "Mar 2020"
-const width = "79"
-const height = "43"
+const width = "87"
+const height = "47"
 const isLeft = false
 const logo = <Logo/>
 const color = "#DEDEDE"

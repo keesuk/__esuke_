@@ -10,6 +10,7 @@ import ContentPage from "./pages/_ContentPage.js"
 import FooterPage from "./pages/_FooterPage.js"
 import HomePage from "./pages/_HomePage.js"
 
+import { portFolioContents } from "./_data/_Data.jsx"
 import { ScrollToTop } from "./_data/_Functions"
 import theme from "./css/_Theme.jsx"
 import media from "./css/_Media.jsx"
@@ -28,7 +29,13 @@ const App = () => {
                     <Contact />
                 </Route>
                 <Route component={HomePage} exact path="/"/>
-                <Route component={ContentPage} path="/"/>
+                <Route path="/"/>
+                    {portFolioContents.map((v) => 
+                        <ContentPage
+                            key={v.title}
+                            content={v}
+                        />
+                    )}
                 <Route component={FooterPage} path="/"/>
             </Router>
         </ThemeProvider>
