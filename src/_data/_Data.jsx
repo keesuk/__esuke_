@@ -1,5 +1,3 @@
-import theme from "../css/_Theme.jsx"
-
 import { ProfileFront, ProfileBack } from "./img/_Source/_Profile_Card.jsx"
 import { getDate } from "./_Functions.jsx"
 
@@ -14,8 +12,8 @@ import WeEat from "./Projects/WeEat.jsx"
 import WeCat from "./Projects/WeCat.jsx"
 
 export const portFolioContents = [
-    Gakka, 
-    Sanchak,
+    // Gakka, 
+    // Sanchak,
     Pigeon, 
     Seoul,
     Samsara,
@@ -25,16 +23,15 @@ export const portFolioContents = [
     Ruler,
 ]
 
-export const welcomeMention = {
-    "text" : "Keesuk Lee is a Graphic Designer and Developer living in Seoul, S.Korea.",
-    "mark" : [
-        { 
-            "title" : "Graphic Designer"
-        },{ 
-            "title" : "Developer"
-        }
-    ]
+export const introTag = {
+    text : {
+        eng : "Welcome! This is my portfolio website and hope you would enjoy with it.\n\nThank You \nKeesuk Lee,",
+        kor : "환영합니다! 이 곳은 저의 포트폴리오 웹사이트입니다. 좋은 시간 되세요.\n\n감사합니다\n이기석 드림,"
+    },
+    date : `${getDate().day}, ${getDate().month}, ${getDate().year}`,
+    rotate : -4,
 }
+
 export const contact = {
     profile : {
         front: <ProfileFront/>, 
@@ -42,44 +39,13 @@ export const contact = {
     },
     mail: "keesukee@naver.com",
 }
-export const menuAboutMe = [
-    {
-        borColor : theme.colorObjs["subMenuBorColor"],
-        color : theme.colorObjs["subMenuColor"],
-        width : "12",
-        content : "",
-        image : null,
-    },{
-        borColor : theme.colorObjs["subMenuBorColor"],
-        color : theme.colorObjs["subMenuColor"],
-        width : "12",
-        content : "",
-        image : null,
-    },{
-        borColor : theme.colorObjs["subMenuBorColor"],
-        color : theme.colorObjs["subMenuColor"],
-        width : "12",
-        content : "",
-        image : null,
-    },
-]
 
-export const subPageIntroTag = {
-    text : {
-        "eng" : <>
-            Welcome! This is my portfolio website and hope you would enjoy with it.<br/><br/>
-            Thank You<br/>
-            Keesuk Lee,
-            </>,
-        "kor" : <>
-            환영합니다! 이 곳은 저의 포트폴리오 웹사이트입니다. 좋은 시간 되세요.<br/><br/>
-            감사합니다<br/>
-            이기석 드림,
-            </>
-    },
-    date : `${getDate().day}, ${getDate().month}, ${getDate().year}`,
-    time : `${getDate().hour}: ${getDate().minutes}: ${getDate().seconds}`,
-    rotate : -4,
+export const welcomeMention = {
+    text : "Keesuk Lee is a Graphic Designer and Developer living in Seoul, S.Korea.",
+    mark : [
+        { "title" : "Graphic Designer" },
+        { "title" : "Developer" }
+    ]
 }
 export const otherSiteLink = [
     {
@@ -91,4 +57,15 @@ export const otherSiteLink = [
         link: "https://github.com/keesuk", 
         color: "#216e39, #30a14e, #40c463",
     }
+]
+export const menuAboutMe = [
+    {
+        color : "#FFFF2F",
+        width : "20",
+        content : "",
+    },{
+        color : "#FFFF2F",
+        width : "20",
+        content : "",
+    },
 ]

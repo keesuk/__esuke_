@@ -14,8 +14,13 @@ import image10 from "../img/Gakka_Content/Gakka-20.jpg"
 
 const title = "Walk Task Force, Gakka"
 const year = "Aug 2020"
-const width = "92"
-const height = "47"
+const size = {
+    width: "92",
+    height: { 
+        deskTop: "47", 
+        mobile: "25" 
+    }
+}
 const isLeft = true
 const logo = <Logo/>
 const color = "#0a6ab2"
@@ -105,12 +110,11 @@ const contents = {
     keyColor : color,
     isLeft : isLeft,
     assign : assign,
-    height : height,
-    width : width,
     title : title, 
     image : image,
     logo : logo,
     year : year,
+    size: size,
     tag : tag,
 }
 

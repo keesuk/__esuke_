@@ -63,18 +63,18 @@ const TagIntroDiv = styled.div`
             border-right: ${({theme}) => theme.lines["subTagTranslateLine"]};
             transform: rotate(${({rotate}) => rotate*3}deg);
             background-image: url("${craft}");
-            background-repeat: no-repeat;
-            background-position: center; 
-            transition: visibility .04s;
-            transition-delay: .15s;
-            letter-spacing: -0.03rem;
             padding-bottom: 1.2rem;
             padding-left: 1.2rem;
             padding-right: 1rem;
             padding-top: 2rem;
-            word-spacing: .16rem;
+            background-repeat: no-repeat;
+            background-position: center; 
+            transition: visibility .04s;
+            letter-spacing: -0.03rem;
+            transition-delay: .15s;
             background-size: cover;
             border-radius: .15rem;
+            word-spacing: .16rem;
             line-height: 1.4rem;
             margin-top: -10rem;
             visibility: hidden;
@@ -156,8 +156,8 @@ const TagIntroDiv = styled.div`
     }
     .tagSubText {
         ${({theme}) => theme.deskTop`
+        letter-spacing: .05rem;
             font-size: 1.4rem;
-            letter-spacing: .05rem;
         `}
         ${({theme}) => theme.mobile`
             letter-spacing: .05rem;
@@ -166,8 +166,8 @@ const TagIntroDiv = styled.div`
         font-family: ${({theme}) => theme.fontObjs["subTag"]["introDate"]["fontFamily"]};
         font-weight: ${({theme}) => theme.fontObjs["subTag"]["introDate"]["fontWeight"]};
         position: absolute;
-        right: 8%;
         bottom: 26%;
+        right: 8%;
     }
 `
 
@@ -176,12 +176,14 @@ export const TagIntro = ({text, date, rotate}) => {
     return(
         <TagIntroDiv rotate={rotate}>
             <div className="tagContentExp">
-                <div className="eng">
-                    {text["eng"]}
-                </div>
-                <div className="kor">
-                    {text["kor"]}
-                </div>
+                <div
+                    dangerouslySetInnerHTML={{__html: text.eng.replace(/\n/g, '<br/>')}}
+                    className="eng"  
+                />
+                <div 
+                    dangerouslySetInnerHTML={{__html: text.kor.replace(/\n/g, '<br/>')}}
+                    className="kor"
+                />
             </div>
             <div className="tagSubText">
                 {date}

@@ -34,12 +34,12 @@ const ContentPage = ({content}) => {
         <Layout>
             <Container 
                 isLeft={content.isLeft}
-                width={content.width}
+                width={content.size.width}
                 isText={isText}
             >
                 <ImageSlider
                     imageArr={content.image}
-                    height={content.height}
+                    height={content.size.height}
                     isText={isText}
                 />
                 <BottomTitle

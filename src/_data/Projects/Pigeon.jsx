@@ -12,7 +12,14 @@ const title = "Pigeon Brand Book"
 const year = "Sep 2019"
 const width = "84"
 const height = "38"
-const isLeft = false
+const size = {
+    width: "84",
+    height: { 
+        deskTop: "38", 
+        mobile: "25" 
+    }
+}
+const isLeft = true
 const logo = <Logo/>
 const color = "#ff677f"
 const assign = {
@@ -44,7 +51,8 @@ const image = [
         paddingTB: {deskTop: "24.5", mobile: "10"},
         color: color,
         logo: logo,
-    },{
+    },
+    {
         type: "image",
         image: image1
     },{
@@ -70,13 +78,12 @@ const contents = {
     mainText : mainText,
     keyColor : color,
     assign : assign,
-    height : height,
     isLeft : isLeft,
-    width : width,
     title : title, 
     image : image,
     logo : logo,
     year : year,
+    size: size,
     tag : tag,
 }
 

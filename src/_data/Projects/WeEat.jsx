@@ -17,8 +17,13 @@ import image16 from "../img/WeEat_Content/WeEat-26.jpg"
 
 
 const title = "We Eat Breakfast"
-const width = "58"
-const height = "62"
+const size = {
+    width: "58",
+    height: { 
+        deskTop: "62", 
+        mobile: "25" 
+    }
+}
 const year = "Sep 2019"
 const isLeft = false
 const color = "#007336"
@@ -103,12 +108,11 @@ const contents = {
     mainText : mainText,
     keyColor : color,
     assign : assign,
-    height : height,
     isLeft : isLeft,
-    width : width,
     title : title, 
     image : image,
     year : year,
+    size : size,
     tag : tag,
 }
 

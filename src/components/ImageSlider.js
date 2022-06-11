@@ -4,7 +4,12 @@ import styled from "styled-components"
 
 
 const Container = styled.div`
-    height: ${({height}) => height}rem;
+    ${({theme, height}) => theme.deskTop`
+        height: ${height.deskTop}rem;
+    `}
+    ${({theme, height}) => theme.mobile`
+        height: ${height.mobile}rem;
+    `}
     box-sizing: border-box;
     margin-bottom: .5rem;
     padding-bottom: 1.5rem;

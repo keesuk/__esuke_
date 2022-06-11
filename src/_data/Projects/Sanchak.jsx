@@ -5,8 +5,13 @@ import image4 from "../img/Sanchak_Content/Sanchak-14.jpg"
 
 const title = "Walking Card"
 const year = "Aug 2020"
-const width = "47"
-const height = "27"
+const size = {
+    width: "47",
+    height: { 
+        deskTop: "27", 
+        mobile: "25" 
+    }
+}
 const isLeft = true
 const assign = {
     "eng" : "Brand identity and product development with companion animals.",
@@ -59,11 +64,10 @@ const contents = {
     mainText : mainText,
     isLeft : isLeft,
     assign : assign,
-    height : height,
-    width : width,
     title : title, 
     image : image,
     year : year,
+    size : size,
     tag : tag,
 }
 

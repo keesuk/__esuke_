@@ -85,25 +85,16 @@ const MainTitleBox = ({color, isThin, text, category, link}) => {
             isThin={isThin}
             color={color}
         >
-            {color === "home" 
-                ?   <div 
-                        dangerouslySetInnerHTML={{__html: 
-                            marking(
-                                text["text"],
-                                text["mark"],
-                                ["TITLE"],
-                                `<span class="mark"><span class="titleText">TITLE</span></span>`
-                        )}}
-                        className="text"
-                    />
-                :   <div className="text">
-                        <span className="mark">
-                            <span className="titleText">
-                                {text}:
-                            </span>
-                        </span>
-                    </div>
-            }
+            <div 
+                dangerouslySetInnerHTML={{__html: 
+                    marking(
+                        text.text,
+                        text.mark,
+                        ["TITLE"],
+                        `<span class="mark"><span class="titleText">TITLE</span></span>`
+                )}}
+                className="text"
+            />
 
         </MainTitleDiv> 
     )

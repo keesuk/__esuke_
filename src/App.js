@@ -4,7 +4,7 @@ import { ThemeProvider } from "styled-components"
 import smoothscroll from "smoothscroll-polyfill"
 
 import Home from "./components/Home.js"
-import Contact from "./components/Contact.js"
+import Menu from "./components/Menu.js"
 
 import ContentPage from "./pages/_ContentPage.js"
 import FooterPage from "./pages/_FooterPage.js"
@@ -26,7 +26,7 @@ const App = () => {
                 <ScrollToTop/>
                 <Route path="/">
                     <Home />
-                    <Contact />
+                    <Menu />
                 </Route>
                 <Route component={HomePage} exact path="/"/>
                 <Route path="/"/>

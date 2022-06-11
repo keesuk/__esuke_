@@ -26,7 +26,7 @@ const Container = styled.div`
     };
     background-color: ${({theme, isText}) => isText
         ? "#eee"
-        : theme.colorObjs["pageBackColor"]
+        : "#FFFCE4" //theme.colorObjs["pageBackColor"]
     };
     padding: 1.2rem 2rem 1.4rem 2rem;
     transition: all .2s;

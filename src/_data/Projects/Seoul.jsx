@@ -14,8 +14,13 @@ import image11 from "../img/Seoul_Content/Seoul-21.jpg"
 
 const title = "Seoul That We See"
 const year = "Mar 2020"
-const width = "87"
-const height = "47"
+const size = {
+    width: "87",
+    height: { 
+        deskTop: "47", 
+        mobile: "25" 
+    }
+}
 const isLeft = false
 const logo = <Logo/>
 const color = "#DEDEDE"
@@ -88,12 +93,11 @@ const contents = {
     keyColor : color,
     isLeft : isLeft,
     assign : assign,
-    height : height,
-    width : width,
     title : title, 
     image : image,
     logo : logo,
     year : year,
+    size : size,
     tag : tag,
 }
 

@@ -7,8 +7,13 @@ import image3 from "../img/Samsara_Content/Samsara-13.jpg"
 
 const title = "Samsara Poster"
 const year = "Mar 2019"
-const width = "56"
-const height = "54"
+const size = {
+    width: "56",
+    height: { 
+        deskTop: "54", 
+        mobile: "25" 
+    }
+}
 const isLeft = true
 const color = "#662583"
 const assign = {
@@ -56,11 +61,10 @@ const contents = {
     keyColor : color,
     isLeft : isLeft,
     assign : assign,
-    height : height,
-    width : width,
     title : title, 
     image : image,
     year : year,
+    size: size,
     tag : tag,
 }
 

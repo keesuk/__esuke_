@@ -8,8 +8,13 @@ import image6 from "../img/WeCat_Content/WeCat-16.jpg"
 
 
 const title = "We Eat Catering"
-const width = "55"
-const height = "29"
+const size = {
+    width: "55",
+    height: { 
+        deskTop: "29", 
+        mobile: "25" 
+    }
+}
 const year = "Sep 2019"
 const isLeft = true
 const color = "#007336"
@@ -62,12 +67,11 @@ const contents = {
     mainText : mainText,
     keyColor : color,
     assign : assign,
-    height : height,
     isLeft : isLeft,
-    width : width,
     title : title, 
     image : image,
     year : year,
+    size : size,
     tag : tag,
 }
 
