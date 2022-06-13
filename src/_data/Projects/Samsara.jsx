@@ -40,10 +40,11 @@ const mainText =
     }
 
 const image = [
+    // {
+    //     type: "image",
+    //     image: image0
+    // },
     {
-        type: "image",
-        image: image0
-    },{
         type: "image",
         image: image2
     },{

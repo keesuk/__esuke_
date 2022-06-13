@@ -139,7 +139,7 @@ const Menu = () => {
         </MenuButton>
         <AreaDiv>
             <Contact toggle={menu}/> 
-            {/* <AboutMe toggle={menu} X={10} Y={10}/> */}
+            <AboutMe toggle={menu} X={10} Y={10}/>
         </AreaDiv>
     </>)
 }

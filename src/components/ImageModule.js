@@ -208,7 +208,7 @@ export const LogoImage = ({ color, paddingTB, paddingLR, logo}) => {
 
 const ImageImg = styled.img`
     ${({theme}) => theme.deskTop`
-        object-fit: cover;
+        object-fit: contain;
         height: 100%;
     `};
     ${({theme}) => theme.mobile`

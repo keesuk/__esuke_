@@ -18,10 +18,10 @@ import image16 from "../img/WeEat_Content/WeEat-26.jpg"
 
 const title = "We Eat Breakfast"
 const size = {
-    width: "58",
+    width: "55",
     height: { 
         deskTop: "62", 
-        mobile: "25" 
+        mobile: "30" 
     }
 }
 const year = "Sep 2019"
@@ -58,13 +58,15 @@ const image = [
     {
         type: "image",
         image: image1
-    },{
-        type: "image",
-        image: image3
-    },{
-        type: "image",
-        image: image4
-    },{
+    },
+    // {
+    //     type: "image",
+    //     image: image3
+    // },{
+    //     type: "image",
+    //     image: image4
+    // },
+    {
         type: "image",
         image: image5
     },{

@@ -6,11 +6,9 @@ import image3 from "../img/WeDel_Content/WeDel-13.jpg"
 import image4 from "../img/WeDel_Content/WeDel-14.jpg"
 import image5 from "../img/WeDel_Content/WeDel-15.jpg"
 import image6 from "../img/WeDel_Content/WeDel-16.jpg"
-import image7 from "../img/WeDel_Content/WeDel-17.jpg"
-import image8 from "../img/WeDel_Content/WeDel-18.jpg"
-import image9 from "../img/WeDel_Content/WeDel-19.jpg"
 import image11 from "../img/WeDel_Content/WeDel-21.jpg"
-
+import image12 from "../img/WeEat_Content/WeEat-11.gif"
+import image13 from "../img/WeEat_Content/WeEat-21.gif"
 
 
 const title = "We Eat Delight"
@@ -74,15 +72,20 @@ const image = [
     {
         type: "image",
         image: image1
-    },{
-        type: "logo",
-        paddingLR: {deskTop: "30", mobile: "10"},
-        paddingTB: {deskTop: "15", mobile: "10"},
-        color: color,
-        logo: logo,
-    },{
+    },
+    // {
+    //     type: "logo",
+    //     paddingLR: {deskTop: "30", mobile: "10"},
+    //     paddingTB: {deskTop: "15", mobile: "10"},
+    //     color: color,
+    //     logo: logo,
+    // },
+    {
         type: "image",
         image: image2
+    },{
+        type: "image",
+        image: image3
     },{
         type: "image",
         image: image4
@@ -92,18 +95,23 @@ const image = [
     },{
         type: "image",
         image: image6
-    },{
-        type: "image",
-        image: image7
-    },{
-        type: "image",
-        image: image8
-    },{
-        type: "image",
-        image: image9
-    },{
+    },
+    // {
+    //     type: "image",
+    //     image: image8
+    // },{
+    //     type: "image",
+    //     image: image9
+    // },
+    {
         type: "image",
         image: image11
+    },{
+        type: "image",
+        image: image12
+    },{
+        type: "image",
+        image: image13
     }
 ]
 

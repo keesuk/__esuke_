@@ -19,8 +19,8 @@ export const portFolioContents = [
     Samsara,
     WeDel,
     WeCat,  
-    WeEat,
-    Ruler,
+    // WeEat,
+    // Ruler,
 ]
 
 export const introTag = {
