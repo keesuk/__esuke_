@@ -20,7 +20,7 @@ export const portFolioContents = [
     WeDel,
     WeCat,  
     // WeEat,
-    // Ruler,
+    Ruler,
 ]
 
 export const introTag = {

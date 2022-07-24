@@ -16,7 +16,7 @@ const size = {
         mobile: "25" 
     }
 }
-const isLeft = true
+const isLeft = false
 const color = "#3B44AC"
 const assign = {
     "eng" : "Editorial work approaching the ruler in an analytical and graphical way",
@@ -31,6 +31,9 @@ const tag = [
 const image = [
     {
         type: "image",
+        image: image5
+    },{
+        type: "image",
         image: image1
     },{
         type: "image",
@@ -41,9 +44,6 @@ const image = [
     },{
         type: "image",
         image: image4
-    },{
-        type: "image",
-        image: image5
     },{
         type: "image",
         image: image6
